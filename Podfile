@@ -6,9 +6,11 @@ target 'sorulur' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'Firebase/Analytics'
-	 pod 'RxSwift',    '~> 4.0'
+    pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
+    pod 'XCGLogger'
 pod 'RealmSwift'
+pod 'ActionKit'
   # Pods for sorulur
 
   target 'sorulurTests' do
