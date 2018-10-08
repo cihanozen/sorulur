@@ -19,6 +19,7 @@ struct LoginVCStruct {
 }
 
 // MARK: - LoginVCSturct initilasion and reset variables
+
 extension LoginVCStruct {
     /// LoginVCStruct İnit
     ///
@@ -30,12 +31,12 @@ extension LoginVCStruct {
     init?(with view: LoginVC) {
         log.debug("Login VC Struct init")
         self.view = view.view
-        self.emailView = view.emailView
-        self.emailTextField = view.emailTextField
-        self.passwordView = view.passwordView
-        self.passwordTextField = view.passwordTextField
+        emailView = view.emailView
+        emailTextField = view.emailTextField
+        passwordView = view.passwordView
+        passwordTextField = view.passwordTextField
     }
-    
+
     /// Reset Variables
     ///    ### Usage Example: ###
     ///    ````
@@ -44,11 +45,10 @@ extension LoginVCStruct {
     ///    ````
     mutating func reset() {
         log.debug("Login VC Struct reset")
-       self.emailView = nil
-        self.emailTextField = nil
-        self.passwordView = nil
-        self.passwordTextField = nil
-        self.view = nil
+        emailView = nil
+        emailTextField = nil
+        passwordView = nil
+        passwordTextField = nil
+        view = nil
     }
 }
-

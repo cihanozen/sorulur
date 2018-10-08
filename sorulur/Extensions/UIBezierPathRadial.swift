@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 // MARK: - Bezier Path
+
 extension UIBezierPath {
-    
     /// QuarterCircle
     enum QuarterCircleQuadrant {
         case topLeft, bottomLeft, topRight, bottomRight, topLeftThreeQuarterCircle, bottomRightThreeQuarterCircle, bottomLeftThreeQuarterCircle, topRightThreeQuarterCircle
-        
+
         var startAngle: CGFloat {
             switch self {
             case .bottomLeft:
@@ -35,8 +35,8 @@ extension UIBezierPath {
             case .bottomRightThreeQuarterCircle:
                 return 0
             }
-            
         }
+
         var endAngle: CGFloat {
             switch self {
             case .bottomLeft:
@@ -56,10 +56,8 @@ extension UIBezierPath {
             case .bottomRightThreeQuarterCircle:
                 return CGFloat.pi
             }
-            
-            
         }
-        
+
         var clockwise: Bool {
             switch self {
             case .bottomLeft:
@@ -79,23 +77,19 @@ extension UIBezierPath {
             case .bottomRightThreeQuarterCircle:
                 return false
             }
-            
-            
         }
     }
-    
+
     /// Create Path
     ///
     /// - Parameters:
     ///   - centre: Position
     ///   - radius: radius value
     ///   - quadrant: QuarterCircleQuadrant type
-    convenience init(quarterCircleCentre centre:CGPoint, radius:CGFloat, quadrant:QuarterCircleQuadrant) {
+    convenience init(quarterCircleCentre centre: CGPoint, radius: CGFloat, quadrant: QuarterCircleQuadrant) {
         self.init()
-        self.move(to: CGPoint(x: centre.x, y: centre.y))
-        self.addArc(withCenter: centre, radius:radius, startAngle:quadrant.startAngle, endAngle: quadrant.endAngle, clockwise:quadrant.clockwise)
-        self.close()
+        move(to: CGPoint(x: centre.x, y: centre.y))
+        addArc(withCenter: centre, radius: radius, startAngle: quadrant.startAngle, endAngle: quadrant.endAngle, clockwise: quadrant.clockwise)
+        close()
     }
-    
 }
-

@@ -6,49 +6,49 @@
 //  Copyright © 2018 Sinan Özman. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import UIKit
-import Alamofire
 
 /// Login Controller for LoginVC
 class LoginController {
-    
     /// LoginVC variables
     var param: LoginVCStruct?
-    
+
     /// Login Controller İnits
     ///
     /// - Parameter param: LoginVCStruct
-    ///### Usage Example: ###
-    ///````
+    /// ### Usage Example: ###
+    /// ````
     /// let controller = LoginController(LoginVCStruct)
-    ///````
+    /// ````
     init(_ param: LoginVCStruct) {
         log.debug("Login Controller İnit")
         self.param = param
     }
-    
+
     deinit {
         log.debug("Login Controller deinit")
         self.param = nil
     }
-    
+
     /// Login Post
     ///    ### Usage Example: ###
     ///    ````
     ///    let contoller = LoginController(LoginVCStruct)
     ///    controller.loginPost()
     ///    ````
-    func loginPost(){
+    func loginPost(_ base: LoginVC) {
         log.debug("login post started")
         let email: String = param?.emailTextField?.text ?? ""
         log.debug(email)
         let password: String = param?.passwordTextField?.text ?? ""
         log.debug(password)
         if email.isEmpty {
-            log.warning("email is empty")
+            ErrorPopupManager.shared.showPopup(base, animated: true, type: 0)
         } else if password.isEmpty {
             log.warning("password is empty")
+            ErrorPopupManager.shared.showPopup(base, animated: true, type: 1)
         } else {
             let data = LoginRequest(email: email, password: password).toJSON()
             log.debug(data)
@@ -69,10 +69,10 @@ class LoginController {
                         singleton.userPoints = login.uyePuan
                     }
                 }
-                    response.result.ifFailure {
-                        log.error("Result is Failure")
-                        print("hataalı panpa bu")
-                    }
+                response.result.ifFailure {
+                    log.error("Result is Failure")
+                    print("hataalı panpa bu")
+                }
             }
         }
     }

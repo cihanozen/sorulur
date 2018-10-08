@@ -8,9 +8,9 @@
 //
 
 // MARK: - ANSIColorLogFormatter
+
 /// A log formatter that will add ANSI colour codes to the message
 open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvertible {
-
     /// ANSI Escape code
     public static let escape: String = "\u{001b}["
 
@@ -75,9 +75,9 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
                 return "97"
             case .default: // Note: Different from the default: at the end of a switch, this is the `default` colour
                 return "39"
-            case .rgb(let red, let green, let blue):
+            case let .rgb(red, green, blue):
                 return "38;2;\(min(max(0, red), 255));\(min(max(0, green), 255));\(min(max(0, blue), 255))"
-            case .colorIndex(let number):
+            case let .colorIndex(number):
                 return "38;5;\(min(max(0, number), 255))"
             }
         }
@@ -118,9 +118,9 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
                 return "107"
             case .default: // Note: Different from the default: at the end of a switch, this is the `default` colour
                 return "49"
-            case .rgb(let red, let green, let blue):
+            case let .rgb(red, green, blue):
                 return "48;2;\(min(max(0, red), 255));\(min(max(0, green), 255));\(min(max(0, blue), 255))"
-            case .colorIndex(let number):
+            case let .colorIndex(number):
                 return "48;5;\(min(max(0, number), 255))"
             }
         }
@@ -162,9 +162,9 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
                 return "White"
             case .default: // Note: Different from the default: at the end of a switch, this is the `default` colour
                 return "Default"
-            case .rgb(let red, let green, let blue):
+            case let .rgb(red, green, blue):
                 return String(format: "(r: %d, g: %d, b: %d) #%02X%02X%02X", red, green, blue, red, green, blue)
-            case .colorIndex(let number):
+            case let .colorIndex(number):
                 return "ANSI color index: \(number)"
             }
         }
@@ -264,8 +264,7 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
         if custom.hasPrefix(ANSIColorLogFormatter.escape) {
             formatStrings[level] = "\(custom)"
             descriptionStrings[level] = "Custom: \(custom[custom.index(custom.startIndex, offsetBy: ANSIColorLogFormatter.escape.lengthOfBytes(using: .utf8)) ..< custom.endIndex])"
-        }
-        else {
+        } else {
             formatStrings[level] = ANSIColorLogFormatter.escape + "\(custom)"
             descriptionStrings[level] = "Custom: \(custom)"
         }
@@ -315,6 +314,7 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
     }
 
     // MARK: - LogFormatterProtocol
+
     /// Apply some additional formatting to the message if appropriate.
     ///
     /// - Parameters:
@@ -329,14 +329,13 @@ open class ANSIColorLogFormatter: LogFormatterProtocol, CustomDebugStringConvert
     }
 
     // MARK: - CustomDebugStringConvertible
-    open var debugDescription: String {
-        get {
-            var description: String = "\(extractTypeName(self)): "
-            for level in XCGLogger.Level.all {
-                description += "\n\t- \(level) > \(descriptionStrings[level] ?? "None")"
-            }
 
-            return description
+    open var debugDescription: String {
+        var description: String = "\(extractTypeName(self)): "
+        for level in XCGLogger.Level.all {
+            description += "\n\t- \(level) > \(descriptionStrings[level] ?? "None")"
         }
+
+        return description
     }
 }

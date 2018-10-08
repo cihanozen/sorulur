@@ -19,10 +19,10 @@ extension UIView {
     ///    let view = UIView()
     ///    view.applyGranient(colours: [UIColor.white])
     ///    ````
-    func applyGranient(colours: [UIColor]) -> Void {
-        self.applyGranient(colours: colours, locations: nil)
+    func applyGranient(colours: [UIColor]) {
+        applyGranient(colours: colours, locations: nil)
     }
-    
+
     /// applyGranient with location
     ///
     /// - Parameters:
@@ -33,15 +33,15 @@ extension UIView {
     ///    let view = UIView()
     ///    view.applyGranient(colours: [UIColor.white] , locations: [0.0,0.0])
     ///    ````
-    func applyGranient(colours: [UIColor], locations: [NSNumber]?) -> Void {
+    func applyGranient(colours: [UIColor], locations: [NSNumber]?) {
         let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.frame = self.bounds
-        gradient.colors = colours.map{
+        gradient.frame = bounds
+        gradient.colors = colours.map {
             $0.cgColor
         }
         gradient.locations = locations
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
-        self.layer.insertSublayer(gradient, at: 0)
+        layer.insertSublayer(gradient, at: 0)
     }
 }

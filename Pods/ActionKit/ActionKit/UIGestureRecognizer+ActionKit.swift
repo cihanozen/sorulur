@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-// MARK:- UIGestureRecognizer actions
+// MARK: - UIGestureRecognizer actions
+
 extension ActionKitSingleton {
-    
     func addGestureClosure(_ gesture: UIGestureRecognizer, name: String, closure: ActionKitClosure) {
         let set: Set<String>? = gestureRecognizerToName[gesture]
         var newSet: Set<String>
@@ -24,7 +24,7 @@ extension ActionKitSingleton {
         gestureRecognizerToName[gesture] = newSet
         controlToClosureDictionary[.gestureRecognizer(gesture, name)] = closure
     }
-    
+
     func canRemoveGesture(_ gesture: UIGestureRecognizer, _ name: String) -> Bool {
         if let _ = controlToClosureDictionary[.gestureRecognizer(gesture, name)] {
             return true
@@ -32,21 +32,21 @@ extension ActionKitSingleton {
             return false
         }
     }
-    
+
     func removeGesture(_ gesture: UIGestureRecognizer, name: String) {
         if canRemoveGesture(gesture, name) {
             controlToClosureDictionary[.gestureRecognizer(gesture, name)] = nil
         }
     }
-    
+
     @objc(runGesture:)
     func runGesture(_ gesture: UIGestureRecognizer) {
         for gestureName in gestureRecognizerToName[gesture] ?? Set<String>() {
             if let closure = controlToClosureDictionary[.gestureRecognizer(gesture, gestureName)] {
                 switch closure {
-                case .noParameters(let voidClosure):
+                case let .noParameters(voidClosure):
                     voidClosure()
-                case .withGestureParameter(let gestureClosure):
+                case let .withGestureParameter(gestureClosure):
                     gestureClosure(gesture)
                 default:
                     assertionFailure("Gesture closure not found, nor void closure")
@@ -59,7 +59,7 @@ extension ActionKitSingleton {
 
 public extension UIGestureRecognizer {
     var actionKitNames: Set<String>? {
-        get { return ActionKitSingleton.shared.gestureRecognizerToName[self] } set { }
+        get { return ActionKitSingleton.shared.gestureRecognizerToName[self] } set {}
     }
 }
 
@@ -71,26 +71,26 @@ extension UIGestureRecognizer {
             ActionKitSingleton.shared.removeGesture(self, name: gestureRecognizerName)
         }
     }
-    
+
     @objc public convenience init(_ name: String = "", _ gestureClosure: @escaping ActionKitGestureClosure) {
         self.init(target: ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runGesture(_:)))
-        self.addClosure(name, gestureClosure: gestureClosure)
+        addClosure(name, gestureClosure: gestureClosure)
     }
- 
+
     @nonobjc
     public convenience init(_ name: String = "", _ closure: @escaping ActionKitVoidClosure) {
         self.init(target: ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runGesture(_:)))
-        self.addClosure(name, closure: closure)
+        addClosure(name, closure: closure)
     }
-    
+
     public func addClosure(_ name: String, gestureClosure: @escaping ActionKitGestureClosure) {
         ActionKitSingleton.shared.addGestureClosure(self, name: name, closure: .withGestureParameter(gestureClosure))
     }
-    
+
     public func addClosure(_ name: String, closure: @escaping ActionKitVoidClosure) {
         ActionKitSingleton.shared.addGestureClosure(self, name: name, closure: .noParameters(closure))
     }
-    
+
     public func removeClosure(_ name: String) {
         ActionKitSingleton.shared.removeGesture(self, name: name)
     }

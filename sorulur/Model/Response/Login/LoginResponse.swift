@@ -18,24 +18,23 @@
 //     }
 //   }
 
-import Foundation
 import Alamofire
+import Foundation
 
 /// LoginResponse
-///### Usage Example: ###
-///````
-///Alamofire.request(url).responseLogin { response in
+/// ### Usage Example: ###
+/// ````
+/// Alamofire.request(url).responseLogin { response in
 ///    if let login = response.result.value {
 ///        ...
 ///    }
-///}
-///````
+/// }
+/// ````
 class LoginResponse: Codable {
-    
     /// Response Variables
     let uyeAvatar, uyeDurum, uyeEposta, uyeID: String
     let uyeKadi, uyePuan, uyeSifre: String
-    
+
     /// Coding Keys for json data
     ///
     /// - uyeAvatar: json response userImage Key
@@ -54,7 +53,7 @@ class LoginResponse: Codable {
         case uyePuan = "uye_puan"
         case uyeSifre = "uye_sifre"
     }
-    
+
     /// Login Response İnit
     ///
     /// - Parameters:
@@ -83,6 +82,7 @@ class LoginResponse: Codable {
 // MARK: Convenience initializers and mutators
 
 // MARK: - LoginResponse Extensions for data
+
 extension LoginResponse {
     /// init data decode and init LoginResponse class variables
     ///
@@ -96,7 +96,7 @@ extension LoginResponse {
         let me = try newJSONDecoder().decode(LoginResponse.self, from: data)
         self.init(uyeAvatar: me.uyeAvatar, uyeDurum: me.uyeDurum, uyeEposta: me.uyeEposta, uyeID: me.uyeID, uyeKadi: me.uyeKadi, uyePuan: me.uyePuan, uyeSifre: me.uyeSifre)
     }
-    
+
     /// init json decode and init LoginResponse class variable
     ///
     /// - Parameters:
@@ -114,7 +114,7 @@ extension LoginResponse {
         }
         try self.init(data: data)
     }
-    
+
     /// init Url for data
     ///
     /// - Parameter url: url
@@ -127,7 +127,7 @@ extension LoginResponse {
     convenience init(fromURL url: URL) throws {
         try self.init(data: try Data(contentsOf: url))
     }
-    
+
     /// with Functions
     ///
     /// - Parameters:
@@ -147,7 +147,7 @@ extension LoginResponse {
         uyeKadi: String? = nil,
         uyePuan: String? = nil,
         uyeSifre: String? = nil
-        ) -> LoginResponse {
+    ) -> LoginResponse {
         return LoginResponse(
             uyeAvatar: uyeAvatar ?? self.uyeAvatar,
             uyeDurum: uyeDurum ?? self.uyeDurum,
@@ -158,7 +158,7 @@ extension LoginResponse {
             uyeSifre: uyeSifre ?? self.uyeSifre
         )
     }
-    
+
     /// data convert to json
     ///
     /// - Returns: parsed Data
@@ -171,7 +171,7 @@ extension LoginResponse {
     func jsonData() throws -> Data {
         return try newJSONEncoder().encode(self)
     }
-    
+
     /// json parse to string
     ///
     /// - Parameter encoding: encoding format
@@ -183,6 +183,6 @@ extension LoginResponse {
     ///    LoginResponse(json,encoding: String.Encoding = .utf8).jsonString()
     ///    ````
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
-        return String(data: try self.jsonData(), encoding: encoding)
+        return String(data: try jsonData(), encoding: encoding)
     }
 }

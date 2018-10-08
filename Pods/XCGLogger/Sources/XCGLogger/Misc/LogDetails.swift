@@ -10,9 +10,9 @@
 import Foundation
 
 // MARK: - LogDetails
+
 /// Data structure to hold all info about a log message, passed to destination classes
 public struct LogDetails {
-
     /// Log level required to display this log
     public var level: XCGLogger.Level
 

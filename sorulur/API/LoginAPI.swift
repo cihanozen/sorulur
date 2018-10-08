@@ -6,9 +6,9 @@
 //  Copyright © 2018 Sinan Özman. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import UIKit
-import Alamofire
 
 // MARK: - Alamofire response handlers
 
@@ -17,17 +17,17 @@ extension DataRequest {
     ///
     /// - Returns: DataResponseSerializer<T>
     fileprivate func decodableResponseSerializer<T: Decodable>() -> DataResponseSerializer<T> {
-        return DataResponseSerializer { _, response, data, error in
+        return DataResponseSerializer { _, _, data, error in
             guard error == nil else { return .failure(error!) }
-            
+
             guard let data = data else {
                 return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
             }
-            
+
             return Result { try newJSONDecoder().decode(T.self, from: data) }
         }
     }
-    
+
     /// response Decodable
     ///
     /// - Parameters:
@@ -38,7 +38,7 @@ extension DataRequest {
     fileprivate func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
         return response(queue: queue, responseSerializer: decodableResponseSerializer(), completionHandler: completionHandler)
     }
-    
+
     /// Login Response
     ///
     /// - Parameters:

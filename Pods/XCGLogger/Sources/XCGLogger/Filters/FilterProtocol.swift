@@ -8,9 +8,9 @@
 //
 
 // MARK: - FilterProtocol
+
 /// Protocol for log filter classes to conform to
 public protocol FilterProtocol: CustomDebugStringConvertible {
-
     /// Check if the log message should be excluded from logging.
     ///
     /// - Parameters:

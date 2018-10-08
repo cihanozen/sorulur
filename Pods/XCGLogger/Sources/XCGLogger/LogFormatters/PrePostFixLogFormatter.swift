@@ -14,17 +14,16 @@
 #endif
 
 // MARK: - PrePostFixLogFormatter
+
 /// A log formatter that will optionally add a prefix, and/or postfix string to a message
 open class PrePostFixLogFormatter: LogFormatterProtocol, CustomDebugStringConvertible {
-
     /// Internal cache of the prefix strings for each log level
     internal var prefixStrings: [XCGLogger.Level: String] = [:]
 
     /// Internal cache of the postfix strings codes for each log level
     internal var postfixStrings: [XCGLogger.Level: String] = [:]
 
-    public init() {
-    }
+    public init() {}
 
     /// Set the prefix/postfix strings for a specific log level.
     ///
@@ -41,22 +40,20 @@ open class PrePostFixLogFormatter: LogFormatterProtocol, CustomDebugStringConver
 
             // No level specified, so, apply to all levels
             for level in XCGLogger.Level.all {
-                self.apply(prefix: prefix, postfix: postfix, to: level)
+                apply(prefix: prefix, postfix: postfix, to: level)
             }
             return
         }
 
         if let prefix = prefix {
             prefixStrings[level] = prefix
-        }
-        else {
+        } else {
             prefixStrings.removeValue(forKey: level)
         }
 
         if let postfix = postfix {
             postfixStrings[level] = postfix
-        }
-        else {
+        } else {
             postfixStrings.removeValue(forKey: level)
         }
     }
@@ -73,6 +70,7 @@ open class PrePostFixLogFormatter: LogFormatterProtocol, CustomDebugStringConver
     }
 
     // MARK: - LogFormatterProtocol
+
     /// Apply some additional formatting to the message if appropriate.
     ///
     /// - Parameters:
@@ -87,14 +85,13 @@ open class PrePostFixLogFormatter: LogFormatterProtocol, CustomDebugStringConver
     }
 
     // MARK: - CustomDebugStringConvertible
-    open var debugDescription: String {
-        get {
-            var description: String = "\(extractTypeName(self)): "
-            for level in XCGLogger.Level.all {
-                description += "\n\t- \(level) > \(prefixStrings[level] ?? "None") | \(postfixStrings[level] ?? "None")"
-            }
 
-            return description
+    open var debugDescription: String {
+        var description: String = "\(extractTypeName(self)): "
+        for level in XCGLogger.Level.all {
+            description += "\n\t- \(level) > \(prefixStrings[level] ?? "None") | \(postfixStrings[level] ?? "None")"
         }
+
+        return description
     }
 }

@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 /// Singleton
-class Singleton{
-    
+class Singleton {
     /// Static User Email
     var userEmail: String?
     /// Static User Nick Name
@@ -26,10 +25,10 @@ class Singleton{
     var userStatus: String?
     /// Static User Points
     var userPoints: String?
-    
+
     /// Shared instanse
     static let shared = Singleton()
-    
+
     /// Singleton İnit
     ///
     /// - Parameters:
@@ -40,18 +39,16 @@ class Singleton{
     ///   - pass: user password for saved static singleton
     ///   - status: user status for saved static singleton
     ///   - point: user point for saved static singleton
-    init(email: String, nick: String, id: String, image: String, pass: String, status: String, point: String){
-        self.userEmail = email
-        self.userNick = nick
-        self.userId = id
-        self.userImage = image
-        self.userPassword = pass
-        self.userStatus = status
-        self.userPoints = point
+    init(email: String, nick: String, id: String, image: String, pass: String, status: String, point: String) {
+        userEmail = email
+        userNick = nick
+        userId = id
+        userImage = image
+        userPassword = pass
+        userStatus = status
+        userPoints = point
     }
-    
+
     /// Blank İnit
-    init() {
-        
-    }
+    init() {}
 }

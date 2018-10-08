@@ -14,9 +14,9 @@
 #endif
 
 // MARK: - XcodeColorsLogFormatter
+
 /// A log formatter that will add colour codes for the [XcodeColor plug-in](https://github.com/robbiehanson/XcodeColors) to the message
 open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConvertible {
-
     /// XcodeColors escape code
     public static let escape: String = "\u{001b}["
 
@@ -77,28 +77,29 @@ open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConve
             self.blue = blue
         }
 
-#if os(macOS)
-        public init(color: NSColor) {
-            if let colorSpaceCorrected = color.usingColorSpaceName(NSColorSpaceName.calibratedRGB) {
-                self.red = Int(colorSpaceCorrected.redComponent * 255)
-                self.green = Int(colorSpaceCorrected.greenComponent * 255)
-                self.blue = Int(colorSpaceCorrected.blueComponent * 255)
+        #if os(macOS)
+            public init(color: NSColor) {
+                if let colorSpaceCorrected = color.usingColorSpaceName(NSColorSpaceName.calibratedRGB) {
+                    red = Int(colorSpaceCorrected.redComponent * 255)
+                    green = Int(colorSpaceCorrected.greenComponent * 255)
+                    blue = Int(colorSpaceCorrected.blueComponent * 255)
+                }
             }
-        }
-#elseif os(iOS) || os(tvOS) || os(watchOS)
-        public init(color: UIColor) {
-            var redComponent: CGFloat = 0
-            var greenComponent: CGFloat = 0
-            var blueComponent: CGFloat = 0
-            var alphaComponent: CGFloat = 0
 
-            color.getRed(&redComponent, green: &greenComponent, blue: &blueComponent, alpha:&alphaComponent)
+        #elseif os(iOS) || os(tvOS) || os(watchOS)
+            public init(color: UIColor) {
+                var redComponent: CGFloat = 0
+                var greenComponent: CGFloat = 0
+                var blueComponent: CGFloat = 0
+                var alphaComponent: CGFloat = 0
 
-            self.red = Int(redComponent * 255)
-            self.green = Int(greenComponent * 255)
-            self.blue = Int(blueComponent * 255)
-        }
-#endif
+                color.getRed(&redComponent, green: &greenComponent, blue: &blueComponent, alpha: &alphaComponent)
+
+                red = Int(redComponent * 255)
+                green = Int(greenComponent * 255)
+                blue = Int(blueComponent * 255)
+            }
+        #endif
 
         /// Human readable description of this colour (CustomStringConvertible)
         public var description: String {
@@ -106,37 +107,37 @@ open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConve
         }
 
         /// Preset colour: Red
-        public static let red: XcodeColor = { return XcodeColor(red: 255, green: 0, blue: 0) }()
+        public static let red: XcodeColor = { XcodeColor(red: 255, green: 0, blue: 0) }()
 
         /// Preset colour: Green
-        public static let green: XcodeColor = { return XcodeColor(red: 0, green: 255, blue: 0) }()
+        public static let green: XcodeColor = { XcodeColor(red: 0, green: 255, blue: 0) }()
 
         /// Preset colour: Blue
-        public static let blue: XcodeColor = { return XcodeColor(red: 0, green: 0, blue: 255) }()
+        public static let blue: XcodeColor = { XcodeColor(red: 0, green: 0, blue: 255) }()
 
         /// Preset colour: Black
-        public static let black: XcodeColor = { return XcodeColor(red: 0, green: 0, blue: 0) }()
+        public static let black: XcodeColor = { XcodeColor(red: 0, green: 0, blue: 0) }()
 
         /// Preset colour: White
-        public static let white: XcodeColor = { return XcodeColor(red: 255, green: 255, blue: 255) }()
+        public static let white: XcodeColor = { XcodeColor(red: 255, green: 255, blue: 255) }()
 
         /// Preset colour: Light Grey
-        public static let lightGrey: XcodeColor = { return XcodeColor(red: 211, green: 211, blue: 211) }()
+        public static let lightGrey: XcodeColor = { XcodeColor(red: 211, green: 211, blue: 211) }()
 
         /// Preset colour: Dark Grey
-        public static let darkGrey: XcodeColor = { return XcodeColor(red: 169, green: 169, blue: 169) }()
+        public static let darkGrey: XcodeColor = { XcodeColor(red: 169, green: 169, blue: 169) }()
 
         /// Preset colour: Orange
-        public static let orange: XcodeColor = { return XcodeColor(red: 255, green: 165, blue: 0) }()
+        public static let orange: XcodeColor = { XcodeColor(red: 255, green: 165, blue: 0) }()
 
         /// Preset colour: Purple
-        public static let purple: XcodeColor = { return XcodeColor(red: 170, green: 0, blue: 170) }()
+        public static let purple: XcodeColor = { XcodeColor(red: 170, green: 0, blue: 170) }()
 
         /// Preset colour: Dark Green
-        public static let darkGreen: XcodeColor = { return XcodeColor(red: 0, green: 128, blue: 0) }()
+        public static let darkGreen: XcodeColor = { XcodeColor(red: 0, green: 128, blue: 0) }()
 
         /// Preset colour: Cyan
-        public static let cyan: XcodeColor = { return XcodeColor(red: 0, green: 170, blue: 170) }()
+        public static let cyan: XcodeColor = { XcodeColor(red: 0, green: 170, blue: 170) }()
     }
 
     /// Internal cache of the XcodeColors codes for each log level
@@ -170,15 +171,13 @@ open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConve
 
         if let foregroundColor = foregroundColor {
             formatString += "\(XcodeColorsLogFormatter.escape)fg\(foregroundColor.red),\(foregroundColor.green),\(foregroundColor.blue);"
-        }
-        else {
+        } else {
             formatString += XcodeColorsLogFormatter.resetForeground
         }
 
         if let backgroundColor = backgroundColor {
             formatString += "\(XcodeColorsLogFormatter.escape)bg\(backgroundColor.red),\(backgroundColor.green),\(backgroundColor.blue);"
-        }
-        else {
+        } else {
             formatString += XcodeColorsLogFormatter.resetBackground
         }
 
@@ -230,6 +229,7 @@ open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConve
     }
 
     // MARK: - LogFormatterProtocol
+
     /// Apply some additional formatting to the message if appropriate.
     ///
     /// - Parameters:
@@ -244,14 +244,13 @@ open class XcodeColorsLogFormatter: LogFormatterProtocol, CustomDebugStringConve
     }
 
     // MARK: - CustomDebugStringConvertible
-    open var debugDescription: String {
-        get {
-            var description: String = "\(extractTypeName(self)): "
-            for level in XCGLogger.Level.all {
-                description += "\n\t- \(level) > \(descriptionStrings[level] ?? "None")"
-            }
 
-            return description
+    open var debugDescription: String {
+        var description: String = "\(extractTypeName(self)): "
+        for level in XCGLogger.Level.all {
+            description += "\n\t- \(level) > \(descriptionStrings[level] ?? "None")"
         }
+
+        return description
     }
 }

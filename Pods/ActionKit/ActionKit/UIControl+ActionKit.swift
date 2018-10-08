@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-// MARK:- UIControl actions
+// MARK: - UIControl actions
+
 extension ActionKitSingleton {
     func removeAction(_ control: UIControl, controlEvent: UIControl.Event) {
         var eventSet = control.actionKitEvents
         if eventSet?.contains(controlEvent) ?? false {
-            let _ = eventSet?.remove(controlEvent)
+            _ = eventSet?.remove(controlEvent)
         }
         controlToClosureDictionary[.control(control, controlEvent)] = nil
     }
-    
-    func addAction(_ control: UIControl, controlEvent: UIControl.Event, closure: ActionKitClosure)
-    {
+
+    func addAction(_ control: UIControl, controlEvent: UIControl.Event, closure: ActionKitClosure) {
         let set: Set<UIControl.Event>? = controlToControlEvent[control]
         var newSet: Set<UIControl.Event>
         if let nonOptSet = set {
@@ -32,15 +32,15 @@ extension ActionKitSingleton {
         controlToControlEvent[control] = newSet
         controlToClosureDictionary[.control(control, controlEvent)] = closure
     }
-    
+
     @objc(runControlEventAction:)
     func runControlEventAction(_ control: UIControl) {
         for controlEvent in control.actionKitEvents ?? Set<UIControl.Event>() {
             if let closure = controlToClosureDictionary[.control(control, controlEvent)] {
                 switch closure {
-                case .noParameters(let voidClosure):
+                case let .noParameters(voidClosure):
                     voidClosure()
-                case .withControlParameter(let controlClosure):
+                case let .withControlParameter(controlClosure):
                     controlClosure(control)
                 default:
                     assertionFailure("Control event closure not found, nor void closure")
@@ -61,7 +61,7 @@ extension UIControl.Event: Hashable {
     public var hashValue: Int {
         return Int(rawValue)
     }
-    
+
     public static var allValues: [UIControl.Event] {
         return [.touchDown, .touchDownRepeat, .touchDragInside, .touchDragOutside, .touchDragEnter,
                 .touchDragExit, .touchUpInside, .touchUpOutside, .touchCancel, .valueChanged,
@@ -72,7 +72,6 @@ extension UIControl.Event: Hashable {
 }
 
 extension UIControl {
-    
     open override func removeFromSuperview() {
         clearActionKit()
         super.removeFromSuperview()
@@ -85,19 +84,19 @@ extension UIControl {
             ActionKitSingleton.shared.removeAction(self, controlEvent: controlEvent)
         }
     }
-    
+
     @objc public func removeControlEvent(_ controlEvent: UIControl.Event) {
         ActionKitSingleton.shared.removeAction(self, controlEvent: controlEvent)
     }
-    
+
     @objc public func addControlEvent(_ controlEvent: UIControl.Event, _ controlClosure: @escaping ActionKitControlClosure) {
-        self.addTarget(ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runControlEventAction(_:)), for: controlEvent)
+        addTarget(ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runControlEventAction(_:)), for: controlEvent)
         ActionKitSingleton.shared.addAction(self, controlEvent: controlEvent, closure: .withControlParameter(controlClosure))
     }
 
     @nonobjc
     public func addControlEvent(_ controlEvent: UIControl.Event, _ closure: @escaping ActionKitVoidClosure) {
-        self.addTarget(ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runControlEventAction(_:)), for: controlEvent)
+        addTarget(ActionKitSingleton.shared, action: #selector(ActionKitSingleton.runControlEventAction(_:)), for: controlEvent)
         ActionKitSingleton.shared.addAction(self, controlEvent: controlEvent, closure: .noParameters(closure))
     }
 }

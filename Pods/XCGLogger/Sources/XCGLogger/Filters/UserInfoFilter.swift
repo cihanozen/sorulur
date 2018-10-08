@@ -8,10 +8,10 @@
 //
 
 // MARK: - UserInfoFilter
+
 /// Filter log messages by the contents of a key in the UserInfo dictionary
 /// Note: - This is intended to be subclassed, unlikely you'll use it directly
 open class UserInfoFilter: FilterProtocol {
-
     /// The key to check in the LogDetails.userInfo dictionary
     open var userInfoKey: String = ""
 
@@ -98,23 +98,21 @@ open class UserInfoFilter: FilterProtocol {
     ///     - true:     Drop this log message.
     ///     - false:    Keep this log message and continue processing.
     ///
-    open func shouldExclude(logDetails: inout LogDetails, message: inout String) -> Bool {
+    open func shouldExclude(logDetails: inout LogDetails, message _: inout String) -> Bool {
         var matched: Bool = false
 
         if !applyFilterToInternalMessages,
-          let isInternal = logDetails.userInfo[XCGLogger.Constants.userInfoKeyInternal] as? Bool,
-          isInternal {
+            let isInternal = logDetails.userInfo[XCGLogger.Constants.userInfoKeyInternal] as? Bool,
+            isInternal {
             return inverse
         }
 
         if let messageItemsObject = logDetails.userInfo[userInfoKey] {
             if let messageItemsSet: Set<String> = messageItemsObject as? Set<String> {
                 matched = itemsToMatch.intersection(messageItemsSet).count > 0
-            }
-            else if let messageItemsArray: Array<String> = messageItemsObject as? Array<String> {
+            } else if let messageItemsArray: Array<String> = messageItemsObject as? Array<String> {
                 matched = itemsToMatch.intersection(messageItemsArray).count > 0
-            }
-            else if let messageItem = messageItemsObject as? String {
+            } else if let messageItem = messageItemsObject as? String {
                 matched = itemsToMatch.contains(messageItem)
             }
         }
@@ -127,17 +125,15 @@ open class UserInfoFilter: FilterProtocol {
     }
 
     // MARK: - CustomDebugStringConvertible
+
     open var debugDescription: String {
-        get {
-            var description: String = "\(extractTypeName(self)): \(applyFilterToInternalMessages ? "(Filtering Internal) " : "")" + (inverse ? "Including only matches for: " : "Excluding matches for: ")
-            if itemsToMatch.count > 5 {
-                description += "\n\t- " + itemsToMatch.sorted().joined(separator: "\n\t- ")
-            }
-            else {
-                description += itemsToMatch.sorted().joined(separator: ", ")
-            }
-            
-            return description
+        var description: String = "\(extractTypeName(self)): \(applyFilterToInternalMessages ? "(Filtering Internal) " : "")" + (inverse ? "Including only matches for: " : "Excluding matches for: ")
+        if itemsToMatch.count > 5 {
+            description += "\n\t- " + itemsToMatch.sorted().joined(separator: "\n\t- ")
+        } else {
+            description += itemsToMatch.sorted().joined(separator: ", ")
         }
+
+        return description
     }
 }

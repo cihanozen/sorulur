@@ -10,9 +10,11 @@
 import Dispatch
 
 // MARK: - ConsoleDestination
+
 /// A standard destination that outputs log details to the console
 open class ConsoleDestination: BaseQueuedDestination {
     // MARK: - Overridden Methods
+
     /// Print the log to the console.
     ///
     /// - Parameters:

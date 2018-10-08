@@ -10,9 +10,11 @@
 import Dispatch
 
 // MARK: - TestDestination
+
 /// A destination for testing, preload it with the expected logs, send your logs, then check for success
 open class TestDestination: BaseQueuedDestination {
     // MARK: - Properties
+
     /// Array of all expected log messages
     open var expectedLogMessages: [String] = []
 
@@ -21,16 +23,12 @@ open class TestDestination: BaseQueuedDestination {
 
     /// Number of log messages still expected
     open var remainingNumberOfExpectedLogMessages: Int {
-        get {
-            return expectedLogMessages.count
-        }
+        return expectedLogMessages.count
     }
 
     /// Number of unexpected log messages
     open var numberOfUnexpectedLogMessages: Int {
-        get {
-            return unexpectedLogMessages.count
-        }
+        return unexpectedLogMessages.count
     }
 
     /// Add the messages you expect to be logged
@@ -53,13 +51,12 @@ open class TestDestination: BaseQueuedDestination {
     ///
     /// - Returns:  Nothing
     ///
-    fileprivate func sync(closure: () -> ()) {
+    fileprivate func sync(closure: () -> Void) {
         if let logQueue = logQueue {
             logQueue.sync {
                 closure()
             }
-        }
-        else {
+        } else {
             closure()
         }
     }
@@ -77,6 +74,7 @@ open class TestDestination: BaseQueuedDestination {
     }
 
     // MARK: - Overridden Methods
+
     /// Removes line from expected log messages if there's a match, otherwise adds to unexpected log messages.
     ///
     /// - Parameters:
@@ -94,14 +92,13 @@ open class TestDestination: BaseQueuedDestination {
             if self.shouldExclude(logDetails: &logDetails, message: &message) {
                 return
             }
-            
+
             applyFormatters(logDetails: &logDetails, message: &message)
 
             let index = expectedLogMessages.index(of: message)
             if let index = index {
                 expectedLogMessages.remove(at: index)
-            }
-            else {
+            } else {
                 unexpectedLogMessages.append(message)
             }
         }

@@ -7,34 +7,35 @@
 //  Some rights reserved: https://github.com/DaveWoodCom/XCGLogger/blob/master/LICENSE.txt
 //
 
-import Foundation
 import Dispatch
+import Foundation
 
 // MARK: - FileDestination
+
 /// A standard destination that outputs log details to a file
 open class FileDestination: BaseQueuedDestination {
     // MARK: - Properties
+
     /// Logger that owns the destination object
     open override var owner: XCGLogger? {
         didSet {
             if owner != nil {
                 openFile()
-            }
-            else {
+            } else {
                 closeFile()
             }
         }
     }
 
     /// FileURL of the file to log to
-    open var writeToFileURL: URL? = nil {
+    open var writeToFileURL: URL? {
         didSet {
             openFile()
         }
     }
 
     /// File handle for the log file
-    internal var logFileHandle: FileHandle? = nil
+    internal var logFileHandle: FileHandle?
 
     /// Option: whether or not to append to the log file if it already exists
     internal var shouldAppend: Bool
@@ -43,21 +44,20 @@ open class FileDestination: BaseQueuedDestination {
     internal var appendMarker: String?
 
     /// Option: Attributes to use when creating a new file
-    internal var fileAttributes: [FileAttributeKey: Any]? = nil
+    internal var fileAttributes: [FileAttributeKey: Any]?
 
     // MARK: - Life Cycle
+
     public init(owner: XCGLogger? = nil, writeToFile: Any, identifier: String = "", shouldAppend: Bool = false, appendMarker: String? = "-- ** ** ** --", attributes: [FileAttributeKey: Any]? = nil) {
         self.shouldAppend = shouldAppend
         self.appendMarker = appendMarker
-        self.fileAttributes = attributes
+        fileAttributes = attributes
 
         if writeToFile is NSString {
             writeToFileURL = URL(fileURLWithPath: writeToFile as! String)
-        }
-        else if let writeToFile = writeToFile as? URL, writeToFile.isFileURL {
+        } else if let writeToFile = writeToFile as? URL, writeToFile.isFileURL {
             writeToFileURL = writeToFile
-        }
-        else {
+        } else {
             writeToFileURL = nil
         }
 
@@ -74,6 +74,7 @@ open class FileDestination: BaseQueuedDestination {
     }
 
     // MARK: - File Handling Methods
+
     /// Open the log file for writing.
     ///
     /// - Parameters:   None
@@ -102,17 +103,15 @@ open class FileDestination: BaseQueuedDestination {
 
                 if let appendMarker = appendMarker,
                     let encodedData = "\(appendMarker)\n".data(using: String.Encoding.utf8) {
-
                     _try({
                         self.logFileHandle?.write(encodedData)
                     },
-                    catch: { (exception: NSException) in
+                         catch: { (exception: NSException) in
                         print("Objective-C Exception occurred: \(exception)")
                     })
                 }
             }
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             owner._logln("Attempt to open log file for \(fileExists && shouldAppend ? "appending" : "writing") failed: \(error.localizedDescription)", level: .error, source: self)
             logFileHandle = nil
             return
@@ -152,8 +151,7 @@ open class FileDestination: BaseQueuedDestination {
                 self.logFileHandle?.synchronizeFile()
                 closure?()
             }
-        }
-        else {
+        } else {
             logFileHandle?.synchronizeFile()
             closure?()
         }
@@ -170,22 +168,19 @@ open class FileDestination: BaseQueuedDestination {
     ///     - false:    Error rotating the log file.
     ///
     @discardableResult open func rotateFile(to archiveToFile: Any, closure: ((_ success: Bool) -> Void)? = nil) -> Bool {
-        var archiveToFileURL: URL? = nil
+        var archiveToFileURL: URL?
 
         if archiveToFile is NSString {
             archiveToFileURL = URL(fileURLWithPath: archiveToFile as! String)
-        }
-        else if let archiveToFile = archiveToFile as? URL, archiveToFile.isFileURL {
+        } else if let archiveToFile = archiveToFile as? URL, archiveToFile.isFileURL {
             archiveToFileURL = archiveToFile
-        }
-        else {
+        } else {
             closure?(false)
             return false
         }
 
         if let archiveToFileURL = archiveToFileURL,
-          let writeToFileURL = writeToFileURL {
-
+            let writeToFileURL = writeToFileURL {
             let fileManager: FileManager = FileManager.default
             guard !fileManager.fileExists(atPath: archiveToFileURL.path) else { closure?(false); return false }
 
@@ -194,8 +189,7 @@ open class FileDestination: BaseQueuedDestination {
 
             do {
                 try fileManager.moveItem(atPath: writeToFileURL.path, toPath: archiveToFileURL.path)
-            }
-            catch let error as NSError {
+            } catch let error as NSError {
                 openFile()
                 owner?._logln("Unable to rotate file \(writeToFileURL.path) to \(archiveToFileURL.path): \(error.localizedDescription)", level: .error, source: self)
                 closure?(false)
@@ -209,8 +203,7 @@ open class FileDestination: BaseQueuedDestination {
                 if let timestampData: Data = "\(Date().timeIntervalSince1970)".data(using: .utf8) {
                     try archiveToFileURL.setExtendedAttribute(data: timestampData, forName: XCGLogger.Constants.extendedAttributeArchivedLogTimestampKey)
                 }
-            }
-            catch let error as NSError {
+            } catch let error as NSError {
                 owner?._logln("Unable to set extended file attributes on file \(archiveToFileURL.path): \(error.localizedDescription)", level: .error, source: self)
             }
 
@@ -225,6 +218,7 @@ open class FileDestination: BaseQueuedDestination {
     }
 
     // MARK: - Overridden Methods
+
     /// Write the log to the log file.
     ///
     /// - Parameters:
@@ -237,7 +231,7 @@ open class FileDestination: BaseQueuedDestination {
             _try({
                 self.logFileHandle?.write(encodedData)
             },
-            catch: { (exception: NSException) in
+                 catch: { (exception: NSException) in
                 print("Objective-C Exception occurred: \(exception)")
             })
         }

@@ -8,8 +8,6 @@
 
 import Foundation
 
-/// Storyboard Structs
-struct STORYBOARD {
-    /// LoginVC identifier
-    let LOGINID = "LoginVC"
-}
+/// LoginVC identifier
+let LOGINID = "LoginVC"
+let ERROR_POPUP = "ErrorPopup"

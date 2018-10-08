@@ -12,7 +12,6 @@ import Foundation
 
 /// Json Null Control
 class JSONNull: Codable, Hashable {
-    
     /// Equable parameters
     ///
     /// - Parameters:
@@ -25,18 +24,18 @@ class JSONNull: Codable, Hashable {
     ///        ...
     ///    }
     ///    ````
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+    public static func == (_: JSONNull, _: JSONNull) -> Bool {
         return true
     }
-    
+
     /// Hash Value
     public var hashValue: Int {
         return 0
     }
-    
+
     /// Emptt init
     public init() {}
-    
+
     /// Decoder
     ///
     /// - Parameter decoder: A type that can decode values from a native format into in-memory representations.
@@ -47,7 +46,7 @@ class JSONNull: Codable, Hashable {
             throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
-    
+
     /// Encoder
     ///
     /// - Parameter encoder: A type that can encode values into a native format for external representation.

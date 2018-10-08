@@ -15,7 +15,7 @@ class LoginRequest: Codable {
     var email: String?
     /// Password Variable
     var password: String?
-    
+
     /// İnit Variable
     ///
     /// - Parameters:
@@ -25,16 +25,16 @@ class LoginRequest: Codable {
     ///    ````
     ///    LoginRequest(email: "example@example.com", password: "123456789")
     ///    ````
-    init(email: String, password: String){
+    init(email: String, password: String) {
         self.email = email
         self.password = password
     }
-    
+
     deinit {
         self.email = nil
         self.password = nil
     }
-    
+
     /// model variable convert json Array
     ///
     /// - Returns: String json key and String json Value
@@ -45,7 +45,7 @@ class LoginRequest: Codable {
     func toJSON() -> [String: Any] {
         return [
             DICT_KEY_LOGIN_EMAIL: email as Any,
-            DICT_KEY_LOGIN_PASSWORD: password as Any
+            DICT_KEY_LOGIN_PASSWORD: password as Any,
         ]
     }
 }

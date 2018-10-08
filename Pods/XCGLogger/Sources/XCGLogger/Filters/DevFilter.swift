@@ -8,9 +8,9 @@
 //
 
 // MARK: - DevFilter
+
 /// Filter log messages by devs
 open class DevFilter: UserInfoFilter {
-
     /// Initializer to create an inclusion list of devs to match against
     ///
     /// Note: Only log messages with a specific dev will be logged, all others will be excluded

@@ -14,9 +14,11 @@
 #endif
 
 // MARK: - XCGLogger
+
 /// The main logging class
 open class XCGLogger: CustomDebugStringConvertible {
     // MARK: - Constants
+
     public struct Constants {
         /// Prefix identifier to use for all other identifiers
         public static let baseIdentifier = "com.cerebralgardens.xcglogger"
@@ -59,6 +61,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Enums
+
     /// Enum defining our log levels
     public enum Level: Int, Comparable, CustomStringConvertible {
         case verbose
@@ -92,10 +95,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Default instance
+
     /// The default XCGLogger object
     public static let `default`: XCGLogger = XCGLogger(identifier: XCGLogger.Constants.defaultInstanceIdentifier)
 
     // MARK: - Properties
+
     /// Identifier for this logger object (should be unique)
     open var identifier: String = ""
 
@@ -109,22 +114,22 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     /// Option: a closure to execute whenever a logging method is called without a log message
-    open var noMessageClosure: () -> Any? = { return "" }
+    open var noMessageClosure: () -> Any? = { "" }
 
     /// Option: override descriptions of log levels
     open var levelDescriptions: [XCGLogger.Level: String] = [:]
 
     /// Array of log formatters to apply to messages before they're output
-    open var formatters: [LogFormatterProtocol]? = nil
+    open var formatters: [LogFormatterProtocol]?
 
     /// Array of log filters to apply to messages before they're output
-    open var filters: [FilterProtocol]? = nil
+    open var filters: [FilterProtocol]?
 
     /// The default dispatch queue used for logging
     public static let logQueue: DispatchQueue = DispatchQueue(label: XCGLogger.Constants.logQueueIdentifier, attributes: [])
 
     /// A custom date formatter object to use when displaying the dates of log messages (internal storage)
-    internal var _customDateFormatter: DateFormatter? = nil
+    internal var _customDateFormatter: DateFormatter?
     /// The date formatter object to use when displaying the dates of log messages
     open var dateFormatter: DateFormatter? {
         get {
@@ -149,6 +154,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     open var destinations: [DestinationProtocol] = []
 
     // MARK: - Life Cycle
+
     public init(identifier: String = "", includeDefaultDestinations: Bool = true) {
         self.identifier = identifier
 
@@ -159,6 +165,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Setup methods
+
     /// A shortcut method to configure the default logger instance.
     ///
     /// - Note: The function exists to get you up and running quickly, but it's recommended that you use the advanced usage configuration for most projects. See https://github.com/DaveWoodCom/XCGLogger/blob/master/README.md#advanced-usage-recommended
@@ -177,8 +184,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing
     ///
-    open class func setup(level: Level = .debug, showLogIdentifier: Bool = false, showFunctionName: Bool = true, showThreadName: Bool = false, showLevel: Bool = true, showFileNames: Bool = true, showLineNumbers: Bool = true, showDate: Bool = true, writeToFile: Any? = nil, fileLevel: Level? = nil) {
-        self.default.setup(level: level, showLogIdentifier: showLogIdentifier, showFunctionName: showFunctionName, showThreadName: showThreadName, showLevel: showLevel, showFileNames: showFileNames, showLineNumbers: showLineNumbers, showDate: showDate, writeToFile: writeToFile)
+    open class func setup(level: Level = .debug, showLogIdentifier: Bool = false, showFunctionName: Bool = true, showThreadName: Bool = false, showLevel: Bool = true, showFileNames: Bool = true, showLineNumbers: Bool = true, showDate: Bool = true, writeToFile: Any? = nil, fileLevel _: Level? = nil) {
+        `default`.setup(level: level, showLogIdentifier: showLogIdentifier, showFunctionName: showFunctionName, showThreadName: showThreadName, showLevel: showLevel, showFileNames: showFileNames, showLineNumbers: showLineNumbers, showDate: showDate, writeToFile: writeToFile)
     }
 
     /// A shortcut method to configure the logger.
@@ -233,6 +240,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Logging methods
+
     /// Log a message if the logger's log level is equal to or lower than the specified level.
     ///
     /// - Parameters:
@@ -246,7 +254,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing
     ///
     open class func logln(_ closure: @autoclosure () -> Any?, level: Level = .debug, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log a message if the logger's log level is equal to or lower than the specified level.
@@ -262,7 +270,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing
     ///
     open class func logln(_ level: Level = .debug, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log a message if the logger's log level is equal to or lower than the specified level.
@@ -278,7 +286,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing
     ///
     open class func logln(_ level: Level = .debug, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log a message if the logger's log level is equal to or lower than the specified level.
@@ -294,7 +302,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing
     ///
     open func logln(_ closure: @autoclosure () -> Any?, level: Level = .debug, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(level, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log a message if the logger's log level is equal to or lower than the specified level.
@@ -326,7 +334,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing
     ///
     open func logln(_ level: Level = .debug, functionName: String = #function, fileName: String = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        let enabledDestinations = destinations.filter({$0.isEnabledFor(level: level)})
+        let enabledDestinations = destinations.filter({ $0.isEnabledFor(level: level) })
         guard enabledDestinations.count > 0 else { return }
         guard let closureResult = closure() else { return }
 
@@ -344,8 +352,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func exec(_ level: Level = .debug, closure: () -> () = {}) {
-        self.default.exec(level, closure: closure)
+    open class func exec(_ level: Level = .debug, closure: () -> Void = {}) {
+        `default`.exec(level, closure: closure)
     }
 
     /// Execute some code only when at the specified log level.
@@ -356,8 +364,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func exec(_ level: Level = .debug, closure: () -> () = {}) {
-        guard isEnabledFor(level:level) else { return }
+    open func exec(_ level: Level = .debug, closure: () -> Void = {}) {
+        guard isEnabledFor(level: level) else { return }
 
         closure()
     }
@@ -391,7 +399,7 @@ open class XCGLogger: CustomDebugStringConvertible {
 
         for var destination in (selectedDestination != nil ? [selectedDestination!] : destinations) where !destination.haveLoggedAppDetails {
             for logDetail in logDetails {
-                guard destination.isEnabledFor(level:.info) else { continue }
+                guard destination.isEnabledFor(level: .info) else { continue }
 
                 destination.haveLoggedAppDetails = true
                 destination.processInternal(logDetails: logDetail)
@@ -400,7 +408,9 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Convenience logging methods
+
     // MARK: * Verbose
+
     /// Log something at the Verbose log level. This format of verbose() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -412,7 +422,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func verbose(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Verbose log level.
@@ -427,7 +437,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func verbose(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Verbose log level.
@@ -442,7 +452,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func verbose(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Verbose log level. This format of verbose() isn't provided the object to log, instead the property *`noMessageClosure`* is executed instead.
@@ -456,7 +466,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func verbose(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Verbose log level.
@@ -471,7 +481,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func verbose(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Verbose log level.
@@ -486,10 +496,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func verbose(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.verbose, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: * Debug
+
     /// Log something at the Debug log level. This format of debug() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -501,7 +512,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func debug(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Debug log level.
@@ -516,7 +527,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func debug(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Debug log level.
@@ -531,7 +542,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func debug(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Debug log level. This format of debug() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
@@ -545,7 +556,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func debug(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Debug log level.
@@ -560,7 +571,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func debug(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Debug log level.
@@ -575,10 +586,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func debug(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.debug, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: * Info
+
     /// Log something at the Info log level. This format of info() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -590,7 +602,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func info(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Info log level.
@@ -605,7 +617,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func info(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Info log level.
@@ -620,7 +632,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func info(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Info log level. This format of info() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
@@ -634,7 +646,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func info(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Info log level.
@@ -649,7 +661,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func info(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Info log level.
@@ -664,10 +676,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func info(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.info, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: * Warning
+
     /// Log something at the Warning log level. This format of warning() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -679,7 +692,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func warning(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Warning log level.
@@ -694,7 +707,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func warning(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Warning log level.
@@ -709,7 +722,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func warning(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Warning log level. This format of warning() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
@@ -723,7 +736,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func warning(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Warning log level.
@@ -738,7 +751,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func warning(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Warning log level.
@@ -753,10 +766,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func warning(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.warning, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: * Error
+
     /// Log something at the Error log level. This format of error() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -768,7 +782,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func error(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Error log level.
@@ -783,7 +797,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func error(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Error log level.
@@ -798,7 +812,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func error(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Error log level. This format of error() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
@@ -812,7 +826,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func error(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Error log level.
@@ -827,7 +841,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func error(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Error log level.
@@ -842,10 +856,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func error(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.error, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: * Severe
+
     /// Log something at the Severe log level. This format of severe() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
     ///
     /// - Parameters:
@@ -857,7 +872,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func severe(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.default.noMessageClosure)
+        `default`.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: `default`.noMessageClosure)
     }
 
     /// Log something at the Severe log level.
@@ -872,7 +887,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func severe(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.default.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Severe log level.
@@ -887,7 +902,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open class func severe(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.default.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        `default`.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Severe log level. This format of severe() isn't provided the object to log, instead the property `noMessageClosure` is executed instead.
@@ -901,7 +916,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func severe(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: self.noMessageClosure)
+        logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: noMessageClosure)
     }
 
     /// Log something at the Severe log level.
@@ -916,7 +931,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func severe(_ closure: @autoclosure () -> Any?, functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:]) {
-        self.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     /// Log something at the Severe log level.
@@ -931,11 +946,13 @@ open class XCGLogger: CustomDebugStringConvertible {
     /// - Returns:  Nothing.
     ///
     open func severe(_ functionName: StaticString = #function, fileName: StaticString = #file, lineNumber: Int = #line, userInfo: [String: Any] = [:], closure: () -> Any?) {
-        self.logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
+        logln(.severe, functionName: functionName, fileName: fileName, lineNumber: lineNumber, userInfo: userInfo, closure: closure)
     }
 
     // MARK: - Exec Methods
+
     // MARK: * Verbose
+
     /// Execute some code only when at the Verbose log level.
     ///
     /// - Parameters:
@@ -943,8 +960,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func verboseExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.verbose, closure: closure)
+    open class func verboseExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.verbose, closure: closure)
     }
 
     /// Execute some code only when at the Verbose log level.
@@ -954,11 +971,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func verboseExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.verbose, closure: closure)
+    open func verboseExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.verbose, closure: closure)
     }
 
     // MARK: * Debug
+
     /// Execute some code only when at the Debug or lower log level.
     ///
     /// - Parameters:
@@ -966,8 +984,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func debugExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.debug, closure: closure)
+    open class func debugExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.debug, closure: closure)
     }
 
     /// Execute some code only when at the Debug or lower log level.
@@ -977,11 +995,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func debugExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.debug, closure: closure)
+    open func debugExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.debug, closure: closure)
     }
 
     // MARK: * Info
+
     /// Execute some code only when at the Info or lower log level.
     ///
     /// - Parameters:
@@ -989,8 +1008,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func infoExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.info, closure: closure)
+    open class func infoExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.info, closure: closure)
     }
 
     /// Execute some code only when at the Info or lower log level.
@@ -1000,11 +1019,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func infoExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.info, closure: closure)
+    open func infoExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.info, closure: closure)
     }
 
     // MARK: * Warning
+
     /// Execute some code only when at the Warning or lower log level.
     ///
     /// - Parameters:
@@ -1012,8 +1032,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func warningExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.warning, closure: closure)
+    open class func warningExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.warning, closure: closure)
     }
 
     /// Execute some code only when at the Warning or lower log level.
@@ -1023,11 +1043,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func warningExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.warning, closure: closure)
+    open func warningExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.warning, closure: closure)
     }
 
     // MARK: * Error
+
     /// Execute some code only when at the Error or lower log level.
     ///
     /// - Parameters:
@@ -1035,8 +1056,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func errorExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.error, closure: closure)
+    open class func errorExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.error, closure: closure)
     }
 
     /// Execute some code only when at the Error or lower log level.
@@ -1046,11 +1067,12 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func errorExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.error, closure: closure)
+    open func errorExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.error, closure: closure)
     }
 
     // MARK: * Severe
+
     /// Execute some code only when at the Severe log level.
     ///
     /// - Parameters:
@@ -1058,8 +1080,8 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open class func severeExec(_ closure: () -> () = {}) {
-        self.default.exec(XCGLogger.Level.severe, closure: closure)
+    open class func severeExec(_ closure: () -> Void = {}) {
+        `default`.exec(XCGLogger.Level.severe, closure: closure)
     }
 
     /// Execute some code only when at the Severe log level.
@@ -1069,18 +1091,19 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing.
     ///
-    open func severeExec(_ closure: () -> () = {}) {
-        self.exec(XCGLogger.Level.severe, closure: closure)
+    open func severeExec(_ closure: () -> Void = {}) {
+        exec(XCGLogger.Level.severe, closure: closure)
     }
 
     // MARK: - Log destination methods
+
     /// Get the destination with the specified identifier.
     ///
     /// - Parameters:
     ///     - identifier:   Identifier of the destination to return.
     ///
     /// - Returns:  The destination with the specified identifier, if one exists, nil otherwise.
-    /// 
+    ///
     open func destination(withIdentifier identifier: String) -> DestinationProtocol? {
         for destination in destinations {
             if destination.identifier == identifier {
@@ -1136,7 +1159,7 @@ open class XCGLogger: CustomDebugStringConvertible {
         var destination = destination
         destination.owner = nil
 
-        destinations = destinations.filter({$0.owner != nil})
+        destinations = destinations.filter({ $0.owner != nil })
         return true
     }
 
@@ -1155,6 +1178,7 @@ open class XCGLogger: CustomDebugStringConvertible {
     }
 
     // MARK: - Misc methods
+
     /// Check if the logger's log level is equal to or lower than the specified level.
     ///
     /// - Parameters:
@@ -1165,10 +1189,11 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///     - false:    Logger is at a higher log levelss.
     ///
     open func isEnabledFor(level: XCGLogger.Level) -> Bool {
-        return level >= self.outputLevel
+        return level >= outputLevel
     }
 
     // MARK: - Private methods
+
     /// Log a message if the logger's log level is equal to or lower than the specified level.
     ///
     /// - Parameters:
@@ -1180,24 +1205,23 @@ open class XCGLogger: CustomDebugStringConvertible {
     ///
     internal func _logln(_ message: String, level: Level = .debug, source sourceDestination: DestinationProtocol? = nil) {
         let logDetails: LogDetails = LogDetails(level: level, date: Date(), message: message, functionName: "", fileName: "", lineNumber: 0, userInfo: XCGLogger.Constants.internalUserInfo)
-        for destination in self.destinations {
+        for destination in destinations {
             if level >= .error && sourceDestination?.identifier == destination.identifier { continue }
-            if (destination.isEnabledFor(level: level)) {
+            if destination.isEnabledFor(level: level) {
                 destination.processInternal(logDetails: logDetails)
             }
         }
     }
 
     // MARK: - DebugPrintable
-    open var debugDescription: String {
-        get {
-            var description: String = "\(extractTypeName(self)): \(identifier) - destinations: \r"
-            for destination in destinations {
-                description += "\t \(destination.debugDescription)\r"
-            }
 
-            return description
+    open var debugDescription: String {
+        var description: String = "\(extractTypeName(self)): \(identifier) - destinations: \r"
+        for destination in destinations {
+            description += "\t \(destination.debugDescription)\r"
         }
+
+        return description
     }
 }
 

@@ -7,19 +7,22 @@
 //  Some rights reserved: https://github.com/DaveWoodCom/XCGLogger/blob/master/LICENSE.txt
 //
 
-import Foundation
 import Dispatch
+import Foundation
 
 // MARK: - BaseQueuedDestination
+
 /// A base class destination (with a possible DispatchQueue) that doesn't actually output the log anywhere and is intended to be subclassed
 open class BaseQueuedDestination: BaseDestination {
     // MARK: - Properties
+
     /// The dispatch queue to process the log on
-    open var logQueue: DispatchQueue? = nil
+    open var logQueue: DispatchQueue?
 
     // MARK: - Life Cycle
 
     // MARK: - Overridden Methods
+
     /// Apply filters and formatters to the message before queuing it to be written by the write method.
     ///
     /// - Parameters:
@@ -43,13 +46,13 @@ open class BaseQueuedDestination: BaseDestination {
 
         if let logQueue = logQueue {
             logQueue.async(execute: outputClosure)
-        }
-        else {
+        } else {
             outputClosure()
         }
     }
 
     // MARK: - Methods that must be overridden in subclasses
+
     /// Write the log message to the destination.
     ///
     /// - Parameters:
@@ -57,7 +60,7 @@ open class BaseQueuedDestination: BaseDestination {
     ///
     /// - Returns:  Nothing
     ///
-    open func write(message: String) {
+    open func write(message _: String) {
         // Do something with the message in an overridden version of this method
         precondition(false, "Must override this")
     }

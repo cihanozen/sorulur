@@ -10,20 +10,19 @@ import Foundation
 import UIKit
 
 extension UIView {
-    
     /**
      Rounds the given set of corners to the specified radius
-     
+
      - parameter corners: Corners to round
      - parameter radius:  Radius to round to
      */
     func round(corners: UIRectCorner, radius: CGFloat) {
         _ = _round(corners: corners, radius: radius)
     }
-    
+
     /**
      Rounds the given set of corners to the specified radius with a border
-     
+
      - parameter corners:     Corners to round
      - parameter radius:      Radius to round to
      - parameter borderColor: The border color
@@ -33,10 +32,10 @@ extension UIView {
         let mask = _round(corners: corners, radius: radius)
         addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
     }
-    
+
     /**
      Fully rounds an autolayout view (e.g. one with no known frame) with the given diameter and border
-     
+
      - parameter diameter:    The view's diameter
      - parameter borderColor: The border color
      - parameter borderWidth: The border width
@@ -45,13 +44,26 @@ extension UIView {
         layer.masksToBounds = true
         layer.cornerRadius = diameter / 2
         layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor;
+        layer.borderColor = borderColor.cgColor
     }
-    
+
+    /// View Add Radius
+    ///
+    /// - Parameter radius: Radius value
+    /**
+     ### Usage Example: ###
+     ````
+     let view = UIView()
+     view.radius(5)
+     ````
+     */
+    func radius(_ radius: CGFloat) {
+        layer.masksToBounds = false
+        layer.cornerRadius = radius
+    }
 }
 
 private extension UIView {
-    
     /// private _round Function view CAShapeLayer
     ///
     /// - Parameters:
@@ -66,10 +78,10 @@ private extension UIView {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
-        self.layer.mask = mask
+        layer.mask = mask
         return mask
     }
-    
+
     /// Add Border
     ///
     /// - Parameters:
@@ -90,5 +102,4 @@ private extension UIView {
         borderLayer.frame = bounds
         layer.addSublayer(borderLayer)
     }
-    
 }

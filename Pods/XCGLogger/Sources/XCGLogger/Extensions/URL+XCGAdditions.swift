@@ -11,10 +11,9 @@
 import Foundation
 
 extension URL {
-
     /// Get extended attribute.
     func extendedAttribute(forName name: String) throws -> Data? {
-        let data: Data? = try self.withUnsafeFileSystemRepresentation { (fileSystemPath: (UnsafePointer<Int8>?)) -> Data? in
+        let data: Data? = try withUnsafeFileSystemRepresentation { (fileSystemPath: (UnsafePointer<Int8>?)) -> Data? in
             // Determine attribute size
             let length = getxattr(fileSystemPath, name, nil, 0, 0, 0)
             guard length >= 0 else { return nil }
@@ -35,7 +34,7 @@ extension URL {
 
     /// Set extended attribute.
     func setExtendedAttribute(data: Data, forName name: String) throws {
-        try self.withUnsafeFileSystemRepresentation { fileSystemPath in
+        try withUnsafeFileSystemRepresentation { fileSystemPath in
             let result = data.withUnsafeBytes {
                 setxattr(fileSystemPath, name, $0, data.count, 0, 0)
             }
@@ -45,7 +44,7 @@ extension URL {
 
     /// Remove extended attribute.
     func removeExtendedAttribute(forName name: String) throws {
-        try self.withUnsafeFileSystemRepresentation { fileSystemPath in
+        try withUnsafeFileSystemRepresentation { fileSystemPath in
             let result = removexattr(fileSystemPath, name, 0)
             guard result >= 0 else { throw URL.posixError(errno) }
         }
@@ -53,7 +52,7 @@ extension URL {
 
     /// Get list of all extended attributes.
     func listExtendedAttributes() throws -> [String] {
-        let list = try self.withUnsafeFileSystemRepresentation { (fileSystemPath: (UnsafePointer<Int8>?)) -> [String] in
+        let list = try withUnsafeFileSystemRepresentation { (fileSystemPath: (UnsafePointer<Int8>?)) -> [String] in
             let length = listxattr(fileSystemPath, nil, 0, 0)
             guard length >= 0 else { throw URL.posixError(errno) }
 

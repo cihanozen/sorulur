@@ -15,12 +15,11 @@ let RegexPatternRegex = Regex(RegexEscapePattern)
 
 /// REGEX
 open class Regex {
-    
     /// Expression
     let expression: NSRegularExpression
     /// Pattern
     let pattern: String
-    
+
     /// Regex İnit
     ///
     /// - Parameter pattern: String Regex Pattern
@@ -30,9 +29,9 @@ open class Regex {
     ///    ````
     public init(_ pattern: String) {
         self.pattern = pattern
-        self.expression = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+        expression = try! NSRegularExpression(pattern: pattern, options: .caseInsensitive)
     }
-    
+
     /// String Match Regex
     ///
     /// - Parameter testStr: String value for matched regex
@@ -42,10 +41,10 @@ open class Regex {
     ///    Regex(pattern).mathes(String)
     ///    ````
     open func matches(_ testStr: String) -> [AnyObject] {
-        let matches = self.expression.matches(in: testStr, options: [], range:NSMakeRange(0, testStr.count))
+        let matches = expression.matches(in: testStr, options: [], range: NSMakeRange(0, testStr.count))
         return matches
     }
-    
+
     /// Range of first match
     ///
     /// - Parameter testStr: String value for matched regex
@@ -55,9 +54,9 @@ open class Regex {
     ///    Regex(pattern).rangeOfFirstMatch(String)
     ///    ````
     open func rangeOfFirstMatch(_ testStr: String) -> NSRange {
-        return self.expression.rangeOfFirstMatch(in: testStr, options: [], range:NSMakeRange(0, testStr.count))
+        return expression.rangeOfFirstMatch(in: testStr, options: [], range: NSMakeRange(0, testStr.count))
     }
-    
+
     /// Test Function
     ///
     /// - Parameter testStr: String value for matched regex
@@ -73,7 +72,7 @@ open class Regex {
         let matches = self.matches(testStr)
         return matches.count > 0
     }
-    
+
     /// Escape String
     ///
     /// - Parameter str: String value for matched regex
@@ -85,7 +84,7 @@ open class Regex {
     ///    ````
     open class func escapeStr(_ str: String) -> String {
         let matches = RegexPatternRegex.matches(str)
-        var charArr:[Character] = Array(str)
+        var charArr: [Character] = Array(str)
         var strBuilder = [Character]()
         var i = 0
         for match in matches {
@@ -106,4 +105,3 @@ open class Regex {
         return String(strBuilder)
     }
 }
-

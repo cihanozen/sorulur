@@ -10,9 +10,11 @@
 import Foundation
 
 // MARK: - BaseDestination
+
 /// A base class destination that doesn't actually output the log anywhere and is intended to be subclassed
 open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     // MARK: - Properties
+
     /// Logger that owns the destination object
     open var owner: XCGLogger?
 
@@ -26,10 +28,10 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     open var haveLoggedAppDetails: Bool = false
 
     /// Array of log formatters to apply to messages before they're output
-    open var formatters: [LogFormatterProtocol]? = nil
+    open var formatters: [LogFormatterProtocol]?
 
     /// Array of log filters to apply to messages before they're output
-    open var filters: [FilterProtocol]? = nil
+    open var filters: [FilterProtocol]?
 
     /// Option: whether or not to output the log identifier
     open var showLogIdentifier: Bool = false
@@ -56,19 +58,20 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     open var levelDescriptions: [XCGLogger.Level: String] = [:]
 
     // MARK: - CustomDebugStringConvertible
+
     open var debugDescription: String {
-        get {
-            return "\(extractTypeName(self)): \(identifier) - Level: \(outputLevel) showLogIdentifier: \(showLogIdentifier) showFunctionName: \(showFunctionName) showThreadName: \(showThreadName) showLevel: \(showLevel) showFileName: \(showFileName) showLineNumber: \(showLineNumber) showDate: \(showDate)"
-        }
+        return "\(extractTypeName(self)): \(identifier) - Level: \(outputLevel) showLogIdentifier: \(showLogIdentifier) showFunctionName: \(showFunctionName) showThreadName: \(showThreadName) showLevel: \(showLevel) showFileName: \(showFileName) showLineNumber: \(showLineNumber) showDate: \(showDate)"
     }
 
     // MARK: - Life Cycle
+
     public init(owner: XCGLogger? = nil, identifier: String = "") {
         self.owner = owner
         self.identifier = identifier
     }
 
     // MARK: - Methods to Process Log Details
+
     /// Process the log details.
     ///
     /// - Parameters:
@@ -96,15 +99,12 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
         if showThreadName {
             if Thread.isMainThread {
                 extendedDetails += "[main] "
-            }
-            else {
+            } else {
                 if let threadName = Thread.current.name, !threadName.isEmpty {
                     extendedDetails += "[\(threadName)] "
-                }
-                else if let queueName = DispatchQueue.currentQueueLabel, !queueName.isEmpty {
+                } else if let queueName = DispatchQueue.currentQueueLabel, !queueName.isEmpty {
                     extendedDetails += "[\(queueName)] "
-                }
-                else {
+                } else {
                     extendedDetails += String(format: "[%p] ", Thread.current)
                 }
             }
@@ -112,8 +112,7 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
 
         if showFileName {
             extendedDetails += "[\((logDetails.fileName as NSString).lastPathComponent)\((showLineNumber ? ":" + String(logDetails.lineNumber) : ""))] "
-        }
-        else if showLineNumber {
+        } else if showLineNumber {
             extendedDetails += "[\(logDetails.lineNumber)] "
         }
 
@@ -152,6 +151,7 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     }
 
     // MARK: - Misc methods
+
     /// Check if the destination's log level is equal to or lower than the specified level.
     ///
     /// - Parameters:
@@ -162,10 +162,11 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     ///     - false:    Log destination is at a higher log level.
     ///
     open func isEnabledFor(level: XCGLogger.Level) -> Bool {
-        return level >= self.outputLevel
+        return level >= outputLevel
     }
 
     // MARK: - Methods that must be overridden in subclasses
+
     /// Output the log to the destination.
     ///
     /// - Parameters:
@@ -174,7 +175,7 @@ open class BaseDestination: DestinationProtocol, CustomDebugStringConvertible {
     ///
     /// - Returns:  Nothing
     ///
-    open func output(logDetails: LogDetails, message: String) {
+    open func output(logDetails _: LogDetails, message _: String) {
         // Do something with the text in an overridden version of this method
         precondition(false, "Must override this")
     }

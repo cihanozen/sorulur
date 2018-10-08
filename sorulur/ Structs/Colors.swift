@@ -11,12 +11,11 @@ import UIKit
 
 /// Colors Variable
 struct COLORS {
-    
     static let GRADIENTSTART = COLORS.HEX("#8274AA")
     static let GRADIENTEND = COLORS.HEX("#A6538D")
-    
+
     static let BORDER_WHITE = COLORS.RGB(255, green: 255, blue: 255)
-    
+
     /// RGB Color convert to UIColor
     ///
     /// - Parameters:
@@ -33,7 +32,7 @@ struct COLORS {
     static func RGB(_ red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
-    
+
     /// Hex String Color convert to UIColor
     ///
     /// - Parameter hexString: hex String

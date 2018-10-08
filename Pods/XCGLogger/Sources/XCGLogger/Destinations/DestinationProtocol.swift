@@ -8,17 +8,19 @@
 //
 
 // MARK: - DestinationProtocol
+
 /// Protocol for destination classes to conform to
 public protocol DestinationProtocol: CustomDebugStringConvertible {
     // MARK: - Properties
+
     /// Logger that owns the destination object
-    var owner: XCGLogger? {get set}
+    var owner: XCGLogger? { get set }
 
     /// Identifier for the destination (should be unique)
-    var identifier: String {get set}
+    var identifier: String { get set }
 
     /// Log level for this destination
-    var outputLevel: XCGLogger.Level {get set}
+    var outputLevel: XCGLogger.Level { get set }
 
     /// Flag whether or not we've logged the app details to this destination
     var haveLoggedAppDetails: Bool { get set }
@@ -30,6 +32,7 @@ public protocol DestinationProtocol: CustomDebugStringConvertible {
     var filters: [FilterProtocol]? { get set }
 
     // MARK: - Methods
+
     /// Process the log details.
     ///
     /// - Parameters:
@@ -83,7 +86,6 @@ public protocol DestinationProtocol: CustomDebugStringConvertible {
 }
 
 extension DestinationProtocol {
-
     /// Iterate over all of the log filters in this destination, or the logger if none set for the destination.
     ///
     /// - Parameters:

@@ -8,9 +8,9 @@
 //
 
 // MARK: - LogFormatterProtocol
+
 /// Protocol for log formatter classes to conform to
 public protocol LogFormatterProtocol: CustomDebugStringConvertible {
-
     /// Apply some additional formatting to the message if appropriate.
     ///
     /// - Parameters:

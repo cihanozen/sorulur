@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    
     /// İnit Hex String
     ///
     /// - Parameter hexString: hexString
@@ -31,7 +30,7 @@ extension UIColor {
         }
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
-    
+
     /// Hex String Code
     ///
     /// - Parameter code: Hex String
@@ -43,15 +42,15 @@ extension UIColor {
     class func hex(_ code: String) -> UIColor {
         return UIColor(hexString: code)
     }
-    
+
     var hexString: String {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0
         var a: CGFloat = 0
         getRed(&r, green: &g, blue: &b, alpha: &a)
-        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        let argb: Int = (Int)(a*255)<<24 | (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        return (a != 1) ? String(format:"#%08x", argb).uppercased() : String(format:"#%06x", rgb).uppercased()
+        let rgb: Int = Int(r * 255) << 16 | Int(g * 255) << 8 | Int(b * 255) << 0
+        let argb: Int = Int(a * 255) << 24 | Int(r * 255) << 16 | Int(g * 255) << 8 | Int(b * 255) << 0
+        return (a != 1) ? String(format: "#%08x", argb).uppercased() : String(format: "#%06x", rgb).uppercased()
     }
 }

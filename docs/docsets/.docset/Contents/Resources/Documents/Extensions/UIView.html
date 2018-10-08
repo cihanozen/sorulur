@@ -14,7 +14,7 @@
     <a title="UIView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (68% documented)</p>
+        <p><a href="../index.html"> Docs</a> (71% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,6 +32,18 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorController.html">ErrorController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorPopup.html">ErrorPopup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorPopupManager.html">ErrorPopupManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ErrorPopupView.html">ErrorPopupView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/JSONNull.html">JSONNull</a>
@@ -85,6 +97,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:7sorulur23DICT_KEY_LOGIN_PASSWORDSSvp">DICT_KEY_LOGIN_PASSWORD</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:7sorulur11ERROR_POPUPSSvp">ERROR_POPUP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:7sorulur7LOGINIDSSvp">LOGINID</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:7sorulur18RegexEscapePatternSSvp">RegexEscapePattern</a>
@@ -144,6 +162,12 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Protocols/ErrorControllerDelegate.html">ErrorControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ErrorViewDelegate.html">ErrorViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/LoginControllerDelegate.html">LoginControllerDelegate</a>
               </li>
               <li class="nav-group-task">
@@ -158,10 +182,18 @@
                 <a href="../Structs/COLORS.html">COLORS</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/LoginVCStruct.html">LoginVCStruct</a>
+                <a href="../Structs/ErrorViewStruct.html">ErrorViewStruct</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/STORYBOARD.html">STORYBOARD</a>
+                <a href="../Structs/LoginVCStruct.html">LoginVCStruct</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:7sorulur18ErrorPopupCallBacka">ErrorPopupCallBack</a>
               </li>
             </ul>
           </li>
@@ -514,12 +546,327 @@ view.applyGranient(colours: [UIColor.white] , locations: [0.0,0.0])
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE6radiusyy12CoreGraphics7CGFloatVF"></a>
+                    <a name="//apple_ref/swift/Method/radius(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE6radiusyy12CoreGraphics7CGFloatVF">radius(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">view</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">radius</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">radius</span><span class="p">(</span><span class="n">_</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE6_round33_CE8ADFDE57E9056DFCCD72EF1B56E3CCLL7corners6radiusSo12CAShapeLayerCSo12UIRectCornerV_12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/_round(corners:radius:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE6_round33_CE8ADFDE57E9056DFCCD72EF1B56E3CCLL7corners6radiusSo12CAShapeLayerCSo12UIRectCornerV_12CoreGraphics7CGFloatVtF">_round(corners:radius:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>private _round Function view CAShapeLayer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">_round</span><span class="p">(</span><span class="nv">corners</span><span class="p">:</span> <span class="kt">UIRectCorner</span><span class="p">,</span> <span class="nv">radius</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CAShapeLayer</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>corners</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The corners of a rectangle.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>he basic type for floating-point scalar values in Core Graphics and related frameworks.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A layer that draws a cubic Bezier spline in its coordinate space.
+### Usage Example: ###
+<code>
+let mask = _round(corners: corners, radius: radius)
+</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE9addBorder33_CE8ADFDE57E9056DFCCD72EF1B56E3CCLL4mask11borderColor0N5WidthySo12CAShapeLayerC_So7UIColorC12CoreGraphics7CGFloatVtF"></a>
+                    <a name="//apple_ref/swift/Method/addBorder(mask:borderColor:borderWidth:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE9addBorder33_CE8ADFDE57E9056DFCCD72EF1B56E3CCLL4mask11borderColor0N5WidthySo12CAShapeLayerC_So7UIColorC12CoreGraphics7CGFloatVtF">addBorder(mask:borderColor:borderWidth:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add Border</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addBorder</span><span class="p">(</span><span class="nv">mask</span><span class="p">:</span> <span class="kt">CAShapeLayer</span><span class="p">,</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">,</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A layer that draws a cubic Bezier spline in its coordinate space.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>borderColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object that stores color data and sometimes opacity (alpha value).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>borderWidth</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The basic type for floating-point scalar values in Core Graphics and related frameworks.
+### Usage Example: ###
+<code>
+let mask = _round(corners: corners, radius: radius)
+addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
+</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE7fromNibyABXDSSSgFZ"></a>
+                    <a name="//apple_ref/swift/Method/fromNib(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE7fromNibyABXDSSSgFZ">fromNib(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">fromNib</span><span class="p">(</span><span class="n">_</span> <span class="nv">nibNameOrNil</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE7fromNib_4typexSSSg_xmtABRbzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/fromNib(_:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE7fromNib_4typexSSSg_xmtABRbzlFZ">fromNib(_:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="n">fromNib</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">nibNameOrNil</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">type</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE7fromNib_4typexSgSSSg_xmtABRbzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/fromNib(_:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE7fromNib_4typexSgSSSg_xmtABRbzlFZ">fromNib(_:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="n">fromNib</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">nibNameOrNil</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">type</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE7nibNameSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/nibName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE7nibNameSSvpZ">nibName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">nibName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So6UIViewC7sorulurE3nibSo5UINibCSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/nib" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So6UIViewC7sorulurE3nibSo5UINibCSgvpZ">nib</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">nib</span><span class="p">:</span> <span class="kt">UINib</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-07)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

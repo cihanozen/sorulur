@@ -6,26 +6,25 @@
 //  Copyright © 2018 Sinan Özman. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 import UIKit
-import Alamofire
-
 
 /// Login View Delegegate Protocol
 protocol LoginViewDelegate {
-    
     /// loading view setup ui variables
     func setupUI()
 }
 
 // MARK: - LoginVC
+
 extension LoginViewDelegate where Self: LoginVC {
-    
     /// loginView Class Object
     var loginView: LoginView {
         log.debug("LoginView")
-        return LoginView(self.param)
+        return LoginView(param)
     }
+
     /// SetupUI
     func setupUI() {
         log.debug("setupUI")

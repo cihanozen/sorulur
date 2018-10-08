@@ -10,13 +10,16 @@
 import Foundation
 
 // MARK: - AutoRotatingFileDestination
+
 /// A destination that outputs log details to files in a log folder, with auto-rotate options (by size or by time)
 open class AutoRotatingFileDestination: FileDestination {
     // MARK: - Constants
+
     public static let autoRotatingFileDefaultMaxFileSize: UInt64 = 1_048_576
     public static let autoRotatingFileDefaultMaxTimeInterval: TimeInterval = 600
 
     // MARK: - Properties
+
     /// Option: desired maximum size of a log file, if 0, no maximum (log files may exceed this, it's a guideline only)
     open var targetMaxFileSize: UInt64 = autoRotatingFileDefaultMaxFileSize {
         didSet {
@@ -43,7 +46,7 @@ open class AutoRotatingFileDestination: FileDestination {
     }
 
     /// Option: the URL of the folder to store archived log files (defaults to the same folder as the initial log file)
-    open var archiveFolderURL: URL? = nil {
+    open var archiveFolderURL: URL? {
         didSet {
             guard let archiveFolderURL = archiveFolderURL else { return }
             try? FileManager.default.createDirectory(at: archiveFolderURL, withIntermediateDirectories: true)
@@ -51,10 +54,10 @@ open class AutoRotatingFileDestination: FileDestination {
     }
 
     /// Option: an optional closure to execute whenever the log is auto rotated
-    open var autoRotationCompletion: ((_ success: Bool) -> Void)? = nil
+    open var autoRotationCompletion: ((_ success: Bool) -> Void)?
 
     /// A custom date formatter object to use as the suffix of archived log files
-    internal var _customArchiveSuffixDateFormatter: DateFormatter? = nil
+    internal var _customArchiveSuffixDateFormatter: DateFormatter?
     /// The date formatter object to use as the suffix of archived log files
     open var archiveSuffixDateFormatter: DateFormatter! {
         get {
@@ -88,6 +91,7 @@ open class AutoRotatingFileDestination: FileDestination {
     internal var fileExtension: String = "log"
 
     // MARK: - Class Properties
+
     /// A default folder for storing archived logs if one isn't supplied
     open class var defaultLogFolderURL: URL {
         #if os(OSX)
@@ -103,14 +107,15 @@ open class AutoRotatingFileDestination: FileDestination {
     }
 
     // MARK: - Life Cycle
+
     public init(owner: XCGLogger? = nil, writeToFile: Any, identifier: String = "", shouldAppend: Bool = false, appendMarker: String? = "-- ** ** ** --", attributes: [FileAttributeKey: Any]? = nil, maxFileSize: UInt64 = autoRotatingFileDefaultMaxFileSize, maxTimeInterval: TimeInterval = autoRotatingFileDefaultMaxTimeInterval, archiveSuffixDateFormatter: DateFormatter? = nil, targetMaxLogFiles: UInt8 = 10) {
         super.init(owner: owner, writeToFile: writeToFile, identifier: identifier, shouldAppend: true, appendMarker: shouldAppend ? appendMarker : nil, attributes: attributes)
 
         currentLogStartTimeInterval = Date().timeIntervalSince1970
         self.archiveSuffixDateFormatter = archiveSuffixDateFormatter
         self.shouldAppend = shouldAppend
-        self.targetMaxFileSize = maxFileSize < 1 ? .max : maxFileSize
-        self.targetMaxTimeInterval = maxTimeInterval < 1 ? 0 : maxTimeInterval
+        targetMaxFileSize = maxFileSize < 1 ? .max : maxFileSize
+        targetMaxTimeInterval = maxTimeInterval < 1 ? 0 : maxTimeInterval
         self.targetMaxLogFiles = targetMaxLogFiles
 
         guard let writeToFileURL = writeToFileURL else { return }
@@ -119,31 +124,30 @@ open class AutoRotatingFileDestination: FileDestination {
         fileExtension = writeToFileURL.pathExtension
         baseFileName = writeToFileURL.lastPathComponent
         if let fileExtensionRange: Range = baseFileName.range(of: ".\(fileExtension)", options: .backwards),
-          fileExtensionRange.upperBound >= baseFileName.endIndex {
+            fileExtensionRange.upperBound >= baseFileName.endIndex {
             baseFileName = String(baseFileName[baseFileName.startIndex ..< fileExtensionRange.lowerBound])
         }
 
         let filePath: String = writeToFileURL.path
         let logFileName: String = "\(baseFileName).\(fileExtension)"
         if let logFileNameRange: Range = filePath.range(of: logFileName, options: .backwards),
-          logFileNameRange.upperBound >= filePath.endIndex {
+            logFileNameRange.upperBound >= filePath.endIndex {
             let archiveFolderPath: String = String(filePath[filePath.startIndex ..< logFileNameRange.lowerBound])
             archiveFolderURL = URL(fileURLWithPath: "\(archiveFolderPath)")
         }
         if archiveFolderURL == nil {
             archiveFolderURL = type(of: self).defaultLogFolderURL
         }
-        
+
         do {
             // Initialize starting values for file size and start time so shouldRotate calculations are valid
             let fileAttributes: [FileAttributeKey: Any] = try FileManager.default.attributesOfItem(atPath: filePath)
             currentLogFileSize = fileAttributes[.size] as? UInt64 ?? 0
             currentLogStartTimeInterval = (fileAttributes[.creationDate] as? Date ?? Date()).timeIntervalSince1970
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             owner?._logln("Unable to determine current file attributes of log file: \(error.localizedDescription)", level: .warning)
         }
-        
+
         // Because we always start by appending, regardless of the shouldAppend setting, we now need to handle the cases where we don't want to append or that we have now reached the rotation threshold for our current log file
         if !shouldAppend || shouldRotate() {
             rotateFile()
@@ -166,8 +170,7 @@ open class AutoRotatingFileDestination: FileDestination {
         for archivedFileURL in archivedFileURLs {
             do {
                 try fileManager.removeItem(at: archivedFileURL)
-            }
-            catch let error as NSError {
+            } catch let error as NSError {
                 owner?._logln("Unable to delete old archived log file \(archivedFileURL.path): \(error.localizedDescription)", level: .error)
             }
         }
@@ -184,8 +187,7 @@ open class AutoRotatingFileDestination: FileDestination {
         for archivedFileURL in archivedFileURLs() {
             do {
                 try fileManager.removeItem(at: archivedFileURL)
-            }
-            catch let error as NSError {
+            } catch let error as NSError {
                 owner?._logln("Unable to delete old archived log file \(archivedFileURL.path): \(error.localizedDescription)", level: .error)
             }
         }
@@ -253,7 +255,7 @@ open class AutoRotatingFileDestination: FileDestination {
     open func shouldRotate() -> Bool {
         // Do not rotate until critical setup has been completed so that we do not accidentally rotate once to the defaultLogFolderURL before determining the desired log location
         guard archiveFolderURL != nil else { return false }
-        
+
         // File Size
         guard currentLogFileSize < targetMaxFileSize else { return true }
 
@@ -267,6 +269,7 @@ open class AutoRotatingFileDestination: FileDestination {
     }
 
     // MARK: - Overridden Methods
+
     /// Write the log to the log file.
     ///
     /// - Parameters:
