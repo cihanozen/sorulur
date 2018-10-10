@@ -11,3 +11,4 @@ import Foundation
 /// LoginVC identifier
 let LOGINID = "LoginVC"
 let ERROR_POPUP = "ErrorPopup"
+let DEFAULT_POPUP = "DefaultPopup"

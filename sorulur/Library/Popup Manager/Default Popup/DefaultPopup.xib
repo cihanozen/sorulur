@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="DefaultPopup" id="vOt-nX-bed" customClass="DefaultPopup" customModule="sorulur" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUq-E9-9zZ">
+                    <rect key="frame" x="47.5" y="100" width="280" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoşgeldin cihanozen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcG-yT-xey">
+                            <rect key="frame" x="37" y="18.5" width="206" height="113"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="113" id="8R8-o5-f6h"/>
+                                <constraint firstAttribute="width" constant="206" id="SAX-hT-3bZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.49019607843137253" green="0.63529411764705879" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="pcG-yT-xey" firstAttribute="centerY" secondItem="AUq-E9-9zZ" secondAttribute="centerY" id="G2X-GJ-fWH"/>
+                        <constraint firstItem="pcG-yT-xey" firstAttribute="centerX" secondItem="AUq-E9-9zZ" secondAttribute="centerX" id="Xth-pT-SiI"/>
+                        <constraint firstAttribute="width" constant="280" id="dtV-1e-ucc"/>
+                        <constraint firstAttribute="height" constant="150" id="rur-7k-bFc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.28627450980000002" green="0.31764705879999999" blue="0.35686274509999999" alpha="0.68999999999999995" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="AUq-E9-9zZ" firstAttribute="centerX" secondItem="vOt-nX-bed" secondAttribute="centerX" id="lAi-yq-cEX"/>
+                <constraint firstItem="AUq-E9-9zZ" firstAttribute="top" secondItem="vOt-nX-bed" secondAttribute="top" constant="100" id="oQU-4B-ZI7"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="baseView" destination="AUq-E9-9zZ" id="yfM-oo-dDn"/>
+                <outlet property="contentText" destination="pcG-yT-xey" id="uOg-qo-qeJ"/>
+            </connections>
+            <point key="canvasLocation" x="228" y="-145.27736131934034"/>
+        </view>
+    </objects>
+</document>

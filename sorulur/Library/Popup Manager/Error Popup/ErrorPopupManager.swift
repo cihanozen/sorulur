@@ -32,8 +32,8 @@ class ErrorPopupManager: NSObject {
      ````
      ErrorPopupManager.shared.dismissAll(true, callCloseCallback: { callback in
      if callback {
-     ...
-     }
+            ...
+        }
      })
      ````
      */

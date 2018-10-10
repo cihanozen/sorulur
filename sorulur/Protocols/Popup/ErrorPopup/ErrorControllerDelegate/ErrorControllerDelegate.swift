@@ -11,7 +11,6 @@ import UIKit
 
 /// ErrorView Delegegate Protocol
 protocol ErrorControllerDelegate {
-    /// loading view setup ui variables
     func remove(_ callClose: Bool)
     func removePopup(_ callClose: Bool)
     func dismiss(_ animated: Bool, callCloseCallback: Bool, popup: [ErrorPopup])
@@ -34,7 +33,7 @@ extension ErrorControllerDelegate where Self: ErrorPopup {
     ///
     /// - Parameter _: remove
     func removePopup(_: Bool = true) {
-        errorContoller.remove(callClose)
+//        errorContoller.remove(callClose)
     }
 
     /// Dismiss popup function

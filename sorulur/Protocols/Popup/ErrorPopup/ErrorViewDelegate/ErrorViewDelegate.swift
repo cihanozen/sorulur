@@ -11,7 +11,6 @@ import UIKit
 
 /// ErrorView Delegegate Protocol
 protocol ErrorViewDelegate {
-    /// loading view setup ui variables
     func setupUI()
     func setTitle(text: String)
     func setContent(text: String)
@@ -30,7 +29,6 @@ extension ErrorViewDelegate where Self: ErrorPopup {
     func setupUI() {
         log.debug("setupUI")
         errorView.baseViewRounded()
-//        self.backgroundColor = UIColor.red
     }
 
     /// Error Popup Set Title Function

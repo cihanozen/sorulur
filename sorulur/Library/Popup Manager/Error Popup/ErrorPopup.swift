@@ -14,7 +14,7 @@ typealias ErrorPopupCallBack = (_ view: ErrorPopup) -> Void
 class ErrorPopup: UIView {
     /// On Close CallBack
     var onClose: ErrorPopupCallBack?
-    /// LoginVC Variable Copy in sturct with other class implement
+    /// ErrorPopup Variable Copy in sturct with other class implement
     /// Error View Struct for other class
     var param: ErrorViewStruct {
         log.debug("Login VC Struct")
@@ -32,27 +32,33 @@ class ErrorPopup: UIView {
 }
 
 // MARK: - Error Popup Tap Gesture Actions
+
 extension ErrorPopup {
     /// Tap Gesture Action
     ///
     /// - Parameter _: Tap Gesture
     @IBAction func Action(_: Any) {
-// MARK: - Dissmiss popup
+        // MARK: - Dissmiss popup
+        
         dismiss(true, callCloseCallback: true, popup: ErrorPopupManager.shared.popups)
     }
 }
 
 // MARK: - ErrorViewDelegate
+
 extension ErrorPopup: ErrorViewDelegate {
     /// Popup View Load functionn
     override func awakeFromNib() {
         super.awakeFromNib()
-// MARK: - SetupUI
+
+        // MARK: - SetupUI
+
         setupUI()
     }
 }
 
 // MARK: - ErrorControllerDelegate
+
 extension ErrorPopup: ErrorControllerDelegate {
     /// Remove popup Function
     ///
@@ -73,7 +79,7 @@ extension ErrorPopup: ErrorControllerDelegate {
 
     /// Other add popup
     func add() {
-        addPopup()
+//        addPopup()
     }
 
     /// Showing popup

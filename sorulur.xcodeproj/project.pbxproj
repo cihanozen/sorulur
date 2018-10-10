@@ -19,6 +19,9 @@
 		6C2DA7332168089900E0D590 /* StoryboardIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DA7322168089900E0D590 /* StoryboardIdentity.swift */; };
 		6C37A367216A36B30056A98F /* ErrorPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C37A366216A36B30056A98F /* ErrorPopup.swift */; };
 		6C37A369216A36C50056A98F /* ErrorPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C37A368216A36C50056A98F /* ErrorPopup.xib */; };
+		6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */; };
+		6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF5216E668200058883 /* DefaultController.swift */; };
+		6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */; };
 		6C79A9C02168E113004ED656 /* UIViewRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9BF2168E113004ED656 /* UIViewRadius.swift */; };
 		6C79A9C32168ED25004ED656 /* LoginVCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9C22168ED25004ED656 /* LoginVCStruct.swift */; };
 		6C79A9C52168EE2A004ED656 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9C42168EE2A004ED656 /* LoginViewDelegate.swift */; };
@@ -43,6 +46,11 @@
 		6CA4D43D216A504000EE2432 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D43C216A504000EE2432 /* ErrorController.swift */; };
 		6CA4D43F216A5A2A00EE2432 /* ErrorPopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D43E216A5A2A00EE2432 /* ErrorPopupManager.swift */; };
 		6CA4D441216A72FD00EE2432 /* UIViewNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D440216A72FD00EE2432 /* UIViewNib.swift */; };
+		6CBED153216D2CA2006C618E /* DefaultPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED152216D2CA2006C618E /* DefaultPopup.swift */; };
+		6CBED156216D3173006C618E /* DefaultViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED155216D3173006C618E /* DefaultViewStruct.swift */; };
+		6CBED15B216D32C9006C618E /* DefaultViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED15A216D32C9006C618E /* DefaultViewDelegate.swift */; };
+		6CBED15E216D34D0006C618E /* DefaultPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED15D216D34D0006C618E /* DefaultPopupView.swift */; };
+		6CC66409216BFDD2007883EF /* DefaultPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC66408216BFDD2007883EF /* DefaultPopup.xib */; };
 		C9B1B18BE31BE39950A2EB43 /* Pods_sorulurUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47032F4AA2FEDA9264A1A878 /* Pods_sorulurUITests.framework */; };
 		DE92F9961FE444CA1377B173 /* Pods_sorulurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6D8EE37F4ACE3E0612EC1A /* Pods_sorulurTests.framework */; };
 		F51E0241A92F730AAEF2B774 /* Pods_sorulur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F020DBD85E735A47EAE01911 /* Pods_sorulur.framework */; };
@@ -80,6 +88,9 @@
 		6C2DA7322168089900E0D590 /* StoryboardIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentity.swift; sourceTree = "<group>"; };
 		6C37A366216A36B30056A98F /* ErrorPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopup.swift; sourceTree = "<group>"; };
 		6C37A368216A36C50056A98F /* ErrorPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopup.xib; sourceTree = "<group>"; };
+		6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultControllerDelegate.swift; sourceTree = "<group>"; };
+		6C6D8BF5216E668200058883 /* DefaultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultController.swift; sourceTree = "<group>"; };
+		6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopupManager.swift; sourceTree = "<group>"; };
 		6C79A9BF2168E113004ED656 /* UIViewRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRadius.swift; sourceTree = "<group>"; };
 		6C79A9C22168ED25004ED656 /* LoginVCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCStruct.swift; sourceTree = "<group>"; };
 		6C79A9C42168EE2A004ED656 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +121,11 @@
 		6CA4D43C216A504000EE2432 /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		6CA4D43E216A5A2A00EE2432 /* ErrorPopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupManager.swift; sourceTree = "<group>"; };
 		6CA4D440216A72FD00EE2432 /* UIViewNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNib.swift; sourceTree = "<group>"; };
+		6CBED152216D2CA2006C618E /* DefaultPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopup.swift; sourceTree = "<group>"; };
+		6CBED155216D3173006C618E /* DefaultViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewStruct.swift; sourceTree = "<group>"; };
+		6CBED15A216D32C9006C618E /* DefaultViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewDelegate.swift; sourceTree = "<group>"; };
+		6CBED15D216D34D0006C618E /* DefaultPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopupView.swift; sourceTree = "<group>"; };
+		6CC66408216BFDD2007883EF /* DefaultPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultPopup.xib; sourceTree = "<group>"; };
 		72D82BD48902C5ACEA0764D2 /* Pods-sorulurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulurUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sorulurUITests/Pods-sorulurUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75683B6315BC741EEF46F71C /* Pods-sorulur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulur.release.xcconfig"; path = "Pods/Target Support Files/Pods-sorulur/Pods-sorulur.release.xcconfig"; sourceTree = "<group>"; };
 		77D4162AF64B4E59A3A5AC19 /* Pods-sorulur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sorulur/Pods-sorulur.debug.xcconfig"; sourceTree = "<group>"; };
@@ -299,8 +315,27 @@
 		6C37A365216A368B0056A98F /* Default Popup */ = {
 			isa = PBXGroup;
 			children = (
+				6CC66408216BFDD2007883EF /* DefaultPopup.xib */,
+				6CBED152216D2CA2006C618E /* DefaultPopup.swift */,
+				6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */,
 			);
 			path = "Default Popup";
+			sourceTree = "<group>";
+		};
+		6C6D8BF1216E650E00058883 /* DefaultControllerDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */,
+			);
+			path = DefaultControllerDelegate;
+			sourceTree = "<group>";
+		};
+		6C6D8BF4216E667400058883 /* DefaultController */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D8BF5216E668200058883 /* DefaultController.swift */,
+			);
+			path = DefaultController;
 			sourceTree = "<group>";
 		};
 		6C79A9C12168ED0C004ED656 /* LoginVC */ = {
@@ -436,8 +471,8 @@
 		6CA4D42B216A3AD700EE2432 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
-				6CA4D437216A4E0E00EE2432 /* ErrorControllerDelegate */,
-				6CA4D42C216A3AE000EE2432 /* ErrorViewDelegate */,
+				6CBED158216D32AE006C618E /* DefaultPopup */,
+				6CBED157216D32A0006C618E /* ErrorPopup */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -453,6 +488,7 @@
 		6CA4D42F216A3B4500EE2432 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				6CBED154216D3163006C618E /* DefaultView */,
 				6CA4D430216A3B4B00EE2432 /* ErrorView */,
 			);
 			path = Popup;
@@ -469,6 +505,7 @@
 		6CA4D433216A3C5D00EE2432 /* Popups */ = {
 			isa = PBXGroup;
 			children = (
+				6CBED15C216D34B8006C618E /* DefaultPopupView */,
 				6CA4D434216A3C6200EE2432 /* ErrorPopupView */,
 			);
 			path = Popups;
@@ -493,6 +530,7 @@
 		6CA4D43A216A502800EE2432 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				6C6D8BF4216E667400058883 /* DefaultController */,
 				6CA4D43B216A502E00EE2432 /* ErrorController */,
 			);
 			path = Popup;
@@ -504,6 +542,48 @@
 				6CA4D43C216A504000EE2432 /* ErrorController.swift */,
 			);
 			path = ErrorController;
+			sourceTree = "<group>";
+		};
+		6CBED154216D3163006C618E /* DefaultView */ = {
+			isa = PBXGroup;
+			children = (
+				6CBED155216D3173006C618E /* DefaultViewStruct.swift */,
+			);
+			path = DefaultView;
+			sourceTree = "<group>";
+		};
+		6CBED157216D32A0006C618E /* ErrorPopup */ = {
+			isa = PBXGroup;
+			children = (
+				6CA4D437216A4E0E00EE2432 /* ErrorControllerDelegate */,
+				6CA4D42C216A3AE000EE2432 /* ErrorViewDelegate */,
+			);
+			path = ErrorPopup;
+			sourceTree = "<group>";
+		};
+		6CBED158216D32AE006C618E /* DefaultPopup */ = {
+			isa = PBXGroup;
+			children = (
+				6C6D8BF1216E650E00058883 /* DefaultControllerDelegate */,
+				6CBED159216D32B9006C618E /* DefaultViewDelegate */,
+			);
+			path = DefaultPopup;
+			sourceTree = "<group>";
+		};
+		6CBED159216D32B9006C618E /* DefaultViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CBED15A216D32C9006C618E /* DefaultViewDelegate.swift */,
+			);
+			path = DefaultViewDelegate;
+			sourceTree = "<group>";
+		};
+		6CBED15C216D34B8006C618E /* DefaultPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				6CBED15D216D34D0006C618E /* DefaultPopupView.swift */,
+			);
+			path = DefaultPopupView;
 			sourceTree = "<group>";
 		};
 		E2E3D104CB1AD58E3731F87C /* Frameworks */ = {
@@ -624,6 +704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC66409216BFDD2007883EF /* DefaultPopup.xib in Resources */,
 				6C7EC3BB21677704002E9464 /* LaunchScreen.storyboard in Resources */,
 				6C37A369216A36C50056A98F /* ErrorPopup.xib in Resources */,
 				6C7EC3B821677704002E9464 /* Assets.xcassets in Resources */,
@@ -745,16 +826,20 @@
 			files = (
 				6C2DA7332168089900E0D590 /* StoryboardIdentity.swift in Sources */,
 				6C2DA7162167FD0800E0D590 /* UIViewGradient.swift in Sources */,
+				6CBED15B216D32C9006C618E /* DefaultViewDelegate.swift in Sources */,
 				6C79A9D521690844004ED656 /* LoginRequest.swift in Sources */,
 				6C79A9CF2168F63C004ED656 /* LoginAPI.swift in Sources */,
 				6C79A9DA2169114C004ED656 /* LoginControllerDelegate.swift in Sources */,
+				6CBED156216D3173006C618E /* DefaultViewStruct.swift in Sources */,
 				6C37A367216A36B30056A98F /* ErrorPopup.swift in Sources */,
 				6CA4D436216A3C7300EE2432 /* ErrorPopupView.swift in Sources */,
 				6C2DA72D2168079700E0D590 /* UIDeviceAddition.swift in Sources */,
 				6CA4D439216A4E2500EE2432 /* ErrorControllerDelegate.swift in Sources */,
+				6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */,
 				6C79A9C82168EF3E004ED656 /* LoginView.swift in Sources */,
 				6C2DA7252168038E00E0D590 /* Colors.swift in Sources */,
 				6C2DA7182167FDF400E0D590 /* UIColorHex.swift in Sources */,
+				6CBED153216D2CA2006C618E /* DefaultPopup.swift in Sources */,
 				6C79A9C32168ED25004ED656 /* LoginVCStruct.swift in Sources */,
 				6C2DA7232168005600E0D590 /* LoginVC.swift in Sources */,
 				6C2DA7292168053D00E0D590 /* Validator.swift in Sources */,
@@ -765,10 +850,13 @@
 				6C79A9C02168E113004ED656 /* UIViewRadius.swift in Sources */,
 				6CA4D441216A72FD00EE2432 /* UIViewNib.swift in Sources */,
 				6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */,
+				6CBED15E216D34D0006C618E /* DefaultPopupView.swift in Sources */,
 				6C79A9DF216918D0004ED656 /* Singleton.swift in Sources */,
+				6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */,
 				6C79A9C52168EE2A004ED656 /* LoginViewDelegate.swift in Sources */,
 				6CA4D43F216A5A2A00EE2432 /* ErrorPopupManager.swift in Sources */,
 				6C2DA7272168050E00E0D590 /* Regex.swift in Sources */,
+				6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */,
 				6C79A9D12168F68E004ED656 /* JsonNull.swift in Sources */,
 				6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */,
 				6CA4D43D216A504000EE2432 /* ErrorController.swift in Sources */,

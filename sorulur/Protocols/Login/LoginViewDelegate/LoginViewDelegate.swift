@@ -33,5 +33,6 @@ extension LoginViewDelegate where Self: LoginVC {
         loginView.textFieldBorderRemove(passwordTextField)
         loginView.rounded(emailView)
         loginView.rounded(passwordView)
+        DefaultPopupManager.shared.showPopup(self, animated: true)
     }
 }

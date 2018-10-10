@@ -2,21 +2,21 @@
   "warnings": [
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Colors.swift",
-      "line": 15,
+      "line": 14,
       "symbol": "COLORS.GRADIENTSTART",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Colors.swift",
-      "line": 16,
+      "line": 15,
       "symbol": "COLORS.GRADIENTEND",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Colors.swift",
-      "line": 18,
+      "line": 17,
       "symbol": "COLORS.BORDER_WHITE",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -57,9 +57,51 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Popup/ErrorView/ErrorViewStruct.swift",
+      "line": 14,
+      "symbol": "ErrorViewStruct.baseView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Popup/ErrorView/ErrorViewStruct.swift",
+      "line": 15,
+      "symbol": "ErrorViewStruct.logoView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Popup/ErrorView/ErrorViewStruct.swift",
+      "line": 16,
+      "symbol": "ErrorViewStruct.titleTextLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Popup/ErrorView/ErrorViewStruct.swift",
+      "line": 17,
+      "symbol": "ErrorViewStruct.contentTextLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/ Structs/Popup/ErrorView/ErrorViewStruct.swift",
+      "line": 18,
+      "symbol": "ErrorViewStruct.onClose",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Controller/LoginController/LoginController.swift",
-      "line": 31,
+      "line": 30,
       "symbol": "LoginController.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Controller/Popup/ErrorController/ErrorController.swift",
+      "line": 32,
+      "symbol": "ErrorController.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -135,14 +177,14 @@
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Extensions/UIBezierPathRadial.swift",
-      "line": 63,
+      "line": 61,
       "symbol": "UIBezierPath.QuarterCircleQuadrant.clockwise",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Extensions/UIColorHex.swift",
-      "line": 47,
+      "line": 46,
       "symbol": "UIColor.hexString",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -156,51 +198,93 @@
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 128,
+      "line": 127,
       "symbol": "URL_BASE",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 129,
+      "line": 128,
       "symbol": "URL_LOGIN",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 131,
+      "line": 132,
       "symbol": "DICT_KEY_LOGIN_EMAIL",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 132,
+      "line": 133,
       "symbol": "DICT_KEY_LOGIN_PASSWORD",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 134,
+      "line": 137,
       "symbol": "ANIMATION_DEFAULT",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 135,
+      "line": 138,
       "symbol": "ANIMATION_DEFAULT_FASTER",
       "symbol_kind": "source.lang.swift.decl.var.global",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/ProjectConstants.swift",
-      "line": 136,
+      "line": 139,
       "symbol": "ANIMATION_DEFAULT_FASTEST",
       "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/StoryboardIdentity.swift",
+      "line": 13,
+      "symbol": "ERROR_POPUP",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/UIViewNib.swift",
+      "line": 13,
+      "symbol": "UIView.fromNib(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/UIViewNib.swift",
+      "line": 17,
+      "symbol": "UIView.fromNib(_:type:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/UIViewNib.swift",
+      "line": 22,
+      "symbol": "UIView.fromNib(_:type:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/UIViewNib.swift",
+      "line": 42,
+      "symbol": "UIView.nibName",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/UIViewNib.swift",
+      "line": 47,
+      "symbol": "UIView.nib",
+      "symbol_kind": "source.lang.swift.decl.var.class",
       "warning": "undocumented"
     },
     {
@@ -253,6 +337,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Library/Validator.swift",
+      "line": 38,
+      "symbol": "Validator.validate(_:regex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Request/Login/LoginRequest.swift",
       "line": 33,
       "symbol": "LoginRequest.deinit",
@@ -261,78 +352,141 @@
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "LoginResponse.uyeKadi",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "LoginResponse.uyePuan",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 37,
+      "line": 36,
       "symbol": "LoginResponse.uyeSifre",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 49,
+      "line": 48,
       "symbol": "LoginResponse.CodingKeys.uyeAvatar",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 50,
+      "line": 49,
       "symbol": "LoginResponse.CodingKeys.uyeDurum",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 51,
+      "line": 50,
       "symbol": "LoginResponse.CodingKeys.uyeEposta",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 52,
+      "line": 51,
       "symbol": "LoginResponse.CodingKeys.uyeID",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 53,
+      "line": 52,
       "symbol": "LoginResponse.CodingKeys.uyeKadi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 54,
+      "line": 53,
       "symbol": "LoginResponse.CodingKeys.uyePuan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Model/Response/Login/LoginResponse.swift",
-      "line": 55,
+      "line": 54,
       "symbol": "LoginResponse.CodingKeys.uyeSifre",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 16,
+      "symbol": "ErrorControllerDelegate.removePopup(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 17,
+      "symbol": "ErrorControllerDelegate.dismiss(_:callCloseCallback:popup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 18,
+      "symbol": "ErrorControllerDelegate.dismissPopup(_:callCloseCallback:popup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 19,
+      "symbol": "ErrorControllerDelegate.add()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 20,
+      "symbol": "ErrorControllerDelegate.show(_:animated:popup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorControllerDelegate/ErrorControllerDelegate.swift",
+      "line": 21,
+      "symbol": "ErrorControllerDelegate.showPopup(_:animated:popup:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorViewDelegate/ErrorViewDelegate.swift",
+      "line": 16,
+      "symbol": "ErrorViewDelegate.setTitle(text:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/Protocols/Popup/ErrorViewDelegate/ErrorViewDelegate.swift",
+      "line": 17,
+      "symbol": "ErrorViewDelegate.setContent(text:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/View/LoginView/LoginView.swift",
-      "line": 30,
+      "line": 29,
       "symbol": "LoginView.deinit",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sinanozman/Desktop/WORK DESKTOP/sorulur/sorulur/View/Popups/ErrorPopupView/ErrorPopupView.swift",
+      "line": 33,
+      "symbol": "ErrorPopupView.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
