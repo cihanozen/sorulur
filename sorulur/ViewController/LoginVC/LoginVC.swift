@@ -26,6 +26,25 @@ class LoginVC: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     /// Login Button Outlet
     @IBOutlet var loginButton: UIButton!
+    /// Logo Bire Outler
+    @IBOutlet weak var logoView: UIImageView!
+    /// Direaction Label Outlet
+    @IBOutlet weak var directionLabel: UILabel!
+    /// Email Label Outlet
+    @IBOutlet weak var emailLabel: UILabel!
+    /// Password Label outlet
+    @IBOutlet weak var passwordLabel: UILabel!
+    /// Bottom View Outlet
+    @IBOutlet weak var bottomView: UIView!
+    /// Logo View Right Constraint
+    @IBOutlet weak var logoViewRightCons: NSLayoutConstraint!
+    /// Logo View Left Constraint
+    @IBOutlet weak var logoViewLeftCons: NSLayoutConstraint!
+    /// LOGO View Bottom Constraint
+    @IBOutlet weak var logoViewBottomCons: NSLayoutConstraint!
+    /// LOGO View Top Constraint
+    @IBOutlet weak var logoViewTopCons: NSLayoutConstraint!
+    
 }
 
 // MARK: - LoginViewDelegate

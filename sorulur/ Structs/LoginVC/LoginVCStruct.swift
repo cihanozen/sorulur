@@ -16,6 +16,16 @@ struct LoginVCStruct {
     weak var emailTextField: UITextField?
     weak var passwordView: UIView?
     weak var passwordTextField: UITextField?
+    weak var logoView: UIImageView?
+    weak var directionLabel: UILabel?
+    weak var emailLabel: UILabel?
+    weak var passwordLabel: UILabel?
+    weak var bottomView: UIView?
+    weak var logoViewRightCons: NSLayoutConstraint?
+    weak var logoViewLeftCons: NSLayoutConstraint?
+    weak var logoViewBottomCons: NSLayoutConstraint?
+    weak var logoViewTopCons: NSLayoutConstraint?
+    weak var loginButton: UIButton?
 }
 
 // MARK: - LoginVCSturct initilasion and reset variables
@@ -35,6 +45,16 @@ extension LoginVCStruct {
         emailTextField = view.emailTextField
         passwordView = view.passwordView
         passwordTextField = view.passwordTextField
+        logoView = view.logoView
+        directionLabel = view.directionLabel
+        emailLabel = view.emailLabel
+        passwordLabel = view.passwordLabel
+        bottomView = view.bottomView
+        logoViewRightCons = view.logoViewRightCons
+        logoViewLeftCons = view.logoViewLeftCons
+        logoViewTopCons = view.logoViewTopCons
+        logoViewBottomCons = view.logoViewBottomCons
+        loginButton = view.loginButton
     }
 
     /// Reset Variables
@@ -49,6 +69,16 @@ extension LoginVCStruct {
         emailTextField = nil
         passwordView = nil
         passwordTextField = nil
+        logoView = nil
+        directionLabel = nil
+        emailLabel = nil
+        passwordLabel = nil
+        bottomView = nil
+        logoViewRightCons = nil
+        logoViewLeftCons = nil
+        logoViewTopCons = nil
+        logoViewBottomCons = nil
+        loginButton = nil
         view = nil
     }
 }

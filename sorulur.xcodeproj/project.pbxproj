@@ -39,6 +39,24 @@
 		6C7EC3BB21677704002E9464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7EC3B921677704002E9464 /* LaunchScreen.storyboard */; };
 		6C7EC3C621677704002E9464 /* sorulurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7EC3C521677704002E9464 /* sorulurTests.swift */; };
 		6C7EC3D121677704002E9464 /* sorulurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7EC3D021677704002E9464 /* sorulurUITests.swift */; };
+		6C86F2E621724FE100FF532F /* Exo2-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D421724FDE00FF532F /* Exo2-BlackItalic.otf */; };
+		6C86F2E721724FE100FF532F /* Exo2-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D521724FDE00FF532F /* Exo2-MediumItalic.otf */; };
+		6C86F2E821724FE100FF532F /* Exo2-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D621724FDF00FF532F /* Exo2-Italic.otf */; };
+		6C86F2E921724FE100FF532F /* Exo2-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D721724FDF00FF532F /* Exo2-LightItalic.otf */; };
+		6C86F2EA21724FE100FF532F /* Exo2-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D821724FDF00FF532F /* Exo2-Thin.otf */; };
+		6C86F2EB21724FE100FF532F /* Exo2-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2D921724FDF00FF532F /* Exo2-ThinItalic.otf */; };
+		6C86F2EC21724FE100FF532F /* Exo2-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DA21724FDF00FF532F /* Exo2-ExtraLightItalic.otf */; };
+		6C86F2ED21724FE100FF532F /* Exo2-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DB21724FDF00FF532F /* Exo2-ExtraBoldItalic.otf */; };
+		6C86F2EE21724FE100FF532F /* Exo2-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DC21724FDF00FF532F /* Exo2-Black.otf */; };
+		6C86F2EF21724FE100FF532F /* Exo2-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DD21724FE000FF532F /* Exo2-Regular.otf */; };
+		6C86F2F021724FE100FF532F /* Exo2-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DE21724FE000FF532F /* Exo2-Bold.otf */; };
+		6C86F2F121724FE100FF532F /* Exo2-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2DF21724FE000FF532F /* Exo2-BoldItalic.otf */; };
+		6C86F2F221724FE100FF532F /* Exo2-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E021724FE000FF532F /* Exo2-ExtraLight.otf */; };
+		6C86F2F321724FE100FF532F /* Exo2-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E121724FE000FF532F /* Exo2-ExtraBold.otf */; };
+		6C86F2F421724FE100FF532F /* Exo2-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E221724FE100FF532F /* Exo2-Medium.otf */; };
+		6C86F2F521724FE100FF532F /* Exo2-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E321724FE100FF532F /* Exo2-SemiBold.otf */; };
+		6C86F2F621724FE100FF532F /* Exo2-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E421724FE100FF532F /* Exo2-SemiBoldItalic.otf */; };
+		6C86F2F721724FE100FF532F /* Exo2-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E521724FE100FF532F /* Exo2-Light.otf */; };
 		6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */; };
 		6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */; };
 		6CA4D436216A3C7300EE2432 /* ErrorPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */; };
@@ -114,6 +132,24 @@
 		6C7EC3CC21677704002E9464 /* sorulurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sorulurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7EC3D021677704002E9464 /* sorulurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sorulurUITests.swift; sourceTree = "<group>"; };
 		6C7EC3D221677704002E9464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C86F2D421724FDE00FF532F /* Exo2-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-BlackItalic.otf"; sourceTree = "<group>"; };
+		6C86F2D521724FDE00FF532F /* Exo2-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-MediumItalic.otf"; sourceTree = "<group>"; };
+		6C86F2D621724FDF00FF532F /* Exo2-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Italic.otf"; sourceTree = "<group>"; };
+		6C86F2D721724FDF00FF532F /* Exo2-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-LightItalic.otf"; sourceTree = "<group>"; };
+		6C86F2D821724FDF00FF532F /* Exo2-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.otf"; sourceTree = "<group>"; };
+		6C86F2D921724FDF00FF532F /* Exo2-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ThinItalic.otf"; sourceTree = "<group>"; };
+		6C86F2DA21724FDF00FF532F /* Exo2-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		6C86F2DB21724FDF00FF532F /* Exo2-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		6C86F2DC21724FDF00FF532F /* Exo2-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Black.otf"; sourceTree = "<group>"; };
+		6C86F2DD21724FE000FF532F /* Exo2-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Regular.otf"; sourceTree = "<group>"; };
+		6C86F2DE21724FE000FF532F /* Exo2-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Bold.otf"; sourceTree = "<group>"; };
+		6C86F2DF21724FE000FF532F /* Exo2-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-BoldItalic.otf"; sourceTree = "<group>"; };
+		6C86F2E021724FE000FF532F /* Exo2-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraLight.otf"; sourceTree = "<group>"; };
+		6C86F2E121724FE000FF532F /* Exo2-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ExtraBold.otf"; sourceTree = "<group>"; };
+		6C86F2E221724FE100FF532F /* Exo2-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Medium.otf"; sourceTree = "<group>"; };
+		6C86F2E321724FE100FF532F /* Exo2-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.otf"; sourceTree = "<group>"; };
+		6C86F2E421724FE100FF532F /* Exo2-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		6C86F2E521724FE100FF532F /* Exo2-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.otf"; sourceTree = "<group>"; };
 		6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDelegate.swift; sourceTree = "<group>"; };
 		6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewStruct.swift; sourceTree = "<group>"; };
 		6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupView.swift; sourceTree = "<group>"; };
@@ -241,6 +277,7 @@
 		6C2DA71E2167FFC800E0D590 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F2D321724FCB00FF532F /* Fonts */,
 				6C7EC3B021677703002E9464 /* AppDelegate.swift */,
 				6C7EC3B921677704002E9464 /* LaunchScreen.storyboard */,
 				6C7EC3B421677703002E9464 /* Main.storyboard */,
@@ -466,6 +503,31 @@
 				6C7EC3D221677704002E9464 /* Info.plist */,
 			);
 			path = sorulurUITests;
+			sourceTree = "<group>";
+		};
+		6C86F2D321724FCB00FF532F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F2DC21724FDF00FF532F /* Exo2-Black.otf */,
+				6C86F2D421724FDE00FF532F /* Exo2-BlackItalic.otf */,
+				6C86F2DE21724FE000FF532F /* Exo2-Bold.otf */,
+				6C86F2DF21724FE000FF532F /* Exo2-BoldItalic.otf */,
+				6C86F2E121724FE000FF532F /* Exo2-ExtraBold.otf */,
+				6C86F2DB21724FDF00FF532F /* Exo2-ExtraBoldItalic.otf */,
+				6C86F2E021724FE000FF532F /* Exo2-ExtraLight.otf */,
+				6C86F2DA21724FDF00FF532F /* Exo2-ExtraLightItalic.otf */,
+				6C86F2D621724FDF00FF532F /* Exo2-Italic.otf */,
+				6C86F2E521724FE100FF532F /* Exo2-Light.otf */,
+				6C86F2D721724FDF00FF532F /* Exo2-LightItalic.otf */,
+				6C86F2E221724FE100FF532F /* Exo2-Medium.otf */,
+				6C86F2D521724FDE00FF532F /* Exo2-MediumItalic.otf */,
+				6C86F2DD21724FE000FF532F /* Exo2-Regular.otf */,
+				6C86F2E321724FE100FF532F /* Exo2-SemiBold.otf */,
+				6C86F2E421724FE100FF532F /* Exo2-SemiBoldItalic.otf */,
+				6C86F2D821724FDF00FF532F /* Exo2-Thin.otf */,
+				6C86F2D921724FDF00FF532F /* Exo2-ThinItalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6CA4D42B216A3AD700EE2432 /* Popup */ = {
@@ -704,11 +766,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C86F2F621724FE100FF532F /* Exo2-SemiBoldItalic.otf in Resources */,
+				6C86F2F021724FE100FF532F /* Exo2-Bold.otf in Resources */,
+				6C86F2EA21724FE100FF532F /* Exo2-Thin.otf in Resources */,
+				6C86F2EC21724FE100FF532F /* Exo2-ExtraLightItalic.otf in Resources */,
 				6CC66409216BFDD2007883EF /* DefaultPopup.xib in Resources */,
+				6C86F2E921724FE100FF532F /* Exo2-LightItalic.otf in Resources */,
+				6C86F2EF21724FE100FF532F /* Exo2-Regular.otf in Resources */,
+				6C86F2E721724FE100FF532F /* Exo2-MediumItalic.otf in Resources */,
+				6C86F2F121724FE100FF532F /* Exo2-BoldItalic.otf in Resources */,
 				6C7EC3BB21677704002E9464 /* LaunchScreen.storyboard in Resources */,
 				6C37A369216A36C50056A98F /* ErrorPopup.xib in Resources */,
+				6C86F2EE21724FE100FF532F /* Exo2-Black.otf in Resources */,
+				6C86F2F521724FE100FF532F /* Exo2-SemiBold.otf in Resources */,
+				6C86F2F221724FE100FF532F /* Exo2-ExtraLight.otf in Resources */,
 				6C7EC3B821677704002E9464 /* Assets.xcassets in Resources */,
+				6C86F2F721724FE100FF532F /* Exo2-Light.otf in Resources */,
+				6C86F2F321724FE100FF532F /* Exo2-ExtraBold.otf in Resources */,
 				6C7EC3B621677703002E9464 /* Main.storyboard in Resources */,
+				6C86F2ED21724FE100FF532F /* Exo2-ExtraBoldItalic.otf in Resources */,
+				6C86F2E621724FE100FF532F /* Exo2-BlackItalic.otf in Resources */,
+				6C86F2EB21724FE100FF532F /* Exo2-ThinItalic.otf in Resources */,
+				6C86F2F421724FE100FF532F /* Exo2-Medium.otf in Resources */,
+				6C86F2E821724FE100FF532F /* Exo2-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,6 +1118,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = sorulur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1045,7 +1126,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.sorulur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1056,6 +1137,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = sorulur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1063,7 +1145,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.sorulur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

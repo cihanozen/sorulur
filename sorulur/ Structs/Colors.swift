@@ -11,8 +11,10 @@ import UIKit
 
 /// Colors Variable
 struct COLORS {
-    static let GRADIENTSTART = COLORS.HEX("#8274AA")
-    static let GRADIENTEND = COLORS.HEX("#A6538D")
+    static let GRADIENTSTART_LOGIN = COLORS.HEX("#8274AA")
+    static let GRADIENTEND_LOGIN = COLORS.HEX("#A6538D")
+    static let GRADIENTSTART_SIGNUP = COLORS.HEX("#33AAD6")
+    static let GRADIENTEND_SIGNUP = COLORS.HEX("#26A98B")
 
     static let BORDER_WHITE = COLORS.RGB(255, green: 255, blue: 255)
 
