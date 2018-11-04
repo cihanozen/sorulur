@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6CAA97E2218F079A002F291C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97E1218F079A002F291C /* AppDelegate.swift */; };
+		6CAA97E4218F079A002F291C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97E3218F079A002F291C /* ViewController.swift */; };
+		6CAA97E6218F079B002F291C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA97E5218F079B002F291C /* Assets.xcassets */; };
+		6CAA97E9218F079B002F291C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA97E7218F079B002F291C /* Main.storyboard */; };
+		6CAA97F5218F079B002F291C /* SorulurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97F4218F079B002F291C /* SorulurTests.swift */; };
+		6CAA9800218F079B002F291C /* SorulurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97FF218F079B002F291C /* SorulurUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CAA97F1218F079B002F291C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CAA97D6218F079A002F291C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CAA97DD218F079A002F291C;
+			remoteInfo = Sorulur;
+		};
+		6CAA97FC218F079B002F291C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CAA97D6218F079A002F291C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CAA97DD218F079A002F291C;
+			remoteInfo = Sorulur;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6CAA97DE218F079A002F291C /* Sorulur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sorulur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAA97E1218F079A002F291C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CAA97E3218F079A002F291C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CAA97E5218F079B002F291C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CAA97E8218F079B002F291C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CAA97EA218F079B002F291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAA97EB218F079B002F291C /* Sorulur.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sorulur.entitlements; sourceTree = "<group>"; };
+		6CAA97F0218F079B002F291C /* SorulurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorulurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAA97F4218F079B002F291C /* SorulurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorulurTests.swift; sourceTree = "<group>"; };
+		6CAA97F6218F079B002F291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAA97FB218F079B002F291C /* SorulurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorulurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAA97FF218F079B002F291C /* SorulurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorulurUITests.swift; sourceTree = "<group>"; };
+		6CAA9801218F079B002F291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CAA97DB218F079A002F291C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97ED218F079B002F291C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97F8218F079B002F291C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6CAA97D5218F079A002F291C = {
+			isa = PBXGroup;
+			children = (
+				6CAA97E0218F079A002F291C /* Sorulur */,
+				6CAA97F3218F079B002F291C /* SorulurTests */,
+				6CAA97FE218F079B002F291C /* SorulurUITests */,
+				6CAA97DF218F079A002F291C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6CAA97DF218F079A002F291C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA97DE218F079A002F291C /* Sorulur.app */,
+				6CAA97F0218F079B002F291C /* SorulurTests.xctest */,
+				6CAA97FB218F079B002F291C /* SorulurUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CAA97E0218F079A002F291C /* Sorulur */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA97E1218F079A002F291C /* AppDelegate.swift */,
+				6CAA97E3218F079A002F291C /* ViewController.swift */,
+				6CAA97E5218F079B002F291C /* Assets.xcassets */,
+				6CAA97E7218F079B002F291C /* Main.storyboard */,
+				6CAA97EA218F079B002F291C /* Info.plist */,
+				6CAA97EB218F079B002F291C /* Sorulur.entitlements */,
+			);
+			path = Sorulur;
+			sourceTree = "<group>";
+		};
+		6CAA97F3218F079B002F291C /* SorulurTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA97F4218F079B002F291C /* SorulurTests.swift */,
+				6CAA97F6218F079B002F291C /* Info.plist */,
+			);
+			path = SorulurTests;
+			sourceTree = "<group>";
+		};
+		6CAA97FE218F079B002F291C /* SorulurUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA97FF218F079B002F291C /* SorulurUITests.swift */,
+				6CAA9801218F079B002F291C /* Info.plist */,
+			);
+			path = SorulurUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CAA97DD218F079A002F291C /* Sorulur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAA9804218F079B002F291C /* Build configuration list for PBXNativeTarget "Sorulur" */;
+			buildPhases = (
+				6CAA97DA218F079A002F291C /* Sources */,
+				6CAA97DB218F079A002F291C /* Frameworks */,
+				6CAA97DC218F079A002F291C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sorulur;
+			productName = Sorulur;
+			productReference = 6CAA97DE218F079A002F291C /* Sorulur.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CAA97EF218F079B002F291C /* SorulurTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAA9807218F079B002F291C /* Build configuration list for PBXNativeTarget "SorulurTests" */;
+			buildPhases = (
+				6CAA97EC218F079B002F291C /* Sources */,
+				6CAA97ED218F079B002F291C /* Frameworks */,
+				6CAA97EE218F079B002F291C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CAA97F2218F079B002F291C /* PBXTargetDependency */,
+			);
+			name = SorulurTests;
+			productName = SorulurTests;
+			productReference = 6CAA97F0218F079B002F291C /* SorulurTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CAA97FA218F079B002F291C /* SorulurUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CAA980A218F079B002F291C /* Build configuration list for PBXNativeTarget "SorulurUITests" */;
+			buildPhases = (
+				6CAA97F7218F079B002F291C /* Sources */,
+				6CAA97F8218F079B002F291C /* Frameworks */,
+				6CAA97F9218F079B002F291C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CAA97FD218F079B002F291C /* PBXTargetDependency */,
+			);
+			name = SorulurUITests;
+			productName = SorulurUITests;
+			productReference = 6CAA97FB218F079B002F291C /* SorulurUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CAA97D6218F079A002F291C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Sinan Özman";
+				TargetAttributes = {
+					6CAA97DD218F079A002F291C = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					6CAA97EF218F079B002F291C = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 6CAA97DD218F079A002F291C;
+					};
+					6CAA97FA218F079B002F291C = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 6CAA97DD218F079A002F291C;
+					};
+				};
+			};
+			buildConfigurationList = 6CAA97D9218F079A002F291C /* Build configuration list for PBXProject "Sorulur" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CAA97D5218F079A002F291C;
+			productRefGroup = 6CAA97DF218F079A002F291C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CAA97DD218F079A002F291C /* Sorulur */,
+				6CAA97EF218F079B002F291C /* SorulurTests */,
+				6CAA97FA218F079B002F291C /* SorulurUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CAA97DC218F079A002F291C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA97E6218F079B002F291C /* Assets.xcassets in Resources */,
+				6CAA97E9218F079B002F291C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97EE218F079B002F291C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97F9218F079B002F291C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CAA97DA218F079A002F291C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA97E4218F079A002F291C /* ViewController.swift in Sources */,
+				6CAA97E2218F079A002F291C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97EC218F079B002F291C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA97F5218F079B002F291C /* SorulurTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CAA97F7218F079B002F291C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAA9800218F079B002F291C /* SorulurUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CAA97F2218F079B002F291C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CAA97DD218F079A002F291C /* Sorulur */;
+			targetProxy = 6CAA97F1218F079B002F291C /* PBXContainerItemProxy */;
+		};
+		6CAA97FD218F079B002F291C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CAA97DD218F079A002F291C /* Sorulur */;
+			targetProxy = 6CAA97FC218F079B002F291C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6CAA97E7218F079B002F291C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CAA97E8218F079B002F291C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CAA9802218F079B002F291C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CAA9803218F079B002F291C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6CAA9805218F079B002F291C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sorulur/Sorulur.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sorulur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.Sorulur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		6CAA9806218F079B002F291C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sorulur/Sorulur.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sorulur/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.Sorulur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		6CAA9808218F079B002F291C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SorulurTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.SorulurTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorulur.app/Contents/MacOS/Sorulur";
+			};
+			name = Debug;
+		};
+		6CAA9809218F079B002F291C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SorulurTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.SorulurTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorulur.app/Contents/MacOS/Sorulur";
+			};
+			name = Release;
+		};
+		6CAA980B218F079B002F291C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SorulurUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.SorulurUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = Sorulur;
+			};
+			name = Debug;
+		};
+		6CAA980C218F079B002F291C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SorulurUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinanozman.Desktop.SorulurUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = Sorulur;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CAA97D9218F079A002F291C /* Build configuration list for PBXProject "Sorulur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA9802218F079B002F291C /* Debug */,
+				6CAA9803218F079B002F291C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CAA9804218F079B002F291C /* Build configuration list for PBXNativeTarget "Sorulur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA9805218F079B002F291C /* Debug */,
+				6CAA9806218F079B002F291C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CAA9807218F079B002F291C /* Build configuration list for PBXNativeTarget "SorulurTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA9808218F079B002F291C /* Debug */,
+				6CAA9809218F079B002F291C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CAA980A218F079B002F291C /* Build configuration list for PBXNativeTarget "SorulurUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CAA980B218F079B002F291C /* Debug */,
+				6CAA980C218F079B002F291C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6CAA97D6218F079A002F291C /* Project object */;
+}
