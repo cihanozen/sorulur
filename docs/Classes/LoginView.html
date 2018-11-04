@@ -14,7 +14,7 @@
     <a title="LoginView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (71% documented)</p>
+        <p><a href="../index.html"> Docs</a> (74% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -82,6 +82,15 @@
                 <a href="../Classes/Regex.html">Regex</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Router.html">Router</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignUpVC.html">SignUpVC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SignupView.html">SignupView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Singleton.html">Singleton</a>
               </li>
               <li class="nav-group-task">
@@ -105,19 +114,10 @@
                 <a href="../Global Variables.html#/s:7sorulur11APP_VERSIONSSSgvp">APP_VERSION</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:7sorulur13DEFAULT_POPUPSSvp">DEFAULT_POPUP</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:7sorulur20DICT_KEY_LOGIN_EMAILSSvp">DICT_KEY_LOGIN_EMAIL</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:7sorulur23DICT_KEY_LOGIN_PASSWORDSSvp">DICT_KEY_LOGIN_PASSWORD</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:7sorulur11ERROR_POPUPSSvp">ERROR_POPUP</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:7sorulur7LOGINIDSSvp">LOGINID</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:7sorulur18RegexEscapePatternSSvp">RegexEscapePattern</a>
@@ -140,6 +140,17 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Page.html">Page</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StoryboardIdentifier.html">StoryboardIdentifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -152,10 +163,16 @@
                 <a href="../Extensions/UIBezierPath/QuarterCircleQuadrant.html">– QuarterCircleQuadrant</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/UIColor.html">UIColor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIDevice.html">UIDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UIView.html">UIView</a>
@@ -194,6 +211,15 @@
               <li class="nav-group-task">
                 <a href="../Protocols/LoginViewDelegate.html">LoginViewDelegate</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignupControllerDelegate.html">SignupControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignupViewDelegate.html">SignupViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/router.html">router</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -210,6 +236,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/LoginVCStruct.html">LoginVCStruct</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SignUpVCStrcuts.html">SignUpVCStrcuts</a>
               </li>
             </ul>
           </li>
@@ -431,9 +460,9 @@ view.textFieldBorderRemove(UITextField)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7sorulur9LoginViewC7roundedyySo6UIViewCF"></a>
+                    <a name="/s:7sorulur9LoginViewC7roundedyyypSgF"></a>
                     <a name="//apple_ref/swift/Method/rounded(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7sorulur9LoginViewC7roundedyySo6UIViewCF">rounded(_:)</a>
+                    <a class="token" href="#/s:7sorulur9LoginViewC7roundedyyypSgF">rounded(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -448,7 +477,7 @@ view.textFieldBorderRemove(UITextField)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rounded</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rounded</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -469,6 +498,7 @@ view.textFieldBorderRemove(UITextField)
 <code>
 let view = LoginView(LoginVCStruct)
 view.rounded(UIView())
+view.rounded(UIButton())
 </code></p>
                                 </div>
                               </td>
@@ -479,12 +509,103 @@ view.rounded(UIView())
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7sorulur9LoginViewC16startupAnimationyyF"></a>
+                    <a name="//apple_ref/swift/Method/startupAnimation()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7sorulur9LoginViewC16startupAnimationyyF">startupAnimation()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">view</span> <span class="o">=</span> <span class="kt">LoginView</span><span class="p">(</span><span class="kt">LoginVCStruct</span><span class="p">)</span>
+    <span class="n">view</span><span class="o">.</span><span class="nf">startupAnimation</span><span class="p">()</span>
+    <span class="err">````</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startupAnimation</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7sorulur9LoginViewC15setCenterLayout33_6C9D3E338D04E1CEABE06FC46D27F827LLyyF"></a>
+                    <a name="//apple_ref/swift/Method/setCenterLayout()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7sorulur9LoginViewC15setCenterLayout33_6C9D3E338D04E1CEABE06FC46D27F827LLyyF">setCenterLayout()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">view</span> <span class="o">=</span> <span class="kt">LoginView</span><span class="p">(</span><span class="kt">LoginVCStruct</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">startupAnimation</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">setCenterLayout</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7sorulur9LoginViewC16setDefaultLayout33_6C9D3E338D04E1CEABE06FC46D27F827LLyyF"></a>
+                    <a name="//apple_ref/swift/Method/setDefaultLayout()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7sorulur9LoginViewC16setDefaultLayout33_6C9D3E338D04E1CEABE06FC46D27F827LLyyF">setDefaultLayout()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">view</span> <span class="o">=</span> <span class="kt">LoginView</span><span class="p">(</span><span class="kt">LoginVCStruct</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">startupAnimation</span><span class="p">()</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">setDefaultLayout</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-10)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-11-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

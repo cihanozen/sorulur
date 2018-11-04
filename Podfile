@@ -10,6 +10,7 @@ target 'sorulur' do
 pod 'RealmSwift'
 pod 'ActionKit'
 pod 'SnapKit'
+pod 'DLRadioButton'
   # Pods for sorulur
 
   target 'sorulurTests' do

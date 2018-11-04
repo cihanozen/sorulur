@@ -7,8 +7,19 @@
 //
 
 import Foundation
+import UIKit
 
-/// LoginVC identifier
-let LOGINID = "LoginVC"
-let ERROR_POPUP = "ErrorPopup"
-let DEFAULT_POPUP = "DefaultPopup"
+   /// StoryboardIdentifier Gloabl
+   ///
+   /// - LOGINID: LoginVC Storyboard Identifier
+   /// - SIGNUPID: SignUpVC Storyboard Identifier
+   /// - ERROR_POPUP: ErrorPopup Storyboard Identifier
+   /// - DEFAULT_POPUP: DefaultPopup Storyboard Identifier
+   public enum StoryboardIdentifier: String {
+        /// LoginVC identifier
+        case LOGINID = "LoginVC"
+        case SIGNUPID = "SignUpVC"
+        case ERROR_POPUP = "ErrorPopup"
+        case DEFAULT_POPUP = "DefaultPopup"
+}
+

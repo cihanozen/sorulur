@@ -67,12 +67,10 @@ class LoginView {
     ///    ````
     func rounded(_ view: Any?) {
         if let uiButton: UIButton = view as? UIButton {
-            uiButton.layer.borderWidth = 1
-            uiButton.layer.borderColor = COLORS.BORDER_WHITE.cgColor
-            uiButton.layer.cornerRadius = 22
+           uiButton.roundedButton(COLORS.BORDER_WHITE)
         } else if let uiView: UIView = view as? UIView {
             log.debug("view rounded")
-            uiView.round(corners: [.topRight, .bottomLeft, .bottomRight], radius: 20, borderColor: COLORS.BORDER_WHITE, borderWidth: 2)
+            uiView.roundedView(COLORS.BORDER_WHITE)
         }
     }
     

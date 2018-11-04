@@ -27,6 +27,9 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>FontAwesomeSolid.otf</string>
+		<string>FontAwesomeRefular.otf</string>
+		<string>FontAwesomeBrandsRegular.otf</string>
 		<string>Exo2-ThinItalic.otf</string>
 		<string>Exo2-Thin.otf</string>
 		<string>Exo2-SemiBoldItalic.otf</string>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0FB3C5218E058A00A45D7E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FB3C4218E058A00A45D7E /* Router.swift */; };
 		6C2DA7162167FD0800E0D590 /* UIViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DA7152167FD0800E0D590 /* UIViewGradient.swift */; };
 		6C2DA7182167FDF400E0D590 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DA7172167FDF400E0D590 /* UIColorHex.swift */; };
 		6C2DA7232168005600E0D590 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DA7222168005600E0D590 /* LoginVC.swift */; };
@@ -19,6 +20,9 @@
 		6C2DA7332168089900E0D590 /* StoryboardIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2DA7322168089900E0D590 /* StoryboardIdentity.swift */; };
 		6C37A367216A36B30056A98F /* ErrorPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C37A366216A36B30056A98F /* ErrorPopup.swift */; };
 		6C37A369216A36C50056A98F /* ErrorPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C37A368216A36C50056A98F /* ErrorPopup.xib */; };
+		6C48A6C0217A33C4009A9AD8 /* UITextFieldBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48A6BF217A33C4009A9AD8 /* UITextFieldBorder.swift */; };
+		6C48A6C2217A345B009A9AD8 /* UIViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48A6C1217A345B009A9AD8 /* UIViewBorder.swift */; };
+		6C48A6C5217A34E0009A9AD8 /* UIButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48A6C4217A34E0009A9AD8 /* UIButtonBorder.swift */; };
 		6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */; };
 		6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF5216E668200058883 /* DefaultController.swift */; };
 		6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */; };
@@ -57,6 +61,14 @@
 		6C86F2F521724FE100FF532F /* Exo2-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E321724FE100FF532F /* Exo2-SemiBold.otf */; };
 		6C86F2F621724FE100FF532F /* Exo2-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E421724FE100FF532F /* Exo2-SemiBoldItalic.otf */; };
 		6C86F2F721724FE100FF532F /* Exo2-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2E521724FE100FF532F /* Exo2-Light.otf */; };
+		6C86F2FD217288B900FF532F /* FontAwesomeSolid.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2FA217288B800FF532F /* FontAwesomeSolid.otf */; };
+		6C86F2FE217288B900FF532F /* FontAwesomeRefular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2FB217288B900FF532F /* FontAwesomeRefular.otf */; };
+		6C86F2FF217288B900FF532F /* FontAwesomeBrandsRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86F2FC217288B900FF532F /* FontAwesomeBrandsRegular.otf */; };
+		6C86F3022172A1CF00FF532F /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F3012172A1CF00FF532F /* SignUpVC.swift */; };
+		6C86F3052172A88400FF532F /* SignUpVCStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F3042172A88400FF532F /* SignUpVCStructs.swift */; };
+		6C86F30A2172B31300FF532F /* SignupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F3092172B31300FF532F /* SignupViewDelegate.swift */; };
+		6C86F30C2172B32200FF532F /* SignupControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F30B2172B32200FF532F /* SignupControllerDelegate.swift */; };
+		6C86F30F2172B38C00FF532F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F30E2172B38C00FF532F /* SignupView.swift */; };
 		6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */; };
 		6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */; };
 		6CA4D436216A3C7300EE2432 /* ErrorPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */; };
@@ -94,6 +106,7 @@
 /* Begin PBXFileReference section */
 		346E8356D6FBEFDFE1193AA0 /* Pods-sorulurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulurTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sorulurTests/Pods-sorulurTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47032F4AA2FEDA9264A1A878 /* Pods_sorulurUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sorulurUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0FB3C4218E058A00A45D7E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6C2DA7152167FD0800E0D590 /* UIViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewGradient.swift; sourceTree = "<group>"; };
 		6C2DA7172167FDF400E0D590 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		6C2DA7222168005600E0D590 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -106,6 +119,9 @@
 		6C2DA7322168089900E0D590 /* StoryboardIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentity.swift; sourceTree = "<group>"; };
 		6C37A366216A36B30056A98F /* ErrorPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopup.swift; sourceTree = "<group>"; };
 		6C37A368216A36C50056A98F /* ErrorPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorPopup.xib; sourceTree = "<group>"; };
+		6C48A6BF217A33C4009A9AD8 /* UITextFieldBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBorder.swift; sourceTree = "<group>"; };
+		6C48A6C1217A345B009A9AD8 /* UIViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBorder.swift; sourceTree = "<group>"; };
+		6C48A6C4217A34E0009A9AD8 /* UIButtonBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBorder.swift; sourceTree = "<group>"; };
 		6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultControllerDelegate.swift; sourceTree = "<group>"; };
 		6C6D8BF5216E668200058883 /* DefaultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultController.swift; sourceTree = "<group>"; };
 		6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopupManager.swift; sourceTree = "<group>"; };
@@ -150,6 +166,14 @@
 		6C86F2E321724FE100FF532F /* Exo2-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBold.otf"; sourceTree = "<group>"; };
 		6C86F2E421724FE100FF532F /* Exo2-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-SemiBoldItalic.otf"; sourceTree = "<group>"; };
 		6C86F2E521724FE100FF532F /* Exo2-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Light.otf"; sourceTree = "<group>"; };
+		6C86F2FA217288B800FF532F /* FontAwesomeSolid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesomeSolid.otf; sourceTree = "<group>"; };
+		6C86F2FB217288B900FF532F /* FontAwesomeRefular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesomeRefular.otf; sourceTree = "<group>"; };
+		6C86F2FC217288B900FF532F /* FontAwesomeBrandsRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesomeBrandsRegular.otf; sourceTree = "<group>"; };
+		6C86F3012172A1CF00FF532F /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		6C86F3042172A88400FF532F /* SignUpVCStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVCStructs.swift; sourceTree = "<group>"; };
+		6C86F3092172B31300FF532F /* SignupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewDelegate.swift; sourceTree = "<group>"; };
+		6C86F30B2172B32200FF532F /* SignupControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupControllerDelegate.swift; sourceTree = "<group>"; };
+		6C86F30E2172B38C00FF532F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDelegate.swift; sourceTree = "<group>"; };
 		6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewStruct.swift; sourceTree = "<group>"; };
 		6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupView.swift; sourceTree = "<group>"; };
@@ -220,6 +244,9 @@
 				6C2DA7152167FD0800E0D590 /* UIViewGradient.swift */,
 				6C2DA7172167FDF400E0D590 /* UIColorHex.swift */,
 				6C79A9BF2168E113004ED656 /* UIViewRadius.swift */,
+				6C48A6BF217A33C4009A9AD8 /* UITextFieldBorder.swift */,
+				6C48A6C1217A345B009A9AD8 /* UIViewBorder.swift */,
+				6C48A6C4217A34E0009A9AD8 /* UIButtonBorder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +272,7 @@
 		6C2DA71B2167FFB000E0D590 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F30D2172B37800FF532F /* SignupView */,
 				6CA4D433216A3C5D00EE2432 /* Popups */,
 				6C79A9C62168EF30004ED656 /* LoginView */,
 			);
@@ -297,6 +325,7 @@
 		6C2DA7202167FFEF00E0D590 /*  Structs */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F3032172A86B00FF532F /* SignUpVC */,
 				6CA4D42F216A3B4500EE2432 /* Popup */,
 				6C79A9C12168ED0C004ED656 /* LoginVC */,
 				6C2DA7242168038E00E0D590 /* Colors.swift */,
@@ -307,6 +336,7 @@
 		6C2DA7212168001700E0D590 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F3002172A19600FF532F /* SignUpVC */,
 				6C2DA7192167FF9300E0D590 /* LoginVC */,
 			);
 			path = ViewController;
@@ -315,6 +345,7 @@
 		6C2DA7302168087100E0D590 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F3062172B2C900FF532F /* SignUp */,
 				6CA4D42B216A3AD700EE2432 /* Popup */,
 				6C2DA7312168087900E0D590 /* Login */,
 			);
@@ -472,6 +503,7 @@
 		6C7EC3AF21677703002E9464 /* sorulur */ = {
 			isa = PBXGroup;
 			children = (
+				6CDD53FD21847B9000882102 /* Router */,
 				6C2DA7302168087100E0D590 /* Protocols */,
 				6C7EC3BC21677704002E9464 /* Info.plist */,
 				6C2DA7212168001700E0D590 /* ViewController */,
@@ -508,6 +540,15 @@
 		6C86F2D321724FCB00FF532F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6C86F2F9217288A000FF532F /* Font Awesome */,
+				6C86F2F82172885C00FF532F /* Exo */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6C86F2F82172885C00FF532F /* Exo */ = {
+			isa = PBXGroup;
+			children = (
 				6C86F2DC21724FDF00FF532F /* Exo2-Black.otf */,
 				6C86F2D421724FDE00FF532F /* Exo2-BlackItalic.otf */,
 				6C86F2DE21724FE000FF532F /* Exo2-Bold.otf */,
@@ -527,7 +568,66 @@
 				6C86F2D821724FDF00FF532F /* Exo2-Thin.otf */,
 				6C86F2D921724FDF00FF532F /* Exo2-ThinItalic.otf */,
 			);
-			path = Fonts;
+			path = Exo;
+			sourceTree = "<group>";
+		};
+		6C86F2F9217288A000FF532F /* Font Awesome */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F2FC217288B900FF532F /* FontAwesomeBrandsRegular.otf */,
+				6C86F2FB217288B900FF532F /* FontAwesomeRefular.otf */,
+				6C86F2FA217288B800FF532F /* FontAwesomeSolid.otf */,
+			);
+			path = "Font Awesome";
+			sourceTree = "<group>";
+		};
+		6C86F3002172A19600FF532F /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F3012172A1CF00FF532F /* SignUpVC.swift */,
+			);
+			path = SignUpVC;
+			sourceTree = "<group>";
+		};
+		6C86F3032172A86B00FF532F /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F3042172A88400FF532F /* SignUpVCStructs.swift */,
+			);
+			path = SignUpVC;
+			sourceTree = "<group>";
+		};
+		6C86F3062172B2C900FF532F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F3082172B2EE00FF532F /* SignupViewDelegate */,
+				6C86F3072172B2E300FF532F /* SignupControllerDelegate */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		6C86F3072172B2E300FF532F /* SignupControllerDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F30B2172B32200FF532F /* SignupControllerDelegate.swift */,
+			);
+			path = SignupControllerDelegate;
+			sourceTree = "<group>";
+		};
+		6C86F3082172B2EE00FF532F /* SignupViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F3092172B31300FF532F /* SignupViewDelegate.swift */,
+			);
+			path = SignupViewDelegate;
+			sourceTree = "<group>";
+		};
+		6C86F30D2172B37800FF532F /* SignupView */ = {
+			isa = PBXGroup;
+			children = (
+				6C86F30E2172B38C00FF532F /* SignupView.swift */,
+			);
+			path = SignupView;
 			sourceTree = "<group>";
 		};
 		6CA4D42B216A3AD700EE2432 /* Popup */ = {
@@ -646,6 +746,14 @@
 				6CBED15D216D34D0006C618E /* DefaultPopupView.swift */,
 			);
 			path = DefaultPopupView;
+			sourceTree = "<group>";
+		};
+		6CDD53FD21847B9000882102 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6C0FB3C4218E058A00A45D7E /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E2E3D104CB1AD58E3731F87C /* Frameworks */ = {
@@ -777,12 +885,15 @@
 				6C86F2F121724FE100FF532F /* Exo2-BoldItalic.otf in Resources */,
 				6C7EC3BB21677704002E9464 /* LaunchScreen.storyboard in Resources */,
 				6C37A369216A36C50056A98F /* ErrorPopup.xib in Resources */,
+				6C86F2FE217288B900FF532F /* FontAwesomeRefular.otf in Resources */,
 				6C86F2EE21724FE100FF532F /* Exo2-Black.otf in Resources */,
 				6C86F2F521724FE100FF532F /* Exo2-SemiBold.otf in Resources */,
 				6C86F2F221724FE100FF532F /* Exo2-ExtraLight.otf in Resources */,
+				6C86F2FD217288B900FF532F /* FontAwesomeSolid.otf in Resources */,
 				6C7EC3B821677704002E9464 /* Assets.xcassets in Resources */,
 				6C86F2F721724FE100FF532F /* Exo2-Light.otf in Resources */,
 				6C86F2F321724FE100FF532F /* Exo2-ExtraBold.otf in Resources */,
+				6C86F2FF217288B900FF532F /* FontAwesomeBrandsRegular.otf in Resources */,
 				6C7EC3B621677703002E9464 /* Main.storyboard in Resources */,
 				6C86F2ED21724FE100FF532F /* Exo2-ExtraBoldItalic.otf in Resources */,
 				6C86F2E621724FE100FF532F /* Exo2-BlackItalic.otf in Resources */,
@@ -836,6 +947,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-sorulur/Pods-sorulur-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ActionKit/ActionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -848,6 +960,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -904,7 +1017,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C86F30F2172B38C00FF532F /* SignupView.swift in Sources */,
 				6C2DA7332168089900E0D590 /* StoryboardIdentity.swift in Sources */,
+				6C48A6C5217A34E0009A9AD8 /* UIButtonBorder.swift in Sources */,
 				6C2DA7162167FD0800E0D590 /* UIViewGradient.swift in Sources */,
 				6CBED15B216D32C9006C618E /* DefaultViewDelegate.swift in Sources */,
 				6C79A9D521690844004ED656 /* LoginRequest.swift in Sources */,
@@ -918,11 +1033,13 @@
 				6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */,
 				6C79A9C82168EF3E004ED656 /* LoginView.swift in Sources */,
 				6C2DA7252168038E00E0D590 /* Colors.swift in Sources */,
+				6C0FB3C5218E058A00A45D7E /* Router.swift in Sources */,
 				6C2DA7182167FDF400E0D590 /* UIColorHex.swift in Sources */,
 				6CBED153216D2CA2006C618E /* DefaultPopup.swift in Sources */,
 				6C79A9C32168ED25004ED656 /* LoginVCStruct.swift in Sources */,
 				6C2DA7232168005600E0D590 /* LoginVC.swift in Sources */,
 				6C2DA7292168053D00E0D590 /* Validator.swift in Sources */,
+				6C48A6C2217A345B009A9AD8 /* UIViewBorder.swift in Sources */,
 				6C2DA72B2168063200E0D590 /* ProjectConstants.swift in Sources */,
 				6C79A9DD216911A6004ED656 /* LoginController.swift in Sources */,
 				6C7EC3B121677703002E9464 /* AppDelegate.swift in Sources */,
@@ -930,17 +1047,22 @@
 				6C79A9C02168E113004ED656 /* UIViewRadius.swift in Sources */,
 				6CA4D441216A72FD00EE2432 /* UIViewNib.swift in Sources */,
 				6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */,
+				6C86F3022172A1CF00FF532F /* SignUpVC.swift in Sources */,
 				6CBED15E216D34D0006C618E /* DefaultPopupView.swift in Sources */,
 				6C79A9DF216918D0004ED656 /* Singleton.swift in Sources */,
+				6C86F3052172A88400FF532F /* SignUpVCStructs.swift in Sources */,
 				6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */,
 				6C79A9C52168EE2A004ED656 /* LoginViewDelegate.swift in Sources */,
 				6CA4D43F216A5A2A00EE2432 /* ErrorPopupManager.swift in Sources */,
 				6C2DA7272168050E00E0D590 /* Regex.swift in Sources */,
+				6C48A6C0217A33C4009A9AD8 /* UITextFieldBorder.swift in Sources */,
 				6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */,
 				6C79A9D12168F68E004ED656 /* JsonNull.swift in Sources */,
 				6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */,
+				6C86F30C2172B32200FF532F /* SignupControllerDelegate.swift in Sources */,
 				6CA4D43D216A504000EE2432 /* ErrorController.swift in Sources */,
 				6C79A9CC2168F5E0004ED656 /* LoginResponse.swift in Sources */,
+				6C86F30A2172B31300FF532F /* SignupViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1117,6 +1239,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSX96QB4A2;
 				INFOPLIST_FILE = sorulur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1136,6 +1259,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YSX96QB4A2;
 				INFOPLIST_FILE = sorulur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

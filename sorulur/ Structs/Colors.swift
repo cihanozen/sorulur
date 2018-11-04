@@ -17,6 +17,8 @@ struct COLORS {
     static let GRADIENTEND_SIGNUP = COLORS.HEX("#26A98B")
 
     static let BORDER_WHITE = COLORS.RGB(255, green: 255, blue: 255)
+    static let BORDER_BLACK = COLORS.RGB(18, green: 18, blue: 18)
+    static let BORDER_PURPLE = COLORS.RGB(118, green: 63, blue: 103)
 
     /// RGB Color convert to UIColor
     ///

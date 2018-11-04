@@ -27,21 +27,30 @@
     import AppKit
 #endif
 
-public protocol ConstraintInsetTarget: ConstraintConstantTarget {}
 
-extension Int: ConstraintInsetTarget {}
+public protocol ConstraintInsetTarget: ConstraintConstantTarget {
+}
 
-extension UInt: ConstraintInsetTarget {}
+extension Int: ConstraintInsetTarget {
+}
 
-extension Float: ConstraintInsetTarget {}
+extension UInt: ConstraintInsetTarget {
+}
 
-extension Double: ConstraintInsetTarget {}
+extension Float: ConstraintInsetTarget {
+}
 
-extension CGFloat: ConstraintInsetTarget {}
+extension Double: ConstraintInsetTarget {
+}
 
-extension ConstraintInsets: ConstraintInsetTarget {}
+extension CGFloat: ConstraintInsetTarget {
+}
+
+extension ConstraintInsets: ConstraintInsetTarget {
+}
 
 extension ConstraintInsetTarget {
+
     internal var constraintInsetTargetValue: ConstraintInsets {
         if let amount = self as? ConstraintInsets {
             return amount
@@ -59,4 +68,5 @@ extension ConstraintInsetTarget {
             return ConstraintInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
     }
+    
 }

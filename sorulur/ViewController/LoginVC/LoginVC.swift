@@ -64,7 +64,7 @@ extension LoginVC: LoginViewDelegate {
 
 // MARK: - LoginControllerDelegate
 
-extension LoginVC: LoginControllerDelegate {
+extension LoginVC: LoginControllerDelegate, router{
     /// Login Button Actions
     ///
     /// - Parameter sender: UIButton
@@ -78,5 +78,12 @@ extension LoginVC: LoginControllerDelegate {
     @IBAction func loginButtonAction(sender _: UIButton) {
         log.debug("click Login Button")
         loginAction()
+    }
+    
+    /// SignupAction
+    ///
+    /// - Parameter _: UIButton
+    @IBAction func signupAction(sender _: UIButton) {
+        navigate(.Signup)
     }
 }
