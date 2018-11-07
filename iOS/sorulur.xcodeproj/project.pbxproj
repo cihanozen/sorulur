@@ -26,6 +26,8 @@
 		6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */; };
 		6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF5216E668200058883 /* DefaultController.swift */; };
 		6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */; };
+		6C799809219068EA0059BBED /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C799808219068EA0059BBED /* TabbarVC.swift */; };
+		6C79980F219070B60059BBED /* LeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79980E219070B60059BBED /* LeftMenuVC.swift */; };
 		6C79A9C02168E113004ED656 /* UIViewRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9BF2168E113004ED656 /* UIViewRadius.swift */; };
 		6C79A9C32168ED25004ED656 /* LoginVCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9C22168ED25004ED656 /* LoginVCStruct.swift */; };
 		6C79A9C52168EE2A004ED656 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79A9C42168EE2A004ED656 /* LoginViewDelegate.swift */; };
@@ -69,6 +71,7 @@
 		6C86F30A2172B31300FF532F /* SignupViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F3092172B31300FF532F /* SignupViewDelegate.swift */; };
 		6C86F30C2172B32200FF532F /* SignupControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F30B2172B32200FF532F /* SignupControllerDelegate.swift */; };
 		6C86F30F2172B38C00FF532F /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86F30E2172B38C00FF532F /* SignupView.swift */; };
+		6C8BD91B2190785700C95BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BD91A2190785700C95BE6 /* ViewController.swift */; };
 		6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */; };
 		6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */; };
 		6CA4D436216A3C7300EE2432 /* ErrorPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */; };
@@ -76,6 +79,12 @@
 		6CA4D43D216A504000EE2432 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D43C216A504000EE2432 /* ErrorController.swift */; };
 		6CA4D43F216A5A2A00EE2432 /* ErrorPopupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D43E216A5A2A00EE2432 /* ErrorPopupManager.swift */; };
 		6CA4D441216A72FD00EE2432 /* UIViewNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA4D440216A72FD00EE2432 /* UIViewNib.swift */; };
+		6CBD41852192E23B00713A93 /* LeftMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD41842192E23B00713A93 /* LeftMenuDelegate.swift */; };
+		6CBD41882192E27A00713A93 /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD41872192E27A00713A93 /* LeftMenuView.swift */; };
+		6CBD418C2192E38C00713A93 /* LeftMenuViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD418B2192E38C00713A93 /* LeftMenuViewDelegate.swift */; };
+		6CBD418E2192E39800713A93 /* LeftMenuControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD418D2192E39800713A93 /* LeftMenuControllerDelegate.swift */; };
+		6CBD41912192E7F500713A93 /* LeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD41902192E7F500713A93 /* LeftMenuController.swift */; };
+		6CBD41942192E98500713A93 /* LeftMenuVCStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD41932192E98500713A93 /* LeftMenuVCStructs.swift */; };
 		6CBED153216D2CA2006C618E /* DefaultPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED152216D2CA2006C618E /* DefaultPopup.swift */; };
 		6CBED156216D3173006C618E /* DefaultViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED155216D3173006C618E /* DefaultViewStruct.swift */; };
 		6CBED15B216D32C9006C618E /* DefaultViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBED15A216D32C9006C618E /* DefaultViewDelegate.swift */; };
@@ -125,6 +134,8 @@
 		6C6D8BF2216E652900058883 /* DefaultControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultControllerDelegate.swift; sourceTree = "<group>"; };
 		6C6D8BF5216E668200058883 /* DefaultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultController.swift; sourceTree = "<group>"; };
 		6C6D8BF7216E68D400058883 /* DefaultPopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopupManager.swift; sourceTree = "<group>"; };
+		6C799808219068EA0059BBED /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		6C79980E219070B60059BBED /* LeftMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuVC.swift; sourceTree = "<group>"; };
 		6C79A9BF2168E113004ED656 /* UIViewRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRadius.swift; sourceTree = "<group>"; };
 		6C79A9C22168ED25004ED656 /* LoginVCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCStruct.swift; sourceTree = "<group>"; };
 		6C79A9C42168EE2A004ED656 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +185,7 @@
 		6C86F3092172B31300FF532F /* SignupViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewDelegate.swift; sourceTree = "<group>"; };
 		6C86F30B2172B32200FF532F /* SignupControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupControllerDelegate.swift; sourceTree = "<group>"; };
 		6C86F30E2172B38C00FF532F /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		6C8BD91A2190785700C95BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6CA4D42D216A3AFB00EE2432 /* ErrorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewDelegate.swift; sourceTree = "<group>"; };
 		6CA4D431216A3B5C00EE2432 /* ErrorViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewStruct.swift; sourceTree = "<group>"; };
 		6CA4D435216A3C7300EE2432 /* ErrorPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupView.swift; sourceTree = "<group>"; };
@@ -181,6 +193,12 @@
 		6CA4D43C216A504000EE2432 /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		6CA4D43E216A5A2A00EE2432 /* ErrorPopupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPopupManager.swift; sourceTree = "<group>"; };
 		6CA4D440216A72FD00EE2432 /* UIViewNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNib.swift; sourceTree = "<group>"; };
+		6CBD41842192E23B00713A93 /* LeftMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuDelegate.swift; sourceTree = "<group>"; };
+		6CBD41872192E27A00713A93 /* LeftMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
+		6CBD418B2192E38C00713A93 /* LeftMenuViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewDelegate.swift; sourceTree = "<group>"; };
+		6CBD418D2192E39800713A93 /* LeftMenuControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuControllerDelegate.swift; sourceTree = "<group>"; };
+		6CBD41902192E7F500713A93 /* LeftMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuController.swift; sourceTree = "<group>"; };
+		6CBD41932192E98500713A93 /* LeftMenuVCStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuVCStructs.swift; sourceTree = "<group>"; };
 		6CBED152216D2CA2006C618E /* DefaultPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPopup.swift; sourceTree = "<group>"; };
 		6CBED155216D3173006C618E /* DefaultViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewStruct.swift; sourceTree = "<group>"; };
 		6CBED15A216D32C9006C618E /* DefaultViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultViewDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +290,7 @@
 		6C2DA71B2167FFB000E0D590 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CBD41862192E26C00713A93 /* LeftMenu */,
 				6C86F30D2172B37800FF532F /* SignupView */,
 				6CA4D433216A3C5D00EE2432 /* Popups */,
 				6C79A9C62168EF30004ED656 /* LoginView */,
@@ -282,6 +301,7 @@
 		6C2DA71C2167FFB600E0D590 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6CBD418F2192E7EA00713A93 /* LeftMenu */,
 				6CA4D43A216A502800EE2432 /* Popup */,
 				6C79A9DB21691191004ED656 /* LoginController */,
 			);
@@ -325,6 +345,7 @@
 		6C2DA7202167FFEF00E0D590 /*  Structs */ = {
 			isa = PBXGroup;
 			children = (
+				6CBD41922192E97500713A93 /* LeftMenuVC */,
 				6C86F3032172A86B00FF532F /* SignUpVC */,
 				6CA4D42F216A3B4500EE2432 /* Popup */,
 				6C79A9C12168ED0C004ED656 /* LoginVC */,
@@ -336,6 +357,8 @@
 		6C2DA7212168001700E0D590 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C79980D219070A90059BBED /* LeftMenuVC */,
+				6C799807219068CF0059BBED /* TabbarVC */,
 				6C86F3002172A19600FF532F /* SignUpVC */,
 				6C2DA7192167FF9300E0D590 /* LoginVC */,
 			);
@@ -345,6 +368,7 @@
 		6C2DA7302168087100E0D590 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6CBD41822192E22500713A93 /* LeftMenu */,
 				6C86F3062172B2C900FF532F /* SignUp */,
 				6CA4D42B216A3AD700EE2432 /* Popup */,
 				6C2DA7312168087900E0D590 /* Login */,
@@ -404,6 +428,22 @@
 				6C6D8BF5216E668200058883 /* DefaultController.swift */,
 			);
 			path = DefaultController;
+			sourceTree = "<group>";
+		};
+		6C799807219068CF0059BBED /* TabbarVC */ = {
+			isa = PBXGroup;
+			children = (
+				6C799808219068EA0059BBED /* TabbarVC.swift */,
+			);
+			path = TabbarVC;
+			sourceTree = "<group>";
+		};
+		6C79980D219070A90059BBED /* LeftMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				6C79980E219070B60059BBED /* LeftMenuVC.swift */,
+			);
+			path = LeftMenuVC;
 			sourceTree = "<group>";
 		};
 		6C79A9C12168ED0C004ED656 /* LoginVC */ = {
@@ -515,6 +555,7 @@
 				6C2DA71B2167FFB000E0D590 /* View */,
 				6C2DA71A2167FFA900E0D590 /* Model */,
 				6C2DA7142167FCEE00E0D590 /* Extensions */,
+				6C8BD91A2190785700C95BE6 /* ViewController.swift */,
 			);
 			path = sorulur;
 			sourceTree = "<group>";
@@ -704,6 +745,64 @@
 				6CA4D43C216A504000EE2432 /* ErrorController.swift */,
 			);
 			path = ErrorController;
+			sourceTree = "<group>";
+		};
+		6CBD41822192E22500713A93 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD418A2192E37B00713A93 /* LeftMenuControllerDelegate */,
+				6CBD41892192E37200713A93 /* LeftMenuViewDelegate */,
+				6CBD41832192E22C00713A93 /* LeftMenuDelegate */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		6CBD41832192E22C00713A93 /* LeftMenuDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD41842192E23B00713A93 /* LeftMenuDelegate.swift */,
+			);
+			path = LeftMenuDelegate;
+			sourceTree = "<group>";
+		};
+		6CBD41862192E26C00713A93 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD41872192E27A00713A93 /* LeftMenuView.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		6CBD41892192E37200713A93 /* LeftMenuViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD418B2192E38C00713A93 /* LeftMenuViewDelegate.swift */,
+			);
+			path = LeftMenuViewDelegate;
+			sourceTree = "<group>";
+		};
+		6CBD418A2192E37B00713A93 /* LeftMenuControllerDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD418D2192E39800713A93 /* LeftMenuControllerDelegate.swift */,
+			);
+			path = LeftMenuControllerDelegate;
+			sourceTree = "<group>";
+		};
+		6CBD418F2192E7EA00713A93 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD41902192E7F500713A93 /* LeftMenuController.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		6CBD41922192E97500713A93 /* LeftMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD41932192E98500713A93 /* LeftMenuVCStructs.swift */,
+			);
+			path = LeftMenuVC;
 			sourceTree = "<group>";
 		};
 		6CBED154216D3163006C618E /* DefaultView */ = {
@@ -952,6 +1051,8 @@
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -965,6 +1066,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1019,8 +1122,10 @@
 			files = (
 				6C86F30F2172B38C00FF532F /* SignupView.swift in Sources */,
 				6C2DA7332168089900E0D590 /* StoryboardIdentity.swift in Sources */,
+				6CBD41942192E98500713A93 /* LeftMenuVCStructs.swift in Sources */,
 				6C48A6C5217A34E0009A9AD8 /* UIButtonBorder.swift in Sources */,
 				6C2DA7162167FD0800E0D590 /* UIViewGradient.swift in Sources */,
+				6C8BD91B2190785700C95BE6 /* ViewController.swift in Sources */,
 				6CBED15B216D32C9006C618E /* DefaultViewDelegate.swift in Sources */,
 				6C79A9D521690844004ED656 /* LoginRequest.swift in Sources */,
 				6C79A9CF2168F63C004ED656 /* LoginAPI.swift in Sources */,
@@ -1032,11 +1137,15 @@
 				6CA4D439216A4E2500EE2432 /* ErrorControllerDelegate.swift in Sources */,
 				6C6D8BF6216E668200058883 /* DefaultController.swift in Sources */,
 				6C79A9C82168EF3E004ED656 /* LoginView.swift in Sources */,
+				6CBD41852192E23B00713A93 /* LeftMenuDelegate.swift in Sources */,
+				6CBD41912192E7F500713A93 /* LeftMenuController.swift in Sources */,
 				6C2DA7252168038E00E0D590 /* Colors.swift in Sources */,
 				6C0FB3C5218E058A00A45D7E /* Router.swift in Sources */,
 				6C2DA7182167FDF400E0D590 /* UIColorHex.swift in Sources */,
 				6CBED153216D2CA2006C618E /* DefaultPopup.swift in Sources */,
+				6CBD41882192E27A00713A93 /* LeftMenuView.swift in Sources */,
 				6C79A9C32168ED25004ED656 /* LoginVCStruct.swift in Sources */,
+				6C79980F219070B60059BBED /* LeftMenuVC.swift in Sources */,
 				6C2DA7232168005600E0D590 /* LoginVC.swift in Sources */,
 				6C2DA7292168053D00E0D590 /* Validator.swift in Sources */,
 				6C48A6C2217A345B009A9AD8 /* UIViewBorder.swift in Sources */,
@@ -1044,6 +1153,7 @@
 				6C79A9DD216911A6004ED656 /* LoginController.swift in Sources */,
 				6C7EC3B121677703002E9464 /* AppDelegate.swift in Sources */,
 				6C2DA72F2168082400E0D590 /* UIBezierPathRadial.swift in Sources */,
+				6CBD418C2192E38C00713A93 /* LeftMenuViewDelegate.swift in Sources */,
 				6C79A9C02168E113004ED656 /* UIViewRadius.swift in Sources */,
 				6CA4D441216A72FD00EE2432 /* UIViewNib.swift in Sources */,
 				6CA4D42E216A3AFB00EE2432 /* ErrorViewDelegate.swift in Sources */,
@@ -1052,12 +1162,14 @@
 				6C79A9DF216918D0004ED656 /* Singleton.swift in Sources */,
 				6C86F3052172A88400FF532F /* SignUpVCStructs.swift in Sources */,
 				6C6D8BF3216E652900058883 /* DefaultControllerDelegate.swift in Sources */,
+				6C799809219068EA0059BBED /* TabbarVC.swift in Sources */,
 				6C79A9C52168EE2A004ED656 /* LoginViewDelegate.swift in Sources */,
 				6CA4D43F216A5A2A00EE2432 /* ErrorPopupManager.swift in Sources */,
 				6C2DA7272168050E00E0D590 /* Regex.swift in Sources */,
 				6C48A6C0217A33C4009A9AD8 /* UITextFieldBorder.swift in Sources */,
 				6C6D8BF8216E68D400058883 /* DefaultPopupManager.swift in Sources */,
 				6C79A9D12168F68E004ED656 /* JsonNull.swift in Sources */,
+				6CBD418E2192E39800713A93 /* LeftMenuControllerDelegate.swift in Sources */,
 				6CA4D432216A3B5C00EE2432 /* ErrorViewStruct.swift in Sources */,
 				6C86F30C2172B32200FF532F /* SignupControllerDelegate.swift in Sources */,
 				6CA4D43D216A504000EE2432 /* ErrorController.swift in Sources */,

@@ -15,11 +15,14 @@ import UIKit
    /// - SIGNUPID: SignUpVC Storyboard Identifier
    /// - ERROR_POPUP: ErrorPopup Storyboard Identifier
    /// - DEFAULT_POPUP: DefaultPopup Storyboard Identifier
-   public enum StoryboardIdentifier: String {
-        /// LoginVC identifier
-        case LOGINID = "LoginVC"
-        case SIGNUPID = "SignUpVC"
-        case ERROR_POPUP = "ErrorPopup"
-        case DEFAULT_POPUP = "DefaultPopup"
+public enum StoryboardIdentifier: String {
+    /// LoginVC identifier
+    case LOGINID = "LoginVC"
+    case SIGNUPID = "SignUpVC"
+    case ERROR_POPUP = "ErrorPopup"
+    case DEFAULT_POPUP = "DefaultPopup"
+    case NAVIGATION = "Navigation"
+    case TABBAR = "TabBarViewController"
+    case LEFTMENU = "LeftMenuViewController"
 }
 

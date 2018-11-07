@@ -61,6 +61,9 @@ PODS:
   - Realm/Headers (3.11.1)
   - RealmSwift (3.11.1):
     - Realm (= 3.11.1)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
   - SnapKit (4.2.0)
   - XCGLogger (6.1.0):
     - XCGLogger/Core (= 6.1.0)
@@ -73,6 +76,8 @@ DEPENDENCIES:
   - DLRadioButton
   - Firebase/Analytics
   - RealmSwift
+  - RxCocoa
+  - RxSwift
   - SnapKit
   - XCGLogger
 
@@ -91,6 +96,8 @@ SPEC REPOS:
     - ObjcExceptionBridging
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxSwift
     - SnapKit
     - XCGLogger
 
@@ -108,9 +115,11 @@ SPEC CHECKSUMS:
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   Realm: 037c5919b9ceb59d6beed5d3b031096856b119b3
   RealmSwift: c9580133e73ef40ed340401af2dbc9a5790dfea7
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: 745a36a056c0b7f267d114f0b6e9ef3d9c6e096e
+PODFILE CHECKSUM: ff4807d6cb683f39f4a03da64af481e4dbf71028
 
 COCOAPODS: 1.5.3

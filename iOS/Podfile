@@ -11,6 +11,8 @@ pod 'RealmSwift'
 pod 'ActionKit'
 pod 'SnapKit'
 pod 'DLRadioButton'
+pod 'RxSwift'
+pod 'RxCocoa'
   # Pods for sorulur
 
   target 'sorulurTests' do

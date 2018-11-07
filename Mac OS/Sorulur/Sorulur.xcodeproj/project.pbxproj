@@ -13,6 +13,13 @@
 		6CAA97E9218F079B002F291C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA97E7218F079B002F291C /* Main.storyboard */; };
 		6CAA97F5218F079B002F291C /* SorulurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97F4218F079B002F291C /* SorulurTests.swift */; };
 		6CAA9800218F079B002F291C /* SorulurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA97FF218F079B002F291C /* SorulurUITests.swift */; };
+		6CAA981A218F1AB1002F291C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA9819218F1AB1002F291C /* LoginVC.swift */; };
+		6CAA981D218F1AF6002F291C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA981C218F1AF6002F291C /* LoginView.swift */; };
+		6CAA981F218F1B2F002F291C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA981E218F1B2F002F291C /* Colors.swift */; };
+		6CAA9822218F1BA1002F291C /* LoginVCStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA9821218F1BA1002F291C /* LoginVCStruct.swift */; };
+		6CAA9824218F1C59002F291C /* NSViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA9823218F1C59002F291C /* NSViewGradient.swift */; };
+		6CAA9826218F1CB6002F291C /* NSColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA9825218F1CB6002F291C /* NSColorHex.swift */; };
+		6CAA982A218F1D0D002F291C /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA9829218F1D0D002F291C /* LoginViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		6CAA97FB218F079B002F291C /* SorulurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorulurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CAA97FF218F079B002F291C /* SorulurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorulurUITests.swift; sourceTree = "<group>"; };
 		6CAA9801218F079B002F291C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CAA9819218F1AB1002F291C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		6CAA981C218F1AF6002F291C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6CAA981E218F1B2F002F291C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6CAA9821218F1BA1002F291C /* LoginVCStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCStruct.swift; sourceTree = "<group>"; };
+		6CAA9823218F1C59002F291C /* NSViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewGradient.swift; sourceTree = "<group>"; };
+		6CAA9825218F1CB6002F291C /* NSColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSColorHex.swift; sourceTree = "<group>"; };
+		6CAA9829218F1D0D002F291C /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +110,18 @@
 		6CAA97E0218F079A002F291C /* Sorulur */ = {
 			isa = PBXGroup;
 			children = (
-				6CAA97E1218F079A002F291C /* AppDelegate.swift */,
+				6CAA9817218F0A50002F291C /* Router */,
+				6CAA9816218F0A48002F291C /* Protocols */,
+				6CAA9815218F0A41002F291C /* ViewController */,
+				6CAA9814218F0A38002F291C /* Structs */,
+				6CAA9813218F0A32002F291C /* API */,
+				6CAA9812218F0A27002F291C /* Supporting Files */,
+				6CAA9811218F0A20002F291C /* Library */,
+				6CAA9810218F0A18002F291C /* Controller */,
+				6CAA980F218F0A12002F291C /* View */,
+				6CAA980E218F0A0B002F291C /* Model */,
+				6CAA980D218F09FD002F291C /* Extensions */,
 				6CAA97E3218F079A002F291C /* ViewController.swift */,
-				6CAA97E5218F079B002F291C /* Assets.xcassets */,
-				6CAA97E7218F079B002F291C /* Main.storyboard */,
 				6CAA97EA218F079B002F291C /* Info.plist */,
 				6CAA97EB218F079B002F291C /* Sorulur.entitlements */,
 			);
@@ -122,6 +144,133 @@
 				6CAA9801218F079B002F291C /* Info.plist */,
 			);
 			path = SorulurUITests;
+			sourceTree = "<group>";
+		};
+		6CAA980D218F09FD002F291C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9823218F1C59002F291C /* NSViewGradient.swift */,
+				6CAA9825218F1CB6002F291C /* NSColorHex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6CAA980E218F0A0B002F291C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CAA980F218F0A12002F291C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA981B218F1AE2002F291C /* LoginView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CAA9810218F0A18002F291C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6CAA9811218F0A20002F291C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		6CAA9812218F0A27002F291C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA97E5218F079B002F291C /* Assets.xcassets */,
+				6CAA97E7218F079B002F291C /* Main.storyboard */,
+				6CAA97E1218F079A002F291C /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CAA9813218F0A32002F291C /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6CAA9814218F0A38002F291C /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9820218F1B93002F291C /* LoginVC */,
+				6CAA981E218F1B2F002F291C /* Colors.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		6CAA9815218F0A41002F291C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9818218F1A92002F291C /* LoginVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6CAA9816218F0A48002F291C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9827218F1CF9002F291C /* Login */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6CAA9817218F0A50002F291C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6CAA9818218F1A92002F291C /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9819218F1AB1002F291C /* LoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		6CAA981B218F1AE2002F291C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA981C218F1AF6002F291C /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		6CAA9820218F1B93002F291C /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9821218F1BA1002F291C /* LoginVCStruct.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		6CAA9827218F1CF9002F291C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9828218F1CFF002F291C /* LoginViewDelegate */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6CAA9828218F1CFF002F291C /* LoginViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA9829218F1D0D002F291C /* LoginViewDelegate.swift */,
+			);
+			path = LoginViewDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +403,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAA982A218F1D0D002F291C /* LoginViewDelegate.swift in Sources */,
+				6CAA9826218F1CB6002F291C /* NSColorHex.swift in Sources */,
 				6CAA97E4218F079A002F291C /* ViewController.swift in Sources */,
+				6CAA981F218F1B2F002F291C /* Colors.swift in Sources */,
 				6CAA97E2218F079A002F291C /* AppDelegate.swift in Sources */,
+				6CAA9824218F1C59002F291C /* NSViewGradient.swift in Sources */,
+				6CAA981D218F1AF6002F291C /* LoginView.swift in Sources */,
+				6CAA981A218F1AB1002F291C /* LoginVC.swift in Sources */,
+				6CAA9822218F1BA1002F291C /* LoginVCStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
