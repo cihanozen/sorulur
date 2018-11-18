@@ -12,7 +12,7 @@ import UIKit
 class LoginVC: UIViewController {
     /// LoginVC Variable Copy in sturct with other class implement
     var param: LoginVCStruct {
-        log.debug("Login VC Struct")
+        print("Login VC Struct")
         return LoginVCStruct(with: self) ?? LoginVCStruct()
     }
 
@@ -54,11 +54,17 @@ extension LoginVC: LoginViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        log.debug("ViewDidLoad")
+        print("ViewDidLoad")
 
         // MARK: - Setup UI
 
         setupUI()
+        
+        // MARK: - Only Debug
+        #if DEBUG
+        self.emailTextField.text = "qwkiss2@gmail.com"
+        self.passwordTextField.text = "chnozn1"
+        #endif
     }
 }
 
@@ -76,7 +82,7 @@ extension LoginVC: LoginControllerDelegate, router{
     ///     }
     ///     ````
     @IBAction func loginButtonAction(sender _: UIButton) {
-        log.debug("click Login Button")
+        print("click Login Button")
         loginAction()
     }
     

@@ -15,6 +15,8 @@ struct LeftMenuVCStructs {
     weak var leftMenuView: UIView?
     weak var imageView: UIView?
     weak var profileImageView: UIImageView?
+    weak var nameLabel: UILabel?
+    weak var levelLabel: UILabel?
 }
 
 // MARK: - LeftMenuVCStructs initilasion and reset variables
@@ -28,11 +30,13 @@ extension LeftMenuVCStructs {
     ///    LoginStruct(LoginVC.self)
     ///    ````
     init?(with view: LeftMenuVC) {
-        log.debug("Login VC Struct init")
+        print("Login VC Struct init")
         self.leftMenuCons = view.leftMenuCons
         self.leftMenuView = view.leftMenuView
         self.imageView = view.imageView
         self.profileImageView = view.profileImageView
+        self.nameLabel = view.nameLabel
+        self.levelLabel = view.levelLabel
     }
     
     /// Reset Variables
@@ -46,5 +50,7 @@ extension LeftMenuVCStructs {
         self.leftMenuView = nil
         self.imageView = nil
         self.profileImageView = nil
+        self.nameLabel = nil
+        self.levelLabel = nil
     }
 }

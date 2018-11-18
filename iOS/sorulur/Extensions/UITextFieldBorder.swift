@@ -19,7 +19,7 @@ extension UITextField {
     ///    view.textFieldBorderRemove()
     ///    ````
     func textFieldBorderRemove() {
-        log.debug("textfield background clear and border style set none")
+        print("textfield background clear and border style set none")
         self.backgroundColor = UIColor.clear
         self.borderStyle = .none
     }

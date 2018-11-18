@@ -22,7 +22,7 @@ class DefaultController {
     /// let controller = ErrorController(ErrorViewStruct)
     /// ````
     init(_ param: DefaultViewStruct){
-        log.debug("Struct init")
+        print("Struct init")
         self.param = param
     }
     
@@ -30,7 +30,7 @@ class DefaultController {
     init(){}
     
     deinit {
-        log.debug("Deinit")
+        print("Deinit")
         self.param = nil
     }
     
@@ -66,10 +66,10 @@ class DefaultController {
     ///   - animated: show with animation
     ///   - popup: popup
     func show(_ inView: UIView, animated: Bool = true, popup: DefaultPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         let view = DefaultPopupView()
-        log.debug(view)
+        print(view)
         if animated {
             view.popupShowAnimated(inView, popup: popup)
         } else {

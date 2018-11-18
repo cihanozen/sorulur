@@ -21,13 +21,13 @@ protocol SignupViewDelegate {
 extension SignupViewDelegate where Self: SignUpVC {
     /// loginView Class Object
     private var signupView: SignupView {
-        log.debug("LoginView")
+        print("LoginView")
         return SignupView(param)
     }
     
     /// SetupUI
     func setupUI() {
-        log.debug("setupUI")
+        print("setupUI")
         signupView.radioButtonClearBg()
         textFields()
         roundedViews()

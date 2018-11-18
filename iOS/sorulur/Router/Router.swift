@@ -44,6 +44,8 @@ class Router {
         switch page {
         case .Signup:
             navigate(identifier: .SIGNUPID)
+        case .Navigation:
+            navigate(identifier: .NAVIGATION)
         default:
             break
         }
@@ -91,4 +93,5 @@ extension router where Self: UIViewController {
 public enum Page {
     case Login
     case Signup
+    case Navigation
 }

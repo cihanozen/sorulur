@@ -11,10 +11,13 @@ import UIKit
 
 class LeftMenuVC: UIViewController, LeftMenuDelegate {
     var isOpenLeftMenu: Bool = false
-    @IBOutlet var leftMenuCons: NSLayoutConstraint!
-    @IBOutlet var leftMenuView: UIView!
-    @IBOutlet var imageView: UIView!
-    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet weak var leftMenuCons: NSLayoutConstraint!
+    @IBOutlet weak var leftMenuView: UIView!
+    @IBOutlet weak var imageView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     let open: Selector = #selector(openLeftView)
     let close: Selector = #selector(closeLeftView)
@@ -24,9 +27,11 @@ class LeftMenuVC: UIViewController, LeftMenuDelegate {
     let panName = NSNotification.Name(rawValue: "panChangePosition")
     
     var param: LeftMenuVCStructs {
-        log.debug("Login VC Struct")
+        print("Login VC Struct")
         return LeftMenuVCStructs(with: self) ?? LeftMenuVCStructs()
     }
+    
+    private var data: [String] = []
 }
 
 extension LeftMenuVC: LeftMenuViewDelegate {
@@ -35,6 +40,12 @@ extension LeftMenuVC: LeftMenuViewDelegate {
         NotificationCenter.default.addObserver(self, selector: open, name: openName, object: nil)
         NotificationCenter.default.addObserver(self, selector: close, name: closeName, object: nil)
         NotificationCenter.default.addObserver(self, selector: pan, name: panName, object: nil)
+        tableView.dataSource = self
+        tableView.delegate = self
+        #warning("DEBUG")
+        for index in 0 ... 1000 {
+            data.append("\(index)")
+        }
         setupUI()
         roundedProfileImage()
         dataSetup()
@@ -60,5 +71,28 @@ extension LeftMenuVC: LeftMenuControllerDelegate {
     
     func dataSetup(){
         setProfileImage()
+        setName()
+        setLevel()
+    }
+}
+
+extension LeftMenuVC: UITableViewDataSource {
+    func numberOfSections(in _: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: indexPath.row == 1 ? StoryboardIdentifier.LEFTMENUTABLECELLTYPE2.rawValue : StoryboardIdentifier.LEFTMENUTABLECELLTYPE1.rawValue)!
+        return cell
+    }
+}
+
+extension LeftMenuVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.row == 1 ? 120 : 60
     }
 }

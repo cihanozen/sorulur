@@ -17,7 +17,7 @@ class ErrorPopup: UIView {
     /// ErrorPopup Variable Copy in sturct with other class implement
     /// Error View Struct for other class
     var param: ErrorViewStruct {
-        log.debug("Login VC Struct")
+        print("Login VC Struct")
         return ErrorViewStruct(with: self) ?? ErrorViewStruct()
     }
 
@@ -89,8 +89,8 @@ extension ErrorPopup: ErrorControllerDelegate {
     ///   - animated: animated showing popup
     ///   - popup: popup
     func show(_ inView: UIView, animated: Bool, popup: ErrorPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         showPopup(inView, animated: animated, popup: popup)
     }
 }

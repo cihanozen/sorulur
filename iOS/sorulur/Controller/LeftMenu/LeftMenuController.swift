@@ -22,7 +22,7 @@ class LeftMenuController {
     /// let controller = LeftMenuController(LeftMenuStruct)
     /// ````
     init(_ param: LeftMenuVCStructs){
-        log.debug("Struct init")
+        print("Struct init")
         self.param = param
     }
     
@@ -30,19 +30,44 @@ class LeftMenuController {
     init(){}
     
     deinit {
-        log.debug("Deinit")
+        print("Deinit")
         self.param = nil
     }
     
-    public func getAvatar() -> UIImage{
+    public func getAvatar() -> String{
         if let model = Singleton.shared.userImage {
             if !model.isEmpty {
-                return UIImage(named: model)!
+                return model
             } else {
-                return UIImage(named: "")!
+                return ""
             }
         } else {
-            return UIImage()
+            return ""
         }
     }
+    
+    public func getName() -> String {
+        if let model = Singleton.shared.userNick {
+            if !model.isEmpty {
+                return model
+            } else {
+                return ""
+            }
+        } else {
+            return ""
+        }
+    }
+    
+    public func getLevel() -> String {
+        if let model = Singleton.shared.userPoints {
+            if !model.isEmpty {
+                return model
+            } else {
+                return ""
+            }
+        } else {
+            return ""
+        }
+    }
+    
 }

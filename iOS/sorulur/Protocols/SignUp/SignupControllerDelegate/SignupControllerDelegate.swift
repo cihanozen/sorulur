@@ -19,13 +19,13 @@ protocol SignupControllerDelegate {
 // MARK: - SignUpVC
 extension SignupControllerDelegate where Self: SignUpVC {
 //    var signupController: SignupConroller {
-//        log.debug("Signup Controller")
+//        print("Signup Controller")
 //        return SignupController(param)
 //    }
     
     /// SignupView Object
     private var signupView: SignupView {
-        log.debug("Signup View")
+        print("Signup View")
         return SignupView(param)
     }
     

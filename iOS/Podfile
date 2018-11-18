@@ -6,13 +6,15 @@ target 'sorulur' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'Firebase/Analytics'
-    pod 'XCGLogger'
+    #   pod 'XCGLogger'
 pod 'RealmSwift'
 pod 'ActionKit'
 pod 'SnapKit'
 pod 'DLRadioButton'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SDWebImage'
+pod 'CocoaDebug', :configurations => ['Debug']
   # Pods for sorulur
 
   target 'sorulurTests' do

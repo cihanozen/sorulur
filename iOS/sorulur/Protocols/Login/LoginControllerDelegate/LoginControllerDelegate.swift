@@ -21,13 +21,17 @@ protocol LoginControllerDelegate {
 extension LoginControllerDelegate where Self: LoginVC {
     /// Login Controller Class Object
     var loginController: LoginController {
-        log.debug("Login Controller")
+        print("Login Controller")
         return LoginController(param)
     }
 
     /// Login Button Action
     func loginAction() {
-        log.debug("Triggered login controller in login post")
-        loginController.loginPost(self)
+        print("Triggered login controller in login post")
+        loginController.loginPost(self , completion: { finish in
+            if finish {
+                self.navigate(.Navigation)
+            }
+        })
     }
 }

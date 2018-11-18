@@ -22,7 +22,7 @@ class ErrorController {
     /// let controller = ErrorController(ErrorViewStruct)
     /// ````
     init(_ param: ErrorViewStruct) {
-        log.debug("Login Controller İnit")
+        print("Login Controller İnit")
         self.param = param
     }
 
@@ -30,7 +30,7 @@ class ErrorController {
     init() {}
 
     deinit {
-        log.debug("Login Controller deinit")
+        print("Login Controller deinit")
         self.param = nil
     }
 
@@ -65,10 +65,10 @@ class ErrorController {
     ///   - animated: show with animation
     ///   - popup: popup
     func show(_ inView: UIView, animated: Bool = true, popup: ErrorPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         let view = ErrorPopupView()
-        log.debug(view)
+        print(view)
         if animated {
             view.popupShowAnimated(inView, popup: popup)
         } else {

@@ -39,7 +39,7 @@ extension LoginVCStruct {
     ///    LoginStruct(LoginVC.self)
     ///    ````
     init?(with view: LoginVC) {
-        log.debug("Login VC Struct init")
+        print("Login VC Struct init")
         self.view = view.view
         emailView = view.emailView
         emailTextField = view.emailTextField
@@ -64,7 +64,7 @@ extension LoginVCStruct {
     ///    param.reset()
     ///    ````
     mutating func reset() {
-        log.debug("Login VC Struct reset")
+        print("Login VC Struct reset")
         emailView = nil
         emailTextField = nil
         passwordView = nil

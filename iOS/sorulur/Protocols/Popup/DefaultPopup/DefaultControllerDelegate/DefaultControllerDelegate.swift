@@ -25,7 +25,7 @@ protocol DefaultControllerDelegate {
 extension DefaultControllerDelegate where Self: DefaultPopup {
         /// DefaultView Class Object
     var defaultController: DefaultController {
-        log.debug("")
+        print("")
         return DefaultController(param)
     }
     
@@ -53,8 +53,8 @@ extension DefaultControllerDelegate where Self: DefaultPopup {
     ///   - animated: show popup with animation
     ///   - popup: popup
     func showPopup(_ inView: UIView, animated: Bool = true, popup: DefaultPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         defaultController.show(inView, animated: animated, popup: popup)
     }
 }

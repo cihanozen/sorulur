@@ -52,7 +52,7 @@ class DefaultPopupManager: NSObject {
      */
     func hideAll() {
         for item in popups {
-            log.debug(item)
+            print(item)
             item.isHidden = true
         }
     }
@@ -118,9 +118,9 @@ class DefaultPopupManager: NSObject {
     func showPopup(_ inVc: UIViewController, animated: Bool = true, onConfirm _: DefaultPopupCallBack? = nil) {
         hideAll()
         let viewPopup = createPopupView()
-        log.debug(viewPopup)
+        print(viewPopup)
         var superView: UIView = inVc.view
-        log.debug(superView)
+        print(superView)
         if let vc = inVc.presentedViewController {
             superView = vc.view
         } else if let vc = inVc.tabBarController {

@@ -8,25 +8,34 @@
 
 import Foundation
 import UIKit
-//import SDWebImage
 
 protocol LeftMenuControllerDelegate {
     func setProfileImage()
+    func setName()
+    func setLevel()
 }
 
 extension LeftMenuControllerDelegate where Self: LeftMenuVC{
     // LeftMenuView Object
     private var leftMenuView: LeftMenuView {
-        log.debug("LeftMenu View")
+        print("LeftMenu View")
         return LeftMenuView(self.param)
     }
     
     private var controller: LeftMenuController {
-        log.debug("LeftMenu Controller")
+        print("LeftMenu Controller")
         return LeftMenuController(self.param)
     }
     
     func setProfileImage(){
-        leftMenuView.setProfileImage(controller.getAvatar())
+        leftMenuView.setProfileImage(URL_PROFILE_PICTURE + controller.getAvatar())
+    }
+    
+    func setName(){
+        leftMenuView.setName(controller.getName())
+    }
+    
+    func setLevel(){
+        leftMenuView.setLevel(controller.getLevel())
     }
 }

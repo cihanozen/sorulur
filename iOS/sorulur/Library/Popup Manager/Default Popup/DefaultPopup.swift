@@ -85,8 +85,8 @@ extension DefaultPopup: DefaultControllerDelegate {
     ///   - animated: animated showing popup
     ///   - popup: popup
     func show(_ inView: UIView, animated: Bool, popup: DefaultPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         showPopup(inView, animated: animated, popup: popup)
     }
     

@@ -53,7 +53,7 @@ class ErrorPopupManager: NSObject {
      */
     func hideAll() {
         for item in popups {
-            log.debug(item)
+            print(item)
             item.isHidden = true
         }
     }
@@ -129,9 +129,9 @@ class ErrorPopupManager: NSObject {
     func showPopup(_ inVC: UIViewController, animated: Bool = true, onConfirm _: ErrorPopupCallBack? = nil, type: Int) {
         hideAll()
         let viewPopup = createPopupView(type: type)
-        log.debug(viewPopup)
+        print(viewPopup)
         var superView: UIView = inVC.view
-        log.debug(superView)
+        print(superView)
         if let vc = inVC.presentedViewController {
             superView = vc.view
         } else if let vc = inVC.tabBarController {

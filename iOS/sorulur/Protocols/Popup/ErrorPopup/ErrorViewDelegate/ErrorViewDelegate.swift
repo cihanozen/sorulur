@@ -21,13 +21,13 @@ protocol ErrorViewDelegate {
 extension ErrorViewDelegate where Self: ErrorPopup {
     /// ErrorView Class Object
     var errorView: ErrorPopupView {
-        log.debug("LoginView")
+        print("LoginView")
         return ErrorPopupView(param)
     }
 
     /// SetupUI
     func setupUI() {
-        log.debug("setupUI")
+        print("setupUI")
         errorView.baseViewRounded()
     }
 

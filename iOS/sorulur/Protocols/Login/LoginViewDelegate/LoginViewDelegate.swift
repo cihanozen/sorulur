@@ -21,13 +21,13 @@ protocol LoginViewDelegate {
 extension LoginViewDelegate where Self: LoginVC {
     /// loginView Class Object
     var loginView: LoginView {
-        log.debug("LoginView")
+        print("LoginView")
         return LoginView(param)
     }
 
     /// SetupUI
     func setupUI() {
-        log.debug("setupUI")
+        print("setupUI")
         loginView.granient()
         loginView.textFieldBorderRemove(emailTextField)
         loginView.textFieldBorderRemove(passwordTextField)

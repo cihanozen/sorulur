@@ -22,12 +22,12 @@ class LoginView {
     ///    let view = LoginView(LoginVCStruct)
     ///    ````
     init(_ param: LoginVCStruct) {
-        log.debug("Login View İnit")
+        print("Login View İnit")
         self.param = param
     }
 
     deinit {
-        log.debug("login view deinit")
+        print("login view deinit")
         self.param = nil
     }
 
@@ -38,7 +38,7 @@ class LoginView {
     ///    view.granient()
     ///    ````
     func granient() {
-        log.debug("background color apply granient")
+        print("background color apply granient")
         param?.view?.applyGranient(colours: [COLORS.GRADIENTSTART_LOGIN, COLORS.GRADIENTEND_LOGIN])
     }
 
@@ -51,7 +51,7 @@ class LoginView {
     ///    view.textFieldBorderRemove(UITextField)
     ///    ````
     func textFieldBorderRemove(_ textfield: UITextField) {
-        log.debug("textfield background clear and border style set none")
+        print("textfield background clear and border style set none")
         textfield.backgroundColor = UIColor.clear
         textfield.borderStyle = .none
     }
@@ -69,7 +69,7 @@ class LoginView {
         if let uiButton: UIButton = view as? UIButton {
            uiButton.roundedButton(COLORS.BORDER_WHITE)
         } else if let uiView: UIView = view as? UIView {
-            log.debug("view rounded")
+            print("view rounded")
             uiView.roundedView(COLORS.BORDER_WHITE)
         }
     }

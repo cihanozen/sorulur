@@ -14,7 +14,7 @@ class SignUpVC: UIViewController {
     
     /// Global Struct
     var param: SignUpVCStrcuts {
-        log.debug("Login VC Struct")
+        print("Login VC Struct")
         return SignUpVCStrcuts(with: self) ?? SignUpVCStrcuts()
     }
     

@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import XCGLogger
+#if DEBUG
+import CocoaDebug
+#endif
 
 /// AppDelegate
 @UIApplicationMain
@@ -36,13 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         #if DEBUG
-            log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
-        #else
-            log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
-            if let consoleLog = log.destination(withIdentifier: XCGLogger.Constants.baseConsoleDestinationIdentifier) as? ConsoleDestination {
-                consoleLog.logQueue = XCGLogger.logQueue
-            }
+        CocoaDebug.enable()
         #endif
         return true
     }
+}
+
+//Step 3.
+public func print<T>(file: String = #file, function: String = #function, line: Int = #line, _ message: T, color: UIColor = .green) {
+    #if DEBUG
+    swiftLog(file, function, line, message, color)
+    #endif
 }

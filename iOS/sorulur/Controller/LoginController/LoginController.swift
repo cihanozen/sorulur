@@ -23,12 +23,12 @@ class LoginController {
     /// let controller = LoginController(LoginVCStruct)
     /// ````
     init(_ param: LoginVCStruct) {
-        log.debug("Login Controller İnit")
+        print("Login Controller İnit")
         self.param = param
     }
 
     deinit {
-        log.debug("Login Controller deinit")
+        print("Login Controller deinit")
         self.param = nil
     }
 
@@ -38,27 +38,27 @@ class LoginController {
     ///    let contoller = LoginController(LoginVCStruct)
     ///    controller.loginPost()
     ///    ````
-    func loginPost(_ base: LoginVC) {
-        log.debug("login post started")
+    func loginPost(_ base: LoginVC , completion: ((_ response: Bool) -> ())? = nil) {
+        print("login post started")
         let email: String = param?.emailTextField?.text ?? ""
-        log.debug(email)
+        print(email)
         let password: String = param?.passwordTextField?.text ?? ""
-        log.debug(password)
+        print(password)
         if email.isEmpty {
             ErrorPopupManager.shared.showPopup(base, animated: true, type: 0)
         } else if password.isEmpty {
-            log.warning("password is empty")
+            print("password is empty", color: .yellow)
             ErrorPopupManager.shared.showPopup(base, animated: true, type: 1)
         } else {
             let data = LoginRequest(email: email, password: password).toJSON()
-            log.debug(data)
+            print(data)
             Alamofire.request(URL_LOGIN, method: .post, parameters: data, encoding: JSONEncoding.default, headers: [:]).responseLogin { response in
-                log.debug(response)
+                print(response)
                 response.result.ifSuccess {
-                    log.debug("response is Success")
+                    print("response is Success")
                     if let login = response.result.value {
-                        log.debug("response result value not empty")
-                        log.info("singleton set")
+                        print("response result value not empty")
+                        print("singleton set",color: .blue)
                         let singleton = Singleton.shared
                         singleton.userEmail = login.uyeEposta
                         singleton.userPassword = login.uyeSifre
@@ -67,11 +67,13 @@ class LoginController {
                         singleton.userNick = login.uyeKadi
                         singleton.userStatus = login.uyeDurum
                         singleton.userPoints = login.uyePuan
+                        completion!(true)
                     }
                 }
                 response.result.ifFailure {
-                    log.error("Result is Failure")
+                    print("Result is Failure", color: .red)
                     print("hataalı panpa bu")
+                    completion!(false)
                 }
             }
         }

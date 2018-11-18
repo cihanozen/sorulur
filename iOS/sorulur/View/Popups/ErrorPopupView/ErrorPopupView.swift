@@ -23,7 +23,7 @@ class ErrorPopupView {
     ///    let view = ErrorPopupView(ErrorViewStruct)
     ///    ````
     init(_ param: ErrorViewStruct) {
-        log.debug("Login View İnit")
+        print("Login View İnit")
         self.param = param
     }
 
@@ -31,7 +31,7 @@ class ErrorPopupView {
     init() {}
 
     deinit {
-        log.debug("login view deinit")
+        print("login view deinit")
         self.param = nil
     }
 
@@ -100,7 +100,7 @@ class ErrorPopupView {
     ///   - popup: popup
     func popupAdd(_ inView: UIView, popup: ErrorPopup) {
         inView.addSubview(popup)
-        log.debug(inView)
+        print(inView)
         popup.snp.makeConstraints({ make in
             make.edges.equalTo(inView).inset(UIEdgeInsets.zero)
         })

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 class LeftMenuView {
     var view: UIView?
@@ -30,7 +31,7 @@ class LeftMenuView {
     }
     
     init(_ param: LeftMenuVCStructs) {
-        log.debug("SignUp View İnit")
+        print("SignUp View İnit")
         self.param = param
     }
     
@@ -110,8 +111,19 @@ class LeftMenuView {
         getView?.layer.shadowOpacity = opacity
     }
     
-    public func setProfileImage(_ image: UIImage){
-        param?.profileImageView?.image = image
+    public func setProfileImage(_ image: String){
+        print(image)
+        param?.profileImageView?.sd_setImage(with: URL(string: image))
+    }
+    
+    public func setName(_ name: String){
+        print(name)
+        param?.nameLabel?.text = name
+    }
+    
+    public func setLevel(_ level: String){
+        print(level)
+        param?.levelLabel?.text = "\(level) xp"
     }
 }
 

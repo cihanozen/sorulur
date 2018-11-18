@@ -18,7 +18,7 @@ extension UIButton {
     ///    view.roundedButton()
     ///    ````
     func roundedButton(_ color: UIColor) {
-        log.debug("view rounded")
+        print("view rounded")
         self.layer.borderWidth = 1
         self.layer.borderColor = color.cgColor
         self.layer.cornerRadius = 22

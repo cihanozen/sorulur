@@ -29,7 +29,7 @@ extension ErrorViewStruct {
     ///    ErrorViewStruct(ErrorPopup.self)
     ///    ````
     init?(with view: ErrorPopup) {
-        log.debug("Login VC Struct init")
+        print("Login VC Struct init")
         baseView = view.baseView
         logoView = view.logoView
         titleTextLabel = view.titleTextLabel
@@ -44,7 +44,7 @@ extension ErrorViewStruct {
     ///    param.reset()
     ///    ````
     mutating func reset() {
-        log.debug("Login VC Struct reset")
+        print("Login VC Struct reset")
         baseView = nil
         logoView = nil
         titleTextLabel = nil

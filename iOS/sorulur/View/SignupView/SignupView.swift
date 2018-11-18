@@ -22,12 +22,12 @@ class SignupView {
     ///    let view = SignUpView(SignUpVCStruct)
     ///    ````
     init(_ param: SignUpVCStrcuts) {
-        log.debug("SignUp View İnit")
+        print("SignUp View İnit")
         self.param = param
     }
     
     deinit {
-        log.debug("SignUp view deinit")
+        print("SignUp view deinit")
         self.param = nil
     }
     
@@ -38,7 +38,7 @@ class SignupView {
     ///    view.granient()
     ///    ````
     func granient() {
-        log.debug("background color apply granient")
+        print("background color apply granient")
         param?.view?.applyGranient(colours: [COLORS.GRADIENTSTART_SIGNUP, COLORS.GRADIENTEND_SIGNUP])
     }
     
@@ -67,7 +67,7 @@ class SignupView {
         if let uiButton: UIButton = view as? UIButton {
             uiButton.roundedButton(COLORS.BORDER_PURPLE)
         } else if let uiView: UIView = view as? UIView {
-            log.debug("view rounded")
+            print("view rounded")
             uiView.roundedView(COLORS.BORDER_BLACK)
         }
     }

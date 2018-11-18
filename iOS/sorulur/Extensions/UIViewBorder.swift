@@ -19,7 +19,7 @@ extension UIView {
     ///    view.rounded()
     ///    ````
     func roundedView(_ color: UIColor) {
-        log.debug("view rounded")
+        print("view rounded")
         self.round(corners: [.topRight, .bottomLeft, .bottomRight], radius: 20, borderColor: color, borderWidth: 2)
     }
 }

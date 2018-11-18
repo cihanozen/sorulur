@@ -25,7 +25,7 @@ protocol ErrorControllerDelegate {
 extension ErrorControllerDelegate where Self: ErrorPopup {
     /// ErrorView Class Object
     var errorContoller: ErrorController {
-        log.debug("LoginView")
+        print("LoginView")
         return ErrorController(param)
     }
 
@@ -53,8 +53,8 @@ extension ErrorControllerDelegate where Self: ErrorPopup {
     ///   - animated: show popup with animation
     ///   - popup: popup
     func showPopup(_ inView: UIView, animated: Bool = true, popup: ErrorPopup) {
-        log.debug(inView)
-        log.debug(animated)
+        print(inView)
+        print(animated)
         errorContoller.show(inView, animated: animated, popup: popup)
     }
 }
