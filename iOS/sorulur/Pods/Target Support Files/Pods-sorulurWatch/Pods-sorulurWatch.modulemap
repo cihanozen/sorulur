@@ -1,0 +1,6 @@
+framework module Pods_sorulurWatch {
+  umbrella header "Pods-sorulurWatch-umbrella.h"
+
+  export *
+  module * { export * }
+}
