@@ -11,32 +11,25 @@ import UIKit
 
 class HomeVC: BaseVC {
     
+    
+}
+
+extension HomeVC {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navBarType = .ad_DETAIL
+}
+
+extension HomeVC {
+    override func backAction() {
+        print("ok")
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        enablePopGesture(false)
+}
+
+extension HomeVC: BaseNCDelegate {
+    func setup() {
+        addTitle()
+        addBack()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func rightBarButtonPressed() {
-//        shareAd(, fromVC: self)
-        print("hello")
-    }
-    
 }

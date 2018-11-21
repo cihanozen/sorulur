@@ -106,6 +106,8 @@
 		6C14221221A3422C00A24C56 /* LeftMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1421B921A3422C00A24C56 /* LeftMenuDelegate.swift */; };
 		6C14221321A3422C00A24C56 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1421BC21A3422C00A24C56 /* LoginViewDelegate.swift */; };
 		6C14221421A3422C00A24C56 /* LoginControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1421BE21A3422C00A24C56 /* LoginControllerDelegate.swift */; };
+		6CA155DD21A5B71B0080C315 /* BaseVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA155DC21A5B71B0080C315 /* BaseVCDelegate.swift */; };
+		6CA155DF21A5B7940080C315 /* BaseNCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA155DE21A5B7940080C315 /* BaseNCDelegate.swift */; };
 		78352A5CEF560623CBC04947 /* Pods_sorulurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3538248EA69985E4580941 /* Pods_sorulurTests.framework */; };
 		7B7ADDA587BC8DB4CF611B0A /* Pods_sorulurWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1489467333701AF9A563271 /* Pods_sorulurWatch.framework */; };
 		EC10F5A7CDAF342C1BB07535 /* Pods_sorulur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83A4E8419703B20ABEEB50 /* Pods_sorulur.framework */; };
@@ -277,6 +279,8 @@
 		6C1421B921A3422C00A24C56 /* LeftMenuDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMenuDelegate.swift; sourceTree = "<group>"; };
 		6C1421BC21A3422C00A24C56 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
 		6C1421BE21A3422C00A24C56 /* LoginControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerDelegate.swift; sourceTree = "<group>"; };
+		6CA155DC21A5B71B0080C315 /* BaseVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCDelegate.swift; sourceTree = "<group>"; };
+		6CA155DE21A5B7940080C315 /* BaseNCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNCDelegate.swift; sourceTree = "<group>"; };
 		843DBCE97C91D78F8EFE0BDF /* Pods-sorulur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulur.release.xcconfig"; path = "Pods/Target Support Files/Pods-sorulur/Pods-sorulur.release.xcconfig"; sourceTree = "<group>"; };
 		8D94D0158C03BD731AFC6E3B /* Pods-sorulurWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulurWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sorulurWatch Extension/Pods-sorulurWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		97D1CABB33E20532E33EE313 /* Pods-sorulurTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sorulurTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sorulurTests/Pods-sorulurTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -876,6 +880,7 @@
 		6C1421A221A3422C00A24C56 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6CA155D921A5B6EA0080C315 /* Base */,
 				6C1421A321A3422C00A24C56 /* Popup */,
 				6C1421AE21A3422C00A24C56 /* SignUp */,
 				6C1421B321A3422C00A24C56 /* LeftMenu */,
@@ -1025,6 +1030,31 @@
 				6C1421BE21A3422C00A24C56 /* LoginControllerDelegate.swift */,
 			);
 			path = LoginControllerDelegate;
+			sourceTree = "<group>";
+		};
+		6CA155D921A5B6EA0080C315 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6CA155DB21A5B7020080C315 /* BaseNCDelegate */,
+				6CA155DA21A5B6F50080C315 /* BaseVCDelegate */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6CA155DA21A5B6F50080C315 /* BaseVCDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CA155DC21A5B71B0080C315 /* BaseVCDelegate.swift */,
+			);
+			path = BaseVCDelegate;
+			sourceTree = "<group>";
+		};
+		6CA155DB21A5B7020080C315 /* BaseNCDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6CA155DE21A5B7940080C315 /* BaseNCDelegate.swift */,
+			);
+			path = BaseNCDelegate;
 			sourceTree = "<group>";
 		};
 		F9D95543ADB5323523A9EF63 /* Frameworks */ = {
@@ -1396,6 +1426,7 @@
 			files = (
 				6C14220E21A3422C00A24C56 /* SignupControllerDelegate.swift in Sources */,
 				6C1421FE21A3422C00A24C56 /* DefaultPopupManager.swift in Sources */,
+				6CA155DF21A5B7940080C315 /* BaseNCDelegate.swift in Sources */,
 				6C1421F221A3422C00A24C56 /* UIViewBorder.swift in Sources */,
 				6C1421E921A3422C00A24C56 /* BaseNC.swift in Sources */,
 				6C14220B21A3422C00A24C56 /* DefaultControllerDelegate.swift in Sources */,
@@ -1404,6 +1435,7 @@
 				6C1421F721A3422C00A24C56 /* UIViewGradient.swift in Sources */,
 				6C1421EC21A3422C00A24C56 /* ErrorController.swift in Sources */,
 				6C1421E721A3422C00A24C56 /* BaseVC.swift in Sources */,
+				6CA155DD21A5B71B0080C315 /* BaseVCDelegate.swift in Sources */,
 				6C14221121A3422C00A24C56 /* LeftMenuControllerDelegate.swift in Sources */,
 				6C1421C921A3422C00A24C56 /* AppDelegate.swift in Sources */,
 				6C1421F821A3422C00A24C56 /* UIColorHex.swift in Sources */,
