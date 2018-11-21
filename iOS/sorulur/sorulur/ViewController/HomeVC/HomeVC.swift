@@ -25,11 +25,21 @@ extension HomeVC {
     override func backAction() {
         print("ok")
     }
+    
+    override func rightAction() {
+        print("right")
+    }
+    
+    override func leftAction() {
+        print("left")
+    }
 }
 
-extension HomeVC: BaseNCDelegate {
+extension HomeVC: BaseNCDelegate {    
     func setup() {
+        config()
         addTitle()
-        addBack()
+        addButton(type: .left, title: "Left", color: UIColor.blue)
+        addButton(type: .right, title: "right", color: UIColor.red)
     }
 }

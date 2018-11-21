@@ -11,4 +11,6 @@ import UIKit
 
 protocol BaseVCDelegate {
     func backButtonAction()
+    func leftButtonAction()
+    func rightButtonAction()
 }

@@ -9,6 +9,14 @@
 import UIKit
 
 class BaseVC: UIViewController, BaseVCDelegate {
+    func leftButtonAction() {
+        
+    }
+    
+    func rightButtonAction() {
+        
+    }
+    
     func backButtonAction() {
         
     }
@@ -23,5 +31,13 @@ extension BaseVC {
 extension BaseVC {
     @objc func backAction(){
         backButtonAction()
+    }
+    
+    @objc func leftAction(){
+        leftButtonAction()
+    }
+    
+    @objc func rightAction(){
+        rightButtonAction()
     }
 }
