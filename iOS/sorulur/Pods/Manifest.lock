@@ -65,6 +65,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SkeletonView (1.4.1)
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SDWebImage
+  - SkeletonView
   - SnapKit
 
 SPEC REPOS:
@@ -97,6 +99,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - SDWebImage
+    - SkeletonView
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -116,8 +119,9 @@ SPEC CHECKSUMS:
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 825c4f5fb67e53ba7702c6f96a5f2ee3fce3b6ad
+PODFILE CHECKSUM: 3bcc058950a1e13ebbbab25e65012e14d68e285c
 
 COCOAPODS: 1.5.3

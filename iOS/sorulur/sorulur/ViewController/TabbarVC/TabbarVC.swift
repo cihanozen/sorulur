@@ -17,7 +17,7 @@ extension TabbarVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // MARK: Left Menu Functions
-        
+        hiddenLeftMenu()
         let show: Selector = #selector(showLeftMenu)
         let hide: Selector = #selector(hiddenLeftMenu)
         let showName = NSNotification.Name(rawValue: "showLeftMenu")

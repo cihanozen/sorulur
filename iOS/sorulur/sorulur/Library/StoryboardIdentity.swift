@@ -26,5 +26,6 @@ public enum StoryboardIdentifier: String {
     case LEFTMENU = "LeftMenuViewController"
     case LEFTMENUTABLECELLTYPE1 = "LeftMenuTableCellType1"
     case LEFTMENUTABLECELLTYPE2 = "LeftMenuTableCellType2"
+    case HOMECELL = "HomeCell"
 }
 

@@ -15,6 +15,7 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'SDWebImage'
 pod 'CocoaDebug', :configurations => ['Debug']
+pod 'SkeletonView'
   # Pods for sorulur
 
   target 'sorulurTests' do

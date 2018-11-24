@@ -8,20 +8,21 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 protocol BaseNCDelegate {
     func config(color: UIColor, style: UIBarStyle, trans: Bool)
     func addLogo()
-    func addTitle()
+    func addTitle(text: String, color: UIColor)
     func setup()
     func addButton(type: navButtonType , title: String, color: UIColor , image: UIImage?)
 }
 
 extension BaseNCDelegate where Self: UIViewController {
-    func config(color: UIColor = .white, style: UIBarStyle = .default, trans: Bool = false) {
-        self.navigationController?.navigationBar.backgroundColor = color
+    func config(color: UIColor = .black, style: UIBarStyle = .default, trans: Bool = false) {
+        self.navigationController?.navigationBar.barTintColor = color
         self.navigationController?.navigationBar.barStyle = style
-        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.isTranslucent = trans
     }
     
     func addLogo(){
@@ -32,29 +33,51 @@ extension BaseNCDelegate where Self: UIViewController {
         self.navigationItem.titleView = image
     }
     
-    func addTitle(){
-        self.navigationItem.title = "Merhaba"
+    func addTitle(text: String, color: UIColor = .white){
+        let label = UILabel()
+        label.text = text
+        label.textColor = color
+        self.navigationItem.titleView = label
     }
     
-    func addButton(type: navButtonType , title: String, color: UIColor , image: UIImage? = nil) {
+    func addButton(type: navButtonType , title: String = "", color: UIColor , image: UIImage? = nil) {
         let button = UIButton(type: .custom)
         button.setTitle(title, for: .normal)
         button.setTitleColor(color, for: .normal)
         if let img: UIImage = image {
             button.setImage(img, for: .normal)
-            button.sizeToFit()
         }
         switch type {
         case .left:
             button.addTarget(self, action: #selector(BaseVC.leftAction), for: .touchUpInside)
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+            var view = UIBarButtonItem(customView: button)
+            if let _: UIImage = image {
+              view = barButtonSetSize(view: view)
+            }
+            self.navigationItem.leftBarButtonItem = view
         case .right:
             button.addTarget(self, action: #selector(BaseVC.rightAction), for: .touchUpInside)
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+            var view = UIBarButtonItem(customView: button)
+            if let _: UIImage = image {
+                view = barButtonSetSize(view: view)
+            }
+            self.navigationItem.rightBarButtonItem = view
         case .back:
             button.addTarget(self, action: #selector(BaseVC.backAction), for: .touchUpInside)
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+            var view = UIBarButtonItem(customView: button)
+            if let _: UIImage = image {
+                view = barButtonSetSize(view: view)
+            }
+            self.navigationItem.leftBarButtonItem = view
         }
+    }
+    
+    private func barButtonSetSize(view: UIBarButtonItem) -> UIBarButtonItem {
+        view.customView?.snp.makeConstraints ({ (make) in
+            make.width.equalTo(25)
+            make.height.equalTo(25)
+        })
+        return view
     }
 }
 

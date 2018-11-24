@@ -114,7 +114,6 @@ extension UITabBarController {
 
 extension UIViewController {
     static func adjustNavBar() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(color: COLORS.BLUE, size: CGSize(width: screenWidth(), height: 44)), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = false
 //        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -131,14 +130,6 @@ extension UIViewController {
         UINavigationBar.appearance().backIndicatorImage = nil
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = nil
 //        OldMethods.resetBarButtonItem()
-    }
-    
-    static func adjustTabbar() {
-        UITabBar.appearance().tintColor = COLORS.ORANGE
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:COLORS.GRAY_PLACEHOLDER], for: UIControl.State())
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:COLORS.ORANGE], for: .highlighted)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:COLORS.ORANGE], for: .selected)
     }
     
     func hideNavBarLine(_ willHide:Bool = true) {
@@ -276,30 +267,7 @@ extension UIViewController {
 }
 
 extension UIView {
-    func addDashedLine(_ frameSize:CGSize, color: UIColor = COLORS.DEEP_SEA_BLUE) {
-        let _ = layer.sublayers?.filter({ $0.name == "DashedTopLine" }).map({ $0.removeFromSuperlayer() })
-        self.backgroundColor = UIColor.clear
-        let cgColor = color.cgColor
-        
-        let shapeLayer: CAShapeLayer = CAShapeLayer()
-        let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
-        
-        shapeLayer.name = "DashedTopLine"
-        shapeLayer.bounds = shapeRect
-        shapeLayer.position = CGPoint(x: frameSize.width / 2, y: frameSize.height / 2)
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = cgColor
-        shapeLayer.lineWidth = 1
-        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
-        shapeLayer.lineDashPattern = [3, 1]
-        
-        let path: CGMutablePath = CGMutablePath()
-        path.move(to: CGPoint.zero)
-        path.addLine(to: CGPoint(x: frameSize.width, y: 0))
-        shapeLayer.path = path
-        
-        self.layer.addSublayer(shapeLayer)
-    }
+    
     
     func findAndResignFirstResponder() -> Bool {
         if self.isFirstResponder {
@@ -331,12 +299,6 @@ extension UIView {
         self.layer.cornerRadius = radius
     }
     
-    func addGreenShadow() {
-        self.layer.shadowColor = COLORS.ORANGE_SHADOW.cgColor
-        self.layer.shadowOpacity = 0.82
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 8
-    }
     
     func addBlackShadow(_ color:CGColor = COLORS.BLACK_SHADOW.cgColor, offset:CGSize = CGSize(width: 0, height: 3), radius:CGFloat = 7) {
         self.layer.shadowColor = color

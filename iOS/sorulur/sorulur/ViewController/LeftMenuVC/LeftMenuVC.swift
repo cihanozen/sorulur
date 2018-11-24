@@ -42,10 +42,6 @@ extension LeftMenuVC: LeftMenuViewDelegate {
         NotificationCenter.default.addObserver(self, selector: pan, name: panName, object: nil)
         tableView.dataSource = self
         tableView.delegate = self
-        #warning("DEBUG")
-        for index in 0 ... 1000 {
-            data.append("\(index)")
-        }
         setupUI()
         roundedProfileImage()
         dataSetup()

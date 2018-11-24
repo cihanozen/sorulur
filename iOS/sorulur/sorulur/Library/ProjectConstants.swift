@@ -20,6 +20,7 @@ let APP_VERSION = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? 
 let URL_BASE = "https://www.sorulur.com/"
 let URL_LOGIN = URL_BASE + "ios_uye_giris"
 let URL_PROFILE_PICTURE = URL_BASE + "uploads/"
+let URL_GET_ALL_QUESTION = URL_BASE + "mobil_tum_sorular"
 
 // MARK: - JSON DICTS
 
